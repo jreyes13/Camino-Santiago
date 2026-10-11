@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<kml>
+  <Document>
+    <name>DE33-Nunrberg-Eichstatt.kml</name>
+    <Placemark>
+      <name>DE33-Jakobweg-Nünrberg-Eichstätt</name>
+      <description></description>
+      <Style>
+        <LineStyle>
+          <color>ffff00ff</color>
+        </LineStyle>
+      </Style>
+      <LineString>
+        <tessellate>1</tessellate>
+        <coordinates>11.114848013967276,49.395105578005312,348 11.186602301895618,49.215760678052904,372 11.205736845731736,49.076515138149264,554 11.165076065808534,48.903872743248936,524 </coordinates>
+      </LineString>
+    </Placemark>
+  </Document>
+</kml>
