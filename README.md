@@ -25,4 +25,29 @@ An open repository dedicated to collecting, processing, standardizing, and visua
 
 The geospatial data and routes are referenced against and verified with official mapping agencies and recognized pilgrim federations:
 
-- **[IGN - National Geographic Information Infrastructure](https://nco.ign.es/Caminosantiago/)**: Official interactive map of Jac
+- **[IGN - National Geographic Information Infrastructure](https://nco.ign.es/Caminosantiago/)**: Official interactive map of Jacobean routes across Spain provided by the National Geographic Institute of Spain (*IGN*).
+- **[CNIG Download Center](https://centrodedescargas.cnig.es/CentroDescargas/mapas-camino-santiago)**: Official digital cartography, aerial photography (PNOA), digital elevation models (DEM), and vector datasets of the Camino de Santiago.
+- **[FEAACS - Spanish Federation of Associations of Friends of the Camino de Santiago](https://www.caminosantiago.org/cpperegrino/caminos/)**: Historical routes, stage itineraries, official variants, and hostel networks.
+
+---
+
+## 📁 Repository Structure
+
+The project is structured into spatial data files (`GPX/`) and QGIS project environments (`QGIS/`):
+
+```text
+.
+├── GPX/
+│   ├── 01-Camino_Frances/             # Full Camino Francés in GPX (Stages 1 through 33)
+│   ├── ES12-Camino-de-Madrid/         # Camino de Madrid stages and variants (KML)
+│   ├── EU/                            # European Jacobean trails
+│   │   ├── CZ/                        # Czech Republic routes (Žitavská, Všerubská, Železná, etc.)
+│   │   └── DE/                        # German Jakobsweg network (Via Baltica, Regia, Imperii, etc.)
+│   ├── CPC.kml                        # Camino Portugués Central
+│   ├── GoogleMaps_Praga_Santiago.gpx  # Trans-European route connecting Prague to Santiago
+│   └── 170615-camino-santiago-en-rep-checa-praga-radotin.gpx
+├── QGIS/
+│   ├── CaminoSantiago.qgz             # Primary QGIS map project
+│   └── CaminoSantiago_OLD.qgz         # Legacy QGIS map project
+├── LICENSE                            # License terms of the repository
+└── README.md                          # Repository documentation
