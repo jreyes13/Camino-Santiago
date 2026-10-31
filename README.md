@@ -1,6 +1,10 @@
 # 🥾 Way of St. James (Camino de Santiago) - GIS & Cartographic Repository
 
 <p align="left">
+  <a href="https://jreyes13.github.io/Camino-Santiago/"><img src="https://img.shields.io/badge/🌐_Live_Web_Map-jreyes13.github.io%2FCamino--Santiago-2A9D8F?style=for-the-badge&logo=leaflet&logoColor=white" alt="Live Web Map" /></a>
+</p>
+
+<p align="left">
   <img src="https://img.shields.io/badge/QGIS-3.x-589632?style=flat-square&logo=qgis&logoColor=white" alt="QGIS 3.x" />
   <img src="https://img.shields.io/badge/Formats-GPX%20%7C%20KML%20%7C%20GeoJSON-007acc?style=flat-square" alt="GPX, KML and GeoJSON Formats" />
   <img src="https://img.shields.io/badge/Coverage-23%2C636%20km-orange?style=flat-square" alt="23,636 km covered" />
@@ -39,10 +43,12 @@ An open repository dedicated to collecting, processing, standardizing, and visua
 
 ## 🗺️ Interactive Web Viewer
 
-Open [`index.html`](file:///Users/jreyes13/GitHub/Camino%20Santiago/index.html) in any browser (or deploy to GitHub Pages) to interact with the full route network:
+👉 **Acceso directo online:** **[https://jreyes13.github.io/Camino-Santiago/](https://jreyes13.github.io/Camino-Santiago/)**
+
+También puedes abrir directamente [`index.html`](index.html) de manera local en cualquier navegador:
 - **Base Layers**: OpenStreetMap, OpenTopoMap, CartoDB Positron, Esri Satellite.
-- **Stage Search & Filtering**: Filter by Camino, stage name, or distance.
-- **Elevation & Statistics**: Altimetric stats and direct 1-click GPX track downloads.
+- **Stage Search & Filtering**: Búsqueda y filtrado en tiempo real por Camino, nombre de etapa o ciudad.
+- **Elevation & Statistics**: Desniveles acumulados ($+$ y $-$), distancias y descarga directa en 1 clic de cada archivo `.gpx`.
 
 ---
 
