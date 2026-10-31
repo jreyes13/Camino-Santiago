@@ -13,12 +13,14 @@
   <style>
     :root {
       --primary: #1D3557;
+      --primary-dark: #14243B;
       --secondary: #457B9D;
       --accent: #E63946;
       --highlight: #F4A261;
-      --bg-light: #F8F9FA;
-      --dark: #2B2D42;
+      --bg-light: #F8FAFC;
+      --dark: #1E293B;
       --border: #E2E8F0;
+      --sidebar-width: 420px;
     }
 
     * {
@@ -31,76 +33,135 @@
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       display: flex;
       height: 100vh;
+      width: 100vw;
       overflow: hidden;
       background: var(--bg-light);
       color: var(--dark);
     }
 
-    /* Sidebar */
+    /* Sidebar Container */
     #sidebar {
-      width: 400px;
-      min-width: 320px;
+      position: relative;
+      width: var(--sidebar-width);
+      min-width: 290px;
+      max-width: 80vw;
       height: 100vh;
       background: #FFFFFF;
       border-right: 1px solid var(--border);
       display: flex;
       flex-direction: column;
-      box-shadow: 2px 0 12px rgba(0,0,0,0.06);
+      box-shadow: 3px 0 16px rgba(0,0,0,0.08);
       z-index: 1000;
-      transition: transform 0.3s ease;
+      transition: margin-left 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+      flex-shrink: 0;
     }
 
+    #sidebar.collapsed {
+      margin-left: calc(-1 * var(--sidebar-width));
+    }
+
+    /* Draggable Resizer Splitter */
+    #sidebar-resizer {
+      position: absolute;
+      top: 0;
+      right: -5px;
+      width: 10px;
+      height: 100%;
+      cursor: col-resize;
+      z-index: 1010;
+      background: transparent;
+      transition: background 0.15s;
+    }
+
+    #sidebar-resizer:hover,
+    #sidebar-resizer.resizing {
+      background: rgba(69, 123, 157, 0.35);
+    }
+
+    /* Floating Toggle Button */
+    #sidebar-toggle {
+      position: absolute;
+      top: 16px;
+      left: calc(var(--sidebar-width) + 12px);
+      z-index: 1001;
+      background: #FFFFFF;
+      color: var(--primary);
+      border: 1px solid var(--border);
+      width: 38px;
+      height: 38px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+      transition: left 0.28s cubic-bezier(0.4, 0, 0.2, 1), background 0.2s, color 0.2s;
+    }
+
+    #sidebar.collapsed ~ #sidebar-toggle {
+      left: 14px;
+    }
+
+    #sidebar-toggle:hover {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
+
+    /* Sidebar Header */
     .sidebar-header {
       background: linear-gradient(135deg, #1D3557 0%, #2A4365 100%);
       color: white;
-      padding: 18px 20px;
+      padding: 16px 18px;
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: 6px;
     }
 
     .sidebar-header h1 {
-      font-size: 1.25rem;
+      font-size: 1.2rem;
       font-weight: 700;
       display: flex;
       align-items: center;
       gap: 10px;
+      letter-spacing: -0.3px;
     }
 
     .sidebar-header .subtitle {
-      font-size: 0.82rem;
+      font-size: 0.8rem;
       opacity: 0.88;
     }
 
     .stats-bar {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 10px;
-      margin-top: 6px;
+      gap: 8px;
+      margin-top: 4px;
     }
 
     .stat-card {
       background: rgba(255, 255, 255, 0.12);
-      padding: 8px 12px;
+      padding: 6px 10px;
       border-radius: 6px;
       backdrop-filter: blur(4px);
     }
 
     .stat-card .val {
-      font-size: 1.15rem;
+      font-size: 1.05rem;
       font-weight: 700;
       color: #F1FAEE;
     }
 
     .stat-card .lbl {
-      font-size: 0.72rem;
+      font-size: 0.68rem;
       text-transform: uppercase;
       letter-spacing: 0.5px;
-      opacity: 0.8;
+      opacity: 0.82;
     }
 
+    /* Search Box */
     .search-box {
-      padding: 12px 16px;
+      padding: 10px 14px;
       border-bottom: 1px solid var(--border);
       background: #FAFAFA;
     }
@@ -109,52 +170,177 @@
       position: relative;
     }
 
-    .search-input-wrapper i {
+    .search-input-wrapper i.search-icon {
       position: absolute;
       left: 12px;
       top: 50%;
       transform: translateY(-50%);
       color: #94A3B8;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
     }
 
     .search-input-wrapper input {
       width: 100%;
-      padding: 8px 12px 8px 36px;
+      padding: 8px 32px 8px 34px;
       border: 1px solid #CBD5E1;
       border-radius: 6px;
-      font-size: 0.88rem;
+      font-size: 0.86rem;
       outline: none;
-      transition: border 0.2s;
+      transition: border 0.2s, box-shadow 0.2s;
     }
 
     .search-input-wrapper input:focus {
       border-color: var(--secondary);
+      box-shadow: 0 0 0 2px rgba(69, 123, 157, 0.15);
     }
 
+    .clear-search-btn {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: #94A3B8;
+      cursor: pointer;
+      font-size: 0.85rem;
+      display: none;
+    }
+
+    .clear-search-btn:hover {
+      color: var(--accent);
+    }
+
+    /* Region Navigation Tabs / Chips */
+    .region-nav {
+      padding: 8px 14px;
+      border-bottom: 1px solid var(--border);
+      background: #FFFFFF;
+      display: flex;
+      gap: 6px;
+      overflow-x: auto;
+      white-space: nowrap;
+      scrollbar-width: thin;
+    }
+
+    .region-nav::-webkit-scrollbar {
+      height: 4px;
+    }
+
+    .region-nav::-webkit-scrollbar-thumb {
+      background: #CBD5E1;
+      border-radius: 4px;
+    }
+
+    .region-tab {
+      padding: 5px 10px;
+      font-size: 0.76rem;
+      font-weight: 600;
+      border-radius: 16px;
+      background: #F1F5F9;
+      color: #475569;
+      border: 1px solid transparent;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: all 0.15s ease;
+      user-select: none;
+    }
+
+    .region-tab:hover {
+      background: #E2E8F0;
+      color: #1E293B;
+    }
+
+    .region-tab.active {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
+
+    .region-tab .count {
+      font-size: 0.68rem;
+      background: rgba(0,0,0,0.08);
+      padding: 1px 5px;
+      border-radius: 10px;
+    }
+
+    .region-tab.active .count {
+      background: rgba(255,255,255,0.25);
+    }
+
+    /* Sub-toolbar */
+    .toolbar-bar {
+      padding: 8px 14px;
+      background: #F8FAFC;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.75rem;
+      color: #64748B;
+    }
+
+    .toolbar-actions {
+      display: flex;
+      gap: 8px;
+    }
+
+    .toolbar-btn {
+      background: none;
+      border: none;
+      color: var(--secondary);
+      font-size: 0.75rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+
+    .toolbar-btn:hover {
+      color: var(--primary);
+      background: #E2E8F0;
+    }
+
+    /* Routes List Container */
     .routes-list {
       flex: 1;
       overflow-y: auto;
-      padding: 12px 16px;
+      padding: 10px 14px;
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 10px;
+      scrollbar-width: thin;
     }
 
+    .routes-list::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .routes-list::-webkit-scrollbar-thumb {
+      background: #CBD5E1;
+      border-radius: 4px;
+    }
+
+    /* Route Group Card */
     .route-group {
       border: 1px solid var(--border);
       border-radius: 8px;
       overflow: hidden;
       background: #FFFFFF;
-      transition: box-shadow 0.2s;
+      transition: box-shadow 0.2s, border-color 0.2s;
     }
 
     .route-group:hover {
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      box-shadow: 0 3px 10px rgba(0,0,0,0.06);
     }
 
     .route-group-header {
-      padding: 10px 14px;
+      padding: 9px 12px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -162,35 +348,103 @@
       user-select: none;
       border-left: 6px solid #CBD5E1;
       background: #F8FAFC;
+      transition: background 0.15s;
+    }
+
+    .route-group-header:hover {
+      background: #F1F5F9;
+    }
+
+    .route-header-main {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
     }
 
     .route-title {
-      font-size: 0.92rem;
+      font-size: 0.88rem;
       font-weight: 600;
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     .route-badge {
-      font-size: 0.72rem;
+      font-size: 0.68rem;
       background: #E2E8F0;
-      padding: 2px 6px;
+      color: #334155;
+      padding: 1px 5px;
       border-radius: 4px;
-      font-weight: 600;
+      font-weight: 700;
+      flex-shrink: 0;
     }
 
     .route-meta {
-      font-size: 0.76rem;
+      font-size: 0.72rem;
       color: #64748B;
+      display: flex;
+      gap: 6px;
     }
 
+    .route-header-actions {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-left: 8px;
+    }
+
+    .action-btn {
+      width: 24px;
+      height: 24px;
+      border-radius: 4px;
+      border: 1px solid transparent;
+      background: transparent;
+      color: #64748B;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.78rem;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .action-btn:hover {
+      background: #E2E8F0;
+      color: var(--primary);
+    }
+
+    .action-btn.active-layer {
+      color: var(--secondary);
+    }
+
+    .action-btn.muted-layer {
+      color: #CBD5E1;
+    }
+
+    .toggle-icon {
+      font-size: 0.75rem;
+      color: #94A3B8;
+      transition: transform 0.2s ease;
+      margin-left: 4px;
+    }
+
+    .route-group.open .toggle-icon {
+      transform: rotate(180deg);
+    }
+
+    /* Stages Container */
     .stages-container {
       display: none;
-      padding: 6px 12px 10px 12px;
+      padding: 6px 10px 8px 10px;
       border-top: 1px solid var(--border);
       flex-direction: column;
-      gap: 6px;
+      gap: 4px;
+      background: #FFFFFF;
     }
 
     .route-group.open .stages-container {
@@ -198,37 +452,46 @@
     }
 
     .stage-item {
-      padding: 6px 8px;
-      border-radius: 4px;
-      font-size: 0.82rem;
+      padding: 5px 8px;
+      border-radius: 5px;
+      font-size: 0.8rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
       cursor: pointer;
       transition: background 0.15s;
+      border: 1px solid transparent;
     }
 
     .stage-item:hover {
       background: #F1F5F9;
+      border-color: #E2E8F0;
+    }
+
+    .stage-item.highlighted {
+      background: #EBF8FF;
+      border-color: #90CDF4;
     }
 
     .stage-name {
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-      max-width: 210px;
+      flex: 1;
+      padding-right: 8px;
     }
 
     .stage-actions {
       display: flex;
       align-items: center;
       gap: 8px;
+      flex-shrink: 0;
     }
 
     .stage-km {
-      font-size: 0.76rem;
+      font-size: 0.72rem;
       color: #64748B;
-      font-weight: 500;
+      font-weight: 600;
     }
 
     .btn-icon {
@@ -236,11 +499,18 @@
       cursor: pointer;
       padding: 2px;
       text-decoration: none;
-      font-size: 0.85rem;
+      font-size: 0.8rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+      border-radius: 3px;
     }
 
     .btn-icon:hover {
       color: var(--accent);
+      background: rgba(230, 57, 70, 0.1);
     }
 
     /* Map Area */
@@ -248,76 +518,49 @@
       flex: 1;
       height: 100vh;
       background: #E5E9EC;
-    }
-
-    .legend-control {
-      background: white;
-      padding: 12px 14px;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
-      max-height: 280px;
-      overflow-y: auto;
-      font-size: 0.8rem;
-    }
-
-    .legend-title {
-      font-weight: 700;
-      margin-bottom: 8px;
-      font-size: 0.85rem;
-      color: var(--primary);
-    }
-
-    .legend-item {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 6px;
-      cursor: pointer;
-    }
-
-    .legend-color {
-      width: 14px;
-      height: 14px;
-      border-radius: 3px;
+      z-index: 1;
     }
 
     /* Custom Leaflet popup */
     .leaflet-popup-content-wrapper {
       border-radius: 8px;
       box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+      padding: 2px;
     }
 
     .popup-card {
-      font-size: 0.86rem;
-      min-width: 220px;
+      font-size: 0.84rem;
+      min-width: 230px;
+      padding: 4px;
     }
 
     .popup-header {
       font-weight: 700;
       color: var(--primary);
       margin-bottom: 4px;
-      font-size: 0.95rem;
+      font-size: 0.92rem;
+      line-height: 1.25;
     }
 
     .popup-route {
       display: inline-block;
-      font-size: 0.72rem;
+      font-size: 0.7rem;
       padding: 2px 6px;
       border-radius: 4px;
       color: white;
       font-weight: 600;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
 
     .popup-stats {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 6px;
-      margin: 8px 0;
+      margin: 6px 0;
       background: #F8FAFC;
       padding: 6px 8px;
       border-radius: 4px;
-      font-size: 0.8rem;
+      font-size: 0.78rem;
     }
 
     .popup-btn {
@@ -327,16 +570,24 @@
       margin-top: 6px;
       background: var(--secondary);
       color: white !important;
-      padding: 6px 12px;
+      padding: 5px 10px;
       border-radius: 4px;
       text-decoration: none;
       font-weight: 600;
-      font-size: 0.78rem;
+      font-size: 0.75rem;
       transition: background 0.2s;
     }
 
     .popup-btn:hover {
       background: var(--primary);
+    }
+
+    /* Empty state */
+    .empty-state {
+      padding: 30px 20px;
+      text-align: center;
+      color: #94A3B8;
+      font-size: 0.85rem;
     }
   </style>
 </head>
@@ -350,27 +601,73 @@
       
       <div class="stats-bar">
         <div class="stat-card">
-          <div class="val" id="total-km">41,438 km</div>
-          <div class="lbl">Total Trazado</div>
+          <div class="val" id="total-km">24,493 km</div>
+          <div class="lbl">Trazado Continuo</div>
         </div>
         <div class="stat-card">
-          <div class="val" id="total-tracks">228</div>
+          <div class="val" id="total-tracks">223</div>
           <div class="lbl">Etapas / Tracks GPX</div>
         </div>
       </div>
     </div>
 
+    <!-- Search Box -->
     <div class="search-box">
       <div class="search-input-wrapper">
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <input type="text" id="route-search" placeholder="Buscar etapa, ciudad o variante..." />
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input type="text" id="route-search" placeholder="Buscar etapa, ruta o ciudad..." />
+        <button class="clear-search-btn" id="clear-search" title="Limpiar búsqueda"><i class="fa-solid fa-xmark"></i></button>
       </div>
     </div>
 
+    <!-- Region Navigation Tabs -->
+    <div class="region-nav" id="region-nav">
+      <div class="region-tab active" data-region="all">
+        Todas <span class="count" id="count-all">20</span>
+      </div>
+      <div class="region-tab" data-region="es_main">
+        🇪🇸 Principales <span class="count" id="count-es_main">9</span>
+      </div>
+      <div class="region-tab" data-region="es_connectors">
+        🇪🇸 Enlaces & Vías <span class="count" id="count-es_connectors">5</span>
+      </div>
+      <div class="region-tab" data-region="pt">
+        🇵🇹 Portugal <span class="count" id="count-pt">3</span>
+      </div>
+      <div class="region-tab" data-region="fr">
+        🇫🇷 Francia <span class="count" id="count-fr">1</span>
+      </div>
+      <div class="region-tab" data-region="eu_central">
+        🇩🇪🇨🇿 Europa <span class="count" id="count-eu_central">2</span>
+      </div>
+    </div>
+
+    <!-- Sub-toolbar -->
+    <div class="toolbar-bar">
+      <span id="routes-counter">Mostrando todas las rutas</span>
+      <div class="toolbar-actions">
+        <button class="toolbar-btn" id="btn-fit-all" title="Ver toda la red en el mapa">
+          <i class="fa-solid fa-globe"></i> Red completa
+        </button>
+        <button class="toolbar-btn" id="btn-toggle-all" title="Expandir o colapsar todas">
+          <i class="fa-solid fa-angles-down" id="toggle-all-icon"></i> <span id="toggle-all-text">Expandir</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Routes Accordion List -->
     <div class="routes-list" id="routes-list">
       <!-- Generated dynamically -->
     </div>
+
+    <!-- Draggable Resizer Handle -->
+    <div id="sidebar-resizer" title="Arrastra para redimensionar el panel"></div>
   </div>
+
+  <!-- Floating Toggle Button for Collapsing/Expanding Sidebar -->
+  <button id="sidebar-toggle" title="Mostrar/ocultar panel lateral">
+    <i class="fa-solid fa-chevron-left" id="toggle-arrow"></i>
+  </button>
 
   <!-- Map Container -->
   <div id="map"></div>
@@ -416,37 +713,90 @@
     baseMaps["OpenStreetMap"].addTo(map);
     L.control.layers(baseMaps, null, { position: 'topright' }).addTo(map);
 
+    // Sidebar DOM elements
+    const sidebar = document.getElementById('sidebar');
+    const sidebarToggle = document.getElementById('sidebar-toggle');
+    const toggleArrow = document.getElementById('toggle-arrow');
+    const sidebarResizer = document.getElementById('sidebar-resizer');
+    const searchInput = document.getElementById('route-search');
+    const clearSearchBtn = document.getElementById('clear-search');
+    const regionNav = document.getElementById('region-nav');
+    const btnFitAll = document.getElementById('btn-fit-all');
+    const btnToggleAll = document.getElementById('btn-toggle-all');
+    const toggleAllIcon = document.getElementById('toggle-all-icon');
+    const toggleAllText = document.getElementById('toggle-all-text');
+
+    let currentRegion = 'all';
+    let allExpanded = false;
+
+    // Resizable Sidebar logic
+    let isResizing = false;
+    sidebarResizer.addEventListener('mousedown', (e) => {
+      isResizing = true;
+      sidebarResizer.classList.add('resizing');
+      document.body.style.cursor = 'col-resize';
+      document.body.style.userSelect = 'none';
+    });
+
+    document.addEventListener('mousemove', (e) => {
+      if (!isResizing) return;
+      const newWidth = Math.min(Math.max(e.clientX, 280), window.innerWidth - 120);
+      sidebar.style.setProperty('--sidebar-width', newWidth + 'px');
+      map.invalidateSize();
+    });
+
+    document.addEventListener('mouseup', () => {
+      if (isResizing) {
+        isResizing = false;
+        sidebarResizer.classList.remove('resizing');
+        document.body.style.cursor = '';
+        document.body.style.userSelect = '';
+        map.invalidateSize();
+      }
+    });
+
+    // Collapsible Sidebar toggle
+    sidebarToggle.addEventListener('click', () => {
+      sidebar.classList.toggle('collapsed');
+      const isCollapsed = sidebar.classList.contains('collapsed');
+      toggleArrow.className = isCollapsed ? 'fa-solid fa-bars' : 'fa-solid fa-chevron-left';
+      setTimeout(() => {
+        map.invalidateSize();
+      }, 300);
+    });
+
     // Layer groups categorized by route_code
     const routeLayers = {};
     const routeMeta = {};
+    let highlightedLayer = null;
 
     function getRouteColor(code) {
       const colors = {
-        'ES01': '#E63946',  // Camino Francés (Rojo)
-        'ES02': '#D90429',  // Camino Aragonés (Carmesí)
-        'ES03': '#1D3557',  // Camino del Norte (Azul marino)
-        'ES04': '#8338EC',  // Camino Primitivo (Púrpura)
-        'ES05': '#588157',  // Camino Vasco del Interior (Verde oliva)
-        'ES07': '#FB8500',  // Vía de la Plata (Naranja)
-        'ES08': '#023047',  // Camino Sanabrés (Azul noche)
-        'ES09': '#2A9D8F',  // Camino Portugués Central (Verde esmeralda)
-        'ES10': '#0077B6',  // Camino Portugués de la Costa (Azul atlántico)
-        'ES11': '#3A86FF',  // Camino Inglés (Azul royal)
-        'ES12': '#457B9D',  // Camino de Madrid (Azul cerúleo)
-        'ES13': '#E76F51',  // Camino Fisterra y Muxía (Coral atlántico)
-        'ES14': '#6A994E',  // Camino de Invierno (Verde bosque)
-        'ES15': '#BC6C25',  // Camino Mozárabe (Ocre andalusí)
-        'ES16': '#D4A373',  // Camino de Levante (Arena)
-        'ES17': '#0096C7',  // Camino del Ebro (Azul fluvial)
-        'ES18': '#F77F00',  // Camino Catalán (Ámbar)
-        'ES19': '#AE2012',  // Camino del Sureste (Teja)
-        'ES21': '#606C38',  // Camino Olvidado (Verde montaña)
-        'ES25': '#7209B7',  // Camino del Salvador (Violeta)
-        'EU-CZ': '#E76F51', // Rutas Checas (Teja)
-        'EU-DE': '#F4A261', // Rutas Alemanas (Dorado)
-        'EU-FR': '#3D5A80', // Rutas Francesas (Azul ultramar)
-        'EU-PT': '#058C42', // Rutas Portuguesas (Verde portugués)
-        'OTHER': '#6C757D'  // Otras Rutas (Gris)
+        'ES01': '#E63946',  // Camino Francés
+        'ES02': '#D90429',  // Camino Aragonés
+        'ES03': '#1D3557',  // Camino del Norte
+        'ES04': '#8338EC',  // Camino Primitivo
+        'ES05': '#588157',  // Camino Vasco del Interior
+        'ES07': '#FB8500',  // Vía de la Plata
+        'ES08': '#023047',  // Camino Sanabrés
+        'ES09': '#2A9D8F',  // Camino Portugués Central
+        'ES10': '#0077B6',  // Camino Portugués de la Costa
+        'ES11': '#3A86FF',  // Camino Inglés
+        'ES12': '#457B9D',  // Camino de Madrid
+        'ES13': '#E76F51',  // Camino Fisterra y Muxía
+        'ES14': '#6A994E',  // Camino de Invierno
+        'ES15': '#BC6C25',  // Camino Mozárabe
+        'ES16': '#D4A373',  // Camino de Levante
+        'ES17': '#0096C7',  // Camino del Ebro
+        'ES18': '#F77F00',  // Camino Catalán
+        'ES19': '#AE2012',  // Camino del Sureste
+        'ES21': '#606C38',  // Camino Olvidado
+        'ES25': '#7209B7',  // Camino del Salvador
+        'EU-CZ': '#E76F51', // Rutas Checas
+        'EU-DE': '#F4A261', // Rutas Alemanas
+        'EU-FR': '#3D5A80', // Rutas Francesas
+        'EU-PT': '#058C42', // Rutas Portuguesas
+        'OTHER': '#6C757D'
       };
       return colors[code] || '#6C757D';
     }
@@ -482,20 +832,27 @@
     }
 
     function loadGeoJSON(geojson) {
-      const stageListByRoute = {};
+      const counts = { all: 0, es_main: 0, es_connectors: 0, pt: 0, fr: 0, eu_central: 0 };
 
       geojson.features.forEach(feat => {
         const p = feat.properties;
         const code = p.route_code;
+        const reg = p.region_group || 'other';
 
         if (!routeLayers[code]) {
           routeLayers[code] = L.featureGroup().addTo(map);
           routeMeta[code] = {
+            code: code,
             name: p.route_name,
             color: p.color || getRouteColor(code),
+            region_group: reg,
+            visible: true,
             stages: [],
-            totalKm: 0
+            totalKm: 0,
+            bounds: null
           };
+          if (counts[reg] !== undefined) counts[reg]++;
+          counts.all++;
         }
 
         routeMeta[code].totalKm += p.distance_km;
@@ -505,23 +862,43 @@
           onEachFeature: function(f, l) {
             l.bindPopup(createPopup(p));
             l.on('mouseover', function() {
-              this.setStyle({ weight: 6, opacity: 1 });
+              if (highlightedLayer !== l) {
+                this.setStyle({ weight: 6, opacity: 1 });
+              }
             });
             l.on('mouseout', function() {
-              this.setStyle(styleFeature(f));
+              if (highlightedLayer !== l) {
+                this.setStyle(styleFeature(f));
+              }
             });
           }
         });
 
         layer.addTo(routeLayers[code]);
 
+        const layerBounds = layer.getBounds();
+        if (layerBounds.isValid()) {
+          if (!routeMeta[code].bounds) {
+            routeMeta[code].bounds = L.latLngBounds(layerBounds.getSouthWest(), layerBounds.getNorthEast());
+          } else {
+            routeMeta[code].bounds.extend(layerBounds);
+          }
+        }
+
         routeMeta[code].stages.push({
           name: p.stage_name,
           km: p.distance_km,
           file: p.file,
-          bounds: layer.getBounds()
+          layer: layer,
+          bounds: layerBounds
         });
       });
+
+      // Update region counters
+      for (const [k, v] of Object.entries(counts)) {
+        const el = document.getElementById('count-' + k);
+        if (el) el.textContent = v;
+      }
 
       renderSidebar();
     }
@@ -531,34 +908,86 @@
       listEl.innerHTML = '';
 
       const query = filterText.toLowerCase().trim();
+      let visibleRouteCount = 0;
 
       Object.keys(routeMeta).sort().forEach(code => {
         const meta = routeMeta[code];
+
+        // Filter by region
+        if (currentRegion !== 'all' && meta.region_group !== currentRegion) {
+          return;
+        }
+
+        // Filter by search query
         const filteredStages = meta.stages.filter(s => 
-          !query || s.name.toLowerCase().includes(query) || meta.name.toLowerCase().includes(query)
+          !query || s.name.toLowerCase().includes(query) || meta.name.toLowerCase().includes(query) || code.toLowerCase().includes(query)
         );
 
         if (query && filteredStages.length === 0) return;
 
+        visibleRouteCount++;
+
         const groupEl = document.createElement('div');
-        groupEl.className = 'route-group' + (query ? ' open' : '');
+        groupEl.className = 'route-group' + (query || allExpanded ? ' open' : '');
 
         const headerEl = document.createElement('div');
         headerEl.className = 'route-group-header';
         headerEl.style.borderLeftColor = meta.color;
+
+        const isVisible = meta.visible;
+        const eyeClass = isVisible ? 'fa-eye active-layer' : 'fa-eye-slash muted-layer';
+
         headerEl.innerHTML = `
-          <div>
-            <div class="route-title">
+          <div class="route-header-main">
+            <div class="route-title" title="${meta.name}">
               <span class="route-badge">${code}</span>
               ${meta.name}
             </div>
-            <div class="route-meta">${filteredStages.length} etapas &bull; ${Math.round(meta.totalKm)} km</div>
+            <div class="route-meta">
+              <span><strong>${filteredStages.length}</strong> etapas</span> &bull; 
+              <span><strong>${Math.round(meta.totalKm)}</strong> km</span>
+            </div>
           </div>
-          <i class="fa-solid fa-chevron-down toggle-icon" style="color:#94A3B8; font-size:0.8rem"></i>
+          <div class="route-header-actions">
+            <button class="action-btn btn-zoom-route" title="Centrar mapa en este camino">
+              <i class="fa-solid fa-crosshairs"></i>
+            </button>
+            <button class="action-btn btn-toggle-layer ${isVisible ? 'active-layer' : 'muted-layer'}" title="Mostrar/ocultar en el mapa">
+              <i class="fa-solid ${eyeClass}"></i>
+            </button>
+            <i class="fa-solid fa-chevron-down toggle-icon"></i>
+          </div>
         `;
 
-        headerEl.addEventListener('click', () => {
+        // Toggle accordion on header click (except when clicking actions)
+        headerEl.addEventListener('click', (e) => {
+          if (e.target.closest('.action-btn')) return;
           groupEl.classList.toggle('open');
+        });
+
+        // Zoom to route bounds button
+        const btnZoom = headerEl.querySelector('.btn-zoom-route');
+        btnZoom.addEventListener('click', (e) => {
+          e.stopPropagation();
+          if (meta.bounds && meta.bounds.isValid()) {
+            map.fitBounds(meta.bounds, { padding: [40, 40], maxZoom: 13 });
+          }
+        });
+
+        // Toggle route layer visibility
+        const btnToggleLayer = headerEl.querySelector('.btn-toggle-layer');
+        btnToggleLayer.addEventListener('click', (e) => {
+          e.stopPropagation();
+          meta.visible = !meta.visible;
+          if (meta.visible) {
+            map.addLayer(routeLayers[code]);
+            btnToggleLayer.className = 'action-btn btn-toggle-layer active-layer';
+            btnToggleLayer.innerHTML = '<i class="fa-solid fa-eye"></i>';
+          } else {
+            map.removeLayer(routeLayers[code]);
+            btnToggleLayer.className = 'action-btn btn-toggle-layer muted-layer';
+            btnToggleLayer.innerHTML = '<i class="fa-solid fa-eye-slash"></i>';
+          }
         });
 
         const stagesContainer = document.createElement('div');
@@ -577,7 +1006,37 @@
 
           item.addEventListener('click', (e) => {
             if (e.target.closest('.btn-icon')) return;
-            map.fitBounds(s.bounds, { padding: [50, 50], maxZoom: 13 });
+
+            // Highlight selected item in list
+            document.querySelectorAll('.stage-item.highlighted').forEach(el => el.classList.remove('highlighted'));
+            item.classList.add('highlighted');
+
+            // Reset previously highlighted layer
+            if (highlightedLayer && highlightedLayer.setStyle) {
+              highlightedLayer.setStyle({ weight: 3.5, opacity: 0.85 });
+            }
+
+            // Ensure route is visible on map
+            if (!meta.visible) {
+              meta.visible = true;
+              map.addLayer(routeLayers[code]);
+              btnToggleLayer.className = 'action-btn btn-toggle-layer active-layer';
+              btnToggleLayer.innerHTML = '<i class="fa-solid fa-eye"></i>';
+            }
+
+            // Fit bounds and highlight
+            if (s.bounds && s.bounds.isValid()) {
+              map.fitBounds(s.bounds, { padding: [50, 50], maxZoom: 13 });
+              s.layer.eachLayer(sublayer => {
+                if (sublayer.openPopup) {
+                  sublayer.openPopup();
+                }
+                if (sublayer.setStyle) {
+                  sublayer.setStyle({ weight: 6, opacity: 1 });
+                  highlightedLayer = sublayer;
+                }
+              });
+            }
           });
 
           stagesContainer.appendChild(item);
@@ -587,11 +1046,68 @@
         groupEl.appendChild(stagesContainer);
         listEl.appendChild(groupEl);
       });
+
+      // Update counter text
+      const counterEl = document.getElementById('routes-counter');
+      if (visibleRouteCount === 0) {
+        listEl.innerHTML = '<div class="empty-state"><i class="fa-solid fa-route" style="font-size:2rem;margin-bottom:8px;display:block;"></i>No se encontraron rutas con ese criterio</div>';
+        counterEl.textContent = 'Sin resultados';
+      } else {
+        counterEl.textContent = `Mostrando ${visibleRouteCount} caminos`;
+      }
     }
 
-    // Search input listener
-    document.getElementById('route-search').addEventListener('input', (e) => {
-      renderSidebar(e.target.value);
+    // Region nav tabs click listener
+    regionNav.addEventListener('click', (e) => {
+      const tab = e.target.closest('.region-tab');
+      if (!tab) return;
+      document.querySelectorAll('.region-tab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      currentRegion = tab.dataset.region;
+      renderSidebar(searchInput.value);
+    });
+
+    // Search input listeners
+    searchInput.addEventListener('input', (e) => {
+      const val = e.target.value;
+      clearSearchBtn.style.display = val ? 'block' : 'none';
+      renderSidebar(val);
+    });
+
+    clearSearchBtn.addEventListener('click', () => {
+      searchInput.value = '';
+      clearSearchBtn.style.display = 'none';
+      renderSidebar('');
+      searchInput.focus();
+    });
+
+    // Global "Fit all" button
+    btnFitAll.addEventListener('click', () => {
+      const allBounds = L.latLngBounds();
+      let hasValid = false;
+      Object.keys(routeMeta).forEach(code => {
+        if (routeMeta[code].visible && routeMeta[code].bounds && routeMeta[code].bounds.isValid()) {
+          allBounds.extend(routeMeta[code].bounds);
+          hasValid = true;
+        }
+      });
+      if (hasValid) {
+        map.fitBounds(allBounds, { padding: [40, 40] });
+      }
+    });
+
+    // Global "Toggle all" button
+    btnToggleAll.addEventListener('click', () => {
+      allExpanded = !allExpanded;
+      toggleAllIcon.className = allExpanded ? 'fa-solid fa-angles-up' : 'fa-solid fa-angles-down';
+      toggleAllText.textContent = allExpanded ? 'Colapsar' : 'Expandir';
+      document.querySelectorAll('.route-group').forEach(group => {
+        if (allExpanded) {
+          group.classList.add('open');
+        } else {
+          group.classList.remove('open');
+        }
+      });
     });
 
     // Check if routes data is available from window.ROUTES_GEOJSON or fetch

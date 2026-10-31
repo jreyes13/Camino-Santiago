@@ -7,8 +7,8 @@
 <p align="left">
   <img src="https://img.shields.io/badge/QGIS-3.x-589632?style=flat-square&logo=qgis&logoColor=white" alt="QGIS 3.x" />
   <img src="https://img.shields.io/badge/Formats-GPX%20%7C%20KML%20%7C%20GeoJSON-007acc?style=flat-square" alt="GPX, KML and GeoJSON Formats" />
-  <img src="https://img.shields.io/badge/Coverage-41%2C438%20km-orange?style=flat-square" alt="41,438 km covered" />
-  <img src="https://img.shields.io/badge/Tracks-228%20GPX-success?style=flat-square" alt="228 GPX tracks" />
+  <img src="https://img.shields.io/badge/Coverage-24%2C493%20km-orange?style=flat-square" alt="24,493 km covered" />
+  <img src="https://img.shields.io/badge/Tracks-223%20GPX-success?style=flat-square" alt="223 GPX tracks" />
   <img src="https://img.shields.io/badge/Data-IGN%20%2F%20CNIG%20%2F%20FEAACS%20%2F%20OSM-lightgrey?style=flat-square" alt="Data IGN / CNIG / FEAACS / OSM" />
   <img src="https://img.shields.io/badge/License-GPL--3.0-blue?style=flat-square" alt="GPL-3.0 License" />
 </p>
@@ -22,27 +22,26 @@ An open repository dedicated to collecting, processing, standardizing, and visua
 | Code | Route / Camino | Stages & Tracks | Distance (km) | Format |
 | :--- | :--- | :---: | :---: | :---: |
 | **ES01** | Camino Francés | 32 | 809.8 km | GPX |
-| **ES02** | Camino Aragonés (Somport – Puente la Reina) | 1 | 72.9 km | GPX |
-| **ES03** | Camino del Norte (Irún – Santiago, 34 etapas + trazado) | 35 | 2,160.3 km | GPX |
-| **ES04** | Camino Primitivo (Oviedo – Santiago) | 1 | 411.3 km | GPX |
-| **ES07** | Vía de la Plata (Sevilla – Astorga, 3 tramos) | 3 | 892.7 km | GPX |
-| **ES08** | Camino Sanabrés (Granja de Moreruela – Santiago) | 2 | 1,052.3 km | GPX |
+| **ES02** | Camino Aragonés (Somport – Puente la Reina) | 1 | 71.8 km | GPX |
+| **ES03** | Camino del Norte (Irún – Santiago, 34 etapas limpias) | 34 | 747.1 km | GPX |
+| **ES04** | Camino Primitivo (Oviedo – Santiago) | 1 | 303.5 km | GPX |
+| **ES07** | Vía de la Plata (Sevilla – Astorga, 3 tramos) | 3 | 680.0 km | GPX |
+| **ES08** | Camino Sanabrés (Granja de Moreruela – Santiago) | 2 | 419.9 km | GPX |
 | **ES09** | Camino Portugués Central (Galicia) | 18 | 91.4 km | GPX / KML |
 | **ES10** | Camino Portugués de la Costa (Galicia) | 10 | 78.1 km | GPX / KML |
-| **ES11** | Camino Inglés (Ferrol – Santiago) | 1 | 191.8 km | GPX |
-| **ES12** | Camino de Madrid (Madrid – Sahagún) | 24 | 453.4 km | GPX / KML |
-| **ES13** | Camino de Fisterra y Muxía | 1 | 226.0 km | GPX |
-| **ES14** | Camino de Invierno (Ponferrada – Santiago) | 1 | 388.4 km | GPX |
-| **ES15** | Camino Mozárabe (Andalucía – Mérida) | 1 | 893.8 km | GPX |
-| **ES16** | Camino de Levante (Valencia – Zamora) | 1 | 616.2 km | GPX |
-| **ES19** | Camino del Sureste (Alicante – Benavente) | 1 | 3,004.4 km | GPX |
-| **ES21** | Camino Olvidado (Bilbao – Villafranca del Bierzo) | 1 | 603.1 km | GPX |
-| **EU-PT** | Camino Portugués en Portugal (Lisboa – Oporto – Valença) | 2 | 3,042.9 km | GPX |
-| **EU-FR** | Rutas Francesas (*Voies de Saint-Jacques*: Podiensis, Lemovicensis, Turonensis, Tolosana, Piémont) | 5 | 10,535.7 km | GPX |
-| **EU-CZ** | Rutas Jacobeas Checas (*Jakubská cesta*) | 7 | 1,382.6 km | GPX / KML |
-| **EU-DE** | Rutas Alemanas (*Jakobsweg*) | 79 | 12,190.7 km | GPX / KML |
-| **OTHER** | Gran Vía Trans-Europea (Praga – Santiago) | 2 | 2,340.1 km | GPX |
-| **TOTAL** | **Red Jacobea Integrada** | **228** | **41,437.8 km** | **GPX** |
+| **ES11** | Camino Inglés (Ferrol – Santiago) | 1 | 156.7 km | GPX |
+| **ES12** | Camino de Madrid (Madrid – Sahagún) | 24 | 409.8 km | GPX / KML |
+| **ES13** | Camino de Fisterra y Muxía | 1 | 149.2 km | GPX |
+| **ES14** | Camino de Invierno (Ponferrada – Santiago) | 1 | 223.4 km | GPX |
+| **ES15** | Camino Mozárabe (Andalucía – Mérida) | 1 | 427.8 km | GPX |
+| **ES16** | Camino de Levante (Valencia – Zamora) | 1 | 361.0 km | GPX |
+| **ES19** | Camino del Sureste (Alicante – Benavente) | 1 | 891.3 km | GPX |
+| **ES21** | Camino Olvidado (Bilbao – Villafranca del Bierzo) | 1 | 481.0 km | GPX |
+| **EU-PT** | Camino Portugués en Portugal (Lisboa – Oporto – Valença) | 1 | 382.8 km | GPX |
+| **EU-FR** | Rutas Francesas (*Voies de Saint-Jacques*: Podiensis, Lemovicensis, Turonensis, Tolosana, Piémont) | 5 | 4,657.2 km | GPX |
+| **EU-CZ** | Rutas Jacobeas Checas & Praga–Santiago | 9 | 3,006.5 km | GPX / KML |
+| **EU-DE** | Rutas Alemanas (*Jakobsweg*) | 76 | 10,145.1 km | GPX / KML |
+| **TOTAL** | **Red Jacobea Integrada** | **223** | **24,493.1 km** | **GPX** |
 
 ---
 
@@ -51,9 +50,17 @@ An open repository dedicated to collecting, processing, standardizing, and visua
 👉 **Acceso directo online:** **[https://jreyes13.github.io/Camino-Santiago/](https://jreyes13.github.io/Camino-Santiago/)**
 
 También puedes abrir directamente [`index.html`](index.html) de manera local en cualquier navegador:
-- **Base Layers**: OpenStreetMap, IGN Topográfico Nacional (MTN), Ortofoto PNOA (IGN), OpenTopoMap (Relieve), Esri Satélite.
-- **Stage Search & Filtering**: Búsqueda y filtrado en tiempo real por Camino, nombre de etapa o ciudad.
-- **Elevation & Statistics**: Desniveles acumulados ($+$ y $-$), distancias y descarga directa en 1 clic de cada archivo `.gpx`.
+- **Panel lateral redimensionable y deslizable**:
+  - Arrastra el divisor lateral para ampliar o reducir el ancho del panel según tus necesidades.
+  - Botón flotante para ocultar/mostrar el panel y navegar el mapa a pantalla completa.
+  - Filtros rápidos por región (🇪🇸 Principales, 🇪🇸 Enlaces, 🇵🇹 Portugal, 🇫🇷 Francia, 🇩🇪🇨🇿 Europa).
+- **Control individual de capas**:
+  - Botón de centrado rápido (*zoom*) por ruta individual.
+  - Botón de encendido/apagado (*ojo*) para mostrar u ocultar caminos específicos en el mapa.
+- **Topología continua sin saltos**: Algoritmo de segmentación inteligente que evita líneas rectas transversales sobre vacíos cartográficos.
+- **Base Layers 100% libres de API Keys**: OpenStreetMap, IGN Topográfico Nacional (MTN), Ortofoto PNOA (IGN), OpenTopoMap (Relieve), Esri Satélite.
+- **Búsqueda & Filtrado en tiempo real**: Búsqueda instantánea con botón de limpieza por código, nombre o etapa.
+- **Altitudes & Estadísticas**: Métricas de elevación acumulada ($+$ y $-$), distancias continuas y descarga directa en 1 clic de cada archivo `.gpx`.
 
 ---
 
