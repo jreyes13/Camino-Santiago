@@ -17,10 +17,11 @@
       --secondary: #457B9D;
       --accent: #E63946;
       --highlight: #F4A261;
-      --bg-light: #F8FAFC;
+      --bg-page: #F1F5F9;
+      --bg-card: #FFFFFF;
       --dark: #1E293B;
       --border: #E2E8F0;
-      --sidebar-width: 420px;
+      --sidebar-width: 440px;
     }
 
     * {
@@ -35,7 +36,7 @@
       height: 100vh;
       width: 100vw;
       overflow: hidden;
-      background: var(--bg-light);
+      background: var(--bg-page);
       color: var(--dark);
     }
 
@@ -43,14 +44,14 @@
     #sidebar {
       position: relative;
       width: var(--sidebar-width);
-      min-width: 290px;
+      min-width: 320px;
       max-width: 80vw;
       height: 100vh;
       background: #FFFFFF;
       border-right: 1px solid var(--border);
       display: flex;
       flex-direction: column;
-      box-shadow: 3px 0 16px rgba(0,0,0,0.08);
+      box-shadow: 4px 0 20px rgba(0,0,0,0.08);
       z-index: 1000;
       transition: margin-left 0.28s cubic-bezier(0.4, 0, 0.2, 1);
       flex-shrink: 0;
@@ -94,7 +95,7 @@
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.12);
       transition: left 0.28s cubic-bezier(0.4, 0, 0.2, 1), background 0.2s, color 0.2s;
     }
 
@@ -112,54 +113,454 @@
     .sidebar-header {
       background: linear-gradient(135deg, #1D3557 0%, #2A4365 100%);
       color: white;
-      padding: 16px 18px;
+      padding: 14px 18px 12px 18px;
       display: flex;
       flex-direction: column;
       gap: 6px;
     }
 
+    .sidebar-header-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
     .sidebar-header h1 {
-      font-size: 1.2rem;
+      font-size: 1.15rem;
       font-weight: 700;
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
       letter-spacing: -0.3px;
     }
 
     .sidebar-header .subtitle {
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       opacity: 0.88;
     }
 
-    .stats-bar {
+    /* Mode Navigation Tabs (Ficha / Documento vs Índice) */
+    .view-mode-tabs {
       display: grid;
       grid-template-columns: 1fr 1fr;
+      background: #F1F5F9;
+      padding: 4px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .mode-tab {
+      padding: 7px 10px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-align: center;
+      border-radius: 6px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      color: #64748B;
+      transition: all 0.15s ease;
+      user-select: none;
+    }
+
+    .mode-tab:hover {
+      color: var(--primary);
+    }
+
+    .mode-tab.active {
+      background: #FFFFFF;
+      color: var(--primary);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    }
+
+    /* Document Navigation Pager Bar */
+    .doc-pager-bar {
+      background: #FFFFFF;
+      border-bottom: 1px solid var(--border);
+      padding: 8px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       gap: 8px;
+    }
+
+    .pager-btn {
+      background: #F1F5F9;
+      border: 1px solid var(--border);
+      color: var(--primary);
+      padding: 6px 10px;
+      border-radius: 6px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: all 0.15s;
+      flex-shrink: 0;
+    }
+
+    .pager-btn:hover:not(:disabled) {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
+
+    .pager-btn:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+
+    .pager-selector-wrap {
+      flex: 1;
+      min-width: 0;
+      text-align: center;
+    }
+
+    .doc-route-select {
+      width: 100%;
+      padding: 5px 8px;
+      border: 1px solid #CBD5E1;
+      border-radius: 6px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--primary);
+      background: #FAFAFA;
+      outline: none;
+      cursor: pointer;
+      text-overflow: ellipsis;
+    }
+
+    .doc-route-select:focus {
+      border-color: var(--secondary);
+    }
+
+    .pager-counter {
+      font-size: 0.68rem;
+      color: #64748B;
+      margin-top: 2px;
+    }
+
+    /* Document Viewport & Sheet (Modo Documento) */
+    .doc-viewport {
+      flex: 1;
+      overflow-y: auto;
+      background: var(--bg-page);
+      padding: 16px;
+      position: relative;
+      scrollbar-width: thin;
+    }
+
+    .doc-viewport::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .doc-viewport::-webkit-scrollbar-thumb {
+      background: #CBD5E1;
+      border-radius: 4px;
+    }
+
+    /* Document Sheet (Hoja de Papel) */
+    .doc-sheet {
+      background: #FFFFFF;
+      border-radius: 10px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+      border: 1px solid var(--border);
+      padding: 22px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      transition: transform 0.24s cubic-bezier(0.2, 0, 0, 1), opacity 0.24s ease;
+    }
+
+    .doc-sheet.sliding-out-left {
+      transform: translateX(-35px);
+      opacity: 0;
+    }
+
+    .doc-sheet.sliding-out-right {
+      transform: translateX(35px);
+      opacity: 0;
+    }
+
+    .doc-sheet.sliding-in-left {
+      transform: translateX(35px);
+      opacity: 0;
+    }
+
+    .doc-sheet.sliding-in-right {
+      transform: translateX(-35px);
+      opacity: 0;
+    }
+
+    /* Header inside Document Sheet */
+    .doc-sheet-header {
+      border-bottom: 2px solid #F1F5F9;
+      padding-bottom: 14px;
+    }
+
+    .doc-page-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: #64748B;
+      margin-bottom: 6px;
+    }
+
+    .doc-route-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      line-height: 1.25;
+    }
+
+    .doc-route-code {
+      font-size: 0.8rem;
+      background: #E2E8F0;
+      color: #1E293B;
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .doc-region-tag {
+      font-size: 0.78rem;
+      color: #64748B;
       margin-top: 4px;
     }
 
-    .stat-card {
-      background: rgba(255, 255, 255, 0.12);
-      padding: 6px 10px;
-      border-radius: 6px;
-      backdrop-filter: blur(4px);
+    /* Document Metrics Summary */
+    .doc-metrics-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      padding: 12px 14px;
+      border-radius: 8px;
     }
 
-    .stat-card .val {
-      font-size: 1.05rem;
+    .doc-metric-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .doc-metric-item .val {
+      font-size: 1.15rem;
       font-weight: 700;
-      color: #F1FAEE;
+      color: var(--primary);
     }
 
-    .stat-card .lbl {
+    .doc-metric-item .lbl {
       font-size: 0.68rem;
       text-transform: uppercase;
       letter-spacing: 0.5px;
-      opacity: 0.82;
+      color: #64748B;
+      font-weight: 600;
     }
 
-    /* Search Box */
+    /* Document Sheet Actions Bar */
+    .doc-sheet-actions {
+      display: flex;
+      gap: 8px;
+    }
+
+    .doc-action-btn {
+      flex: 1;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: all 0.15s;
+    }
+
+    .doc-action-btn.btn-primary {
+      background: var(--primary);
+      color: white;
+      border: 1px solid var(--primary);
+    }
+
+    .doc-action-btn.btn-primary:hover {
+      background: var(--secondary);
+      border-color: var(--secondary);
+    }
+
+    .doc-action-btn.btn-outline {
+      background: #FFFFFF;
+      color: #475569;
+      border: 1px solid #CBD5E1;
+    }
+
+    .doc-action-btn.btn-outline:hover {
+      background: #F1F5F9;
+      color: var(--primary);
+    }
+
+    .doc-action-btn.active-eye {
+      color: var(--secondary);
+      border-color: var(--secondary);
+    }
+
+    /* Document Stages Section */
+    .doc-stages-section {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .doc-section-title {
+      font-size: 0.86rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #475569;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #E2E8F0;
+      padding-bottom: 6px;
+      margin-top: 4px;
+    }
+
+    .doc-stages-list {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .doc-stage-row {
+      padding: 9px 12px;
+      background: #FAFAFA;
+      border: 1px solid #E2E8F0;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .doc-stage-row:hover {
+      background: #F1F5F9;
+      border-color: #CBD5E1;
+      transform: translateX(2px);
+    }
+
+    .doc-stage-row.highlighted {
+      background: #EBF8FF;
+      border-color: #90CDF4;
+      box-shadow: 0 0 0 1px #3182CE;
+    }
+
+    .doc-stage-info {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .doc-stage-name {
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: #1E293B;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .doc-stage-meta {
+      font-size: 0.72rem;
+      color: #64748B;
+      display: flex;
+      gap: 8px;
+    }
+
+    .doc-stage-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-left: 10px;
+    }
+
+    .doc-download-icon {
+      color: var(--secondary);
+      font-size: 0.85rem;
+      padding: 4px 6px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: all 0.15s;
+    }
+
+    .doc-download-icon:hover {
+      color: var(--accent);
+      background: rgba(230, 57, 70, 0.1);
+    }
+
+    /* Document Sheet Footer Navigation */
+    .doc-sheet-footer-nav {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 14px;
+      border-top: 1px solid #E2E8F0;
+      margin-top: 8px;
+    }
+
+    .doc-footer-link {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--secondary);
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .doc-footer-link:hover {
+      color: var(--primary);
+      text-decoration: underline;
+    }
+
+    /* Table of Contents View (Modo Índice) */
+    .index-view {
+      display: none;
+      flex: 1;
+      flex-direction: column;
+      overflow-y: hidden;
+    }
+
+    .index-view.active {
+      display: flex;
+    }
+
+    .doc-view-container {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .doc-view-container.hidden {
+      display: none;
+    }
+
+    /* Search Box in Index View */
     .search-box {
       padding: 10px 14px;
       border-bottom: 1px solid var(--border);
@@ -211,7 +612,7 @@
       color: var(--accent);
     }
 
-    /* Region Navigation Tabs / Chips */
+    /* Region Navigation Tabs / Chips in Index */
     .region-nav {
       padding: 8px 14px;
       border-bottom: 1px solid var(--border);
@@ -234,7 +635,7 @@
 
     .region-tab {
       padding: 5px 10px;
-      font-size: 0.76rem;
+      font-size: 0.74rem;
       font-weight: 600;
       border-radius: 16px;
       background: #F1F5F9;
@@ -270,247 +671,73 @@
       background: rgba(255,255,255,0.25);
     }
 
-    /* Sub-toolbar */
-    .toolbar-bar {
-      padding: 8px 14px;
-      background: #F8FAFC;
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      font-size: 0.75rem;
-      color: #64748B;
-    }
-
-    .toolbar-actions {
-      display: flex;
-      gap: 8px;
-    }
-
-    .toolbar-btn {
-      background: none;
-      border: none;
-      color: var(--secondary);
-      font-size: 0.75rem;
-      font-weight: 600;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      padding: 2px 4px;
-      border-radius: 4px;
-    }
-
-    .toolbar-btn:hover {
-      color: var(--primary);
-      background: #E2E8F0;
-    }
-
-    /* Routes List Container */
-    .routes-list {
+    /* Index List Container */
+    .index-list {
       flex: 1;
       overflow-y: auto;
       padding: 10px 14px;
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 8px;
       scrollbar-width: thin;
     }
 
-    .routes-list::-webkit-scrollbar {
+    .index-list::-webkit-scrollbar {
       width: 6px;
     }
 
-    .routes-list::-webkit-scrollbar-thumb {
+    .index-list::-webkit-scrollbar-thumb {
       background: #CBD5E1;
       border-radius: 4px;
     }
 
-    /* Route Group Card */
-    .route-group {
+    .index-item-card {
+      padding: 10px 12px;
       border: 1px solid var(--border);
       border-radius: 8px;
-      overflow: hidden;
       background: #FFFFFF;
-      transition: box-shadow 0.2s, border-color 0.2s;
-    }
-
-    .route-group:hover {
-      box-shadow: 0 3px 10px rgba(0,0,0,0.06);
-    }
-
-    .route-group-header {
-      padding: 9px 12px;
+      cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      cursor: pointer;
-      user-select: none;
       border-left: 6px solid #CBD5E1;
+      transition: all 0.15s ease;
+    }
+
+    .index-item-card:hover {
       background: #F8FAFC;
-      transition: background 0.15s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      transform: translateX(3px);
     }
 
-    .route-group-header:hover {
-      background: #F1F5F9;
-    }
-
-    .route-header-main {
+    .index-item-main {
       flex: 1;
       min-width: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
     }
 
-    .route-title {
+    .index-item-title {
       font-size: 0.88rem;
       font-weight: 600;
+      color: #1E293B;
       display: flex;
       align-items: center;
       gap: 6px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
     }
 
-    .route-badge {
-      font-size: 0.68rem;
-      background: #E2E8F0;
-      color: #334155;
-      padding: 1px 5px;
-      border-radius: 4px;
-      font-weight: 700;
-      flex-shrink: 0;
-    }
-
-    .route-meta {
+    .index-item-meta {
       font-size: 0.72rem;
       color: #64748B;
-      display: flex;
-      gap: 6px;
+      margin-top: 2px;
     }
 
-    .route-header-actions {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      margin-left: 8px;
-    }
-
-    .action-btn {
-      width: 24px;
-      height: 24px;
-      border-radius: 4px;
-      border: 1px solid transparent;
-      background: transparent;
-      color: #64748B;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.78rem;
-      cursor: pointer;
-      transition: all 0.15s;
-    }
-
-    .action-btn:hover {
-      background: #E2E8F0;
-      color: var(--primary);
-    }
-
-    .action-btn.active-layer {
+    .index-open-btn {
       color: var(--secondary);
-    }
-
-    .action-btn.muted-layer {
-      color: #CBD5E1;
-    }
-
-    .toggle-icon {
-      font-size: 0.75rem;
-      color: #94A3B8;
-      transition: transform 0.2s ease;
-      margin-left: 4px;
-    }
-
-    .route-group.open .toggle-icon {
-      transform: rotate(180deg);
-    }
-
-    /* Stages Container */
-    .stages-container {
-      display: none;
-      padding: 6px 10px 8px 10px;
-      border-top: 1px solid var(--border);
-      flex-direction: column;
+      font-size: 0.8rem;
+      display: flex;
+      align-items: center;
       gap: 4px;
-      background: #FFFFFF;
-    }
-
-    .route-group.open .stages-container {
-      display: flex;
-    }
-
-    .stage-item {
-      padding: 5px 8px;
-      border-radius: 5px;
-      font-size: 0.8rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      cursor: pointer;
-      transition: background 0.15s;
-      border: 1px solid transparent;
-    }
-
-    .stage-item:hover {
-      background: #F1F5F9;
-      border-color: #E2E8F0;
-    }
-
-    .stage-item.highlighted {
-      background: #EBF8FF;
-      border-color: #90CDF4;
-    }
-
-    .stage-name {
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      flex: 1;
-      padding-right: 8px;
-    }
-
-    .stage-actions {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      flex-shrink: 0;
-    }
-
-    .stage-km {
-      font-size: 0.72rem;
-      color: #64748B;
       font-weight: 600;
-    }
-
-    .btn-icon {
-      color: var(--secondary);
-      cursor: pointer;
-      padding: 2px;
-      text-decoration: none;
-      font-size: 0.8rem;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 20px;
-      height: 20px;
-      border-radius: 3px;
-    }
-
-    .btn-icon:hover {
-      color: var(--accent);
-      background: rgba(230, 57, 70, 0.1);
+      margin-left: 8px;
     }
 
     /* Map Area */
@@ -581,14 +808,6 @@
     .popup-btn:hover {
       background: var(--primary);
     }
-
-    /* Empty state */
-    .empty-state {
-      padding: 30px 20px;
-      text-align: center;
-      color: #94A3B8;
-      font-size: 0.85rem;
-    }
   </style>
 </head>
 <body>
@@ -596,68 +815,83 @@
   <!-- Sidebar -->
   <div id="sidebar">
     <div class="sidebar-header">
-      <h1><i class="fa-solid fa-map-location-dot"></i> Camino de Santiago</h1>
-      <div class="subtitle">Repositorio Cartográfico & Tracks GPX</div>
-      
-      <div class="stats-bar">
-        <div class="stat-card">
-          <div class="val" id="total-km">24,493 km</div>
-          <div class="lbl">Trazado Continuo</div>
-        </div>
-        <div class="stat-card">
-          <div class="val" id="total-tracks">223</div>
-          <div class="lbl">Etapas / Tracks GPX</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Search Box -->
-    <div class="search-box">
-      <div class="search-input-wrapper">
-        <i class="fa-solid fa-magnifying-glass search-icon"></i>
-        <input type="text" id="route-search" placeholder="Buscar etapa, ruta o ciudad..." />
-        <button class="clear-search-btn" id="clear-search" title="Limpiar búsqueda"><i class="fa-solid fa-xmark"></i></button>
-      </div>
-    </div>
-
-    <!-- Region Navigation Tabs -->
-    <div class="region-nav" id="region-nav">
-      <div class="region-tab active" data-region="all">
-        Todas <span class="count" id="count-all">20</span>
-      </div>
-      <div class="region-tab" data-region="es_main">
-        🇪🇸 Principales <span class="count" id="count-es_main">9</span>
-      </div>
-      <div class="region-tab" data-region="es_connectors">
-        🇪🇸 Enlaces & Vías <span class="count" id="count-es_connectors">5</span>
-      </div>
-      <div class="region-tab" data-region="pt">
-        🇵🇹 Portugal <span class="count" id="count-pt">3</span>
-      </div>
-      <div class="region-tab" data-region="fr">
-        🇫🇷 Francia <span class="count" id="count-fr">1</span>
-      </div>
-      <div class="region-tab" data-region="eu_central">
-        🇩🇪🇨🇿 Europa <span class="count" id="count-eu_central">2</span>
-      </div>
-    </div>
-
-    <!-- Sub-toolbar -->
-    <div class="toolbar-bar">
-      <span id="routes-counter">Mostrando todas las rutas</span>
-      <div class="toolbar-actions">
-        <button class="toolbar-btn" id="btn-fit-all" title="Ver toda la red en el mapa">
-          <i class="fa-solid fa-globe"></i> Red completa
-        </button>
-        <button class="toolbar-btn" id="btn-toggle-all" title="Expandir o colapsar todas">
-          <i class="fa-solid fa-angles-down" id="toggle-all-icon"></i> <span id="toggle-all-text">Expandir</span>
+      <div class="sidebar-header-top">
+        <h1><i class="fa-solid fa-map-location-dot"></i> Camino de Santiago</h1>
+        <button id="btn-fit-global" style="background:rgba(255,255,255,0.15);border:none;color:white;padding:3px 7px;border-radius:4px;font-size:0.72rem;cursor:pointer;" title="Encuadrar toda la red jacobea">
+          <i class="fa-solid fa-globe"></i> Red Global
         </button>
       </div>
+      <div class="subtitle">Repositorio Cartográfico & Tracks GPX (24.493 km)</div>
     </div>
 
-    <!-- Routes Accordion List -->
-    <div class="routes-list" id="routes-list">
-      <!-- Generated dynamically -->
+    <!-- Mode Switcher Tabs -->
+    <div class="view-mode-tabs">
+      <div class="mode-tab active" id="tab-doc-mode">
+        <i class="fa-solid fa-book-open"></i> Ficha Deslizable
+      </div>
+      <div class="mode-tab" id="tab-index-mode">
+        <i class="fa-solid fa-list-ul"></i> Índice General
+      </div>
+    </div>
+
+    <!-- 1. MODO DOCUMENTO DESLIZABLE (SLIDING DOSSIER) -->
+    <div class="doc-view-container" id="doc-view-container">
+      <!-- Pager Controller Bar -->
+      <div class="doc-pager-bar">
+        <button class="pager-btn" id="btn-doc-prev" title="Camino anterior (Flecha Izquierda ←)">
+          <i class="fa-solid fa-chevron-left"></i> Anterior
+        </button>
+        <div class="pager-selector-wrap">
+          <select id="doc-route-select" class="doc-route-select" title="Selecciona un camino para abrir su ficha"></select>
+          <div class="pager-counter" id="doc-pager-counter">Página 1 de 20</div>
+        </div>
+        <button class="pager-btn" id="btn-doc-next" title="Camino siguiente (Flecha Derecha →)">
+          Siguiente <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+
+      <!-- Scrollable Viewport with Animated Document Sheet -->
+      <div class="doc-viewport" id="doc-viewport">
+        <div class="doc-sheet" id="doc-sheet">
+          <!-- Dynamic Document Sheet Contents -->
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. MODO ÍNDICE GENERAL (TABLE OF CONTENTS) -->
+    <div class="index-view" id="index-view">
+      <div class="search-box">
+        <div class="search-input-wrapper">
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          <input type="text" id="route-search" placeholder="Buscar camino, ciudad o etapa..." />
+          <button class="clear-search-btn" id="clear-search" title="Limpiar búsqueda"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+      </div>
+
+      <div class="region-nav" id="region-nav">
+        <div class="region-tab active" data-region="all">
+          Todas <span class="count" id="count-all">20</span>
+        </div>
+        <div class="region-tab" data-region="es_main">
+          🇪🇸 Principales <span class="count" id="count-es_main">9</span>
+        </div>
+        <div class="region-tab" data-region="es_connectors">
+          🇪🇸 Enlaces <span class="count" id="count-es_connectors">5</span>
+        </div>
+        <div class="region-tab" data-region="pt">
+          🇵🇹 Portugal <span class="count" id="count-pt">3</span>
+        </div>
+        <div class="region-tab" data-region="fr">
+          🇫🇷 Francia <span class="count" id="count-fr">1</span>
+        </div>
+        <div class="region-tab" data-region="eu_central">
+          🇩🇪🇨🇿 Europa <span class="count" id="count-eu_central">2</span>
+        </div>
+      </div>
+
+      <div class="index-list" id="index-list">
+        <!-- Dynamic Index Items -->
+      </div>
     </div>
 
     <!-- Draggable Resizer Handle -->
@@ -713,21 +947,40 @@
     baseMaps["OpenStreetMap"].addTo(map);
     L.control.layers(baseMaps, null, { position: 'topright' }).addTo(map);
 
-    // Sidebar DOM elements
+    // Sidebar Elements
     const sidebar = document.getElementById('sidebar');
     const sidebarToggle = document.getElementById('sidebar-toggle');
     const toggleArrow = document.getElementById('toggle-arrow');
     const sidebarResizer = document.getElementById('sidebar-resizer');
+    
+    // View Switcher Elements
+    const tabDocMode = document.getElementById('tab-doc-mode');
+    const tabIndexMode = document.getElementById('tab-index-mode');
+    const docViewContainer = document.getElementById('doc-view-container');
+    const indexView = document.getElementById('index-view');
+
+    // Document View Elements
+    const btnDocPrev = document.getElementById('btn-doc-prev');
+    const btnDocNext = document.getElementById('btn-doc-next');
+    const docRouteSelect = document.getElementById('doc-route-select');
+    const docPagerCounter = document.getElementById('doc-pager-counter');
+    const docViewport = document.getElementById('doc-viewport');
+    const docSheet = document.getElementById('doc-sheet');
+
+    // Index View Elements
     const searchInput = document.getElementById('route-search');
     const clearSearchBtn = document.getElementById('clear-search');
     const regionNav = document.getElementById('region-nav');
-    const btnFitAll = document.getElementById('btn-fit-all');
-    const btnToggleAll = document.getElementById('btn-toggle-all');
-    const toggleAllIcon = document.getElementById('toggle-all-icon');
-    const toggleAllText = document.getElementById('toggle-all-text');
+    const indexList = document.getElementById('index-list');
+    const btnFitGlobal = document.getElementById('btn-fit-global');
 
+    // App State
+    let routesOrder = [];
+    let currentRouteIndex = 0;
     let currentRegion = 'all';
-    let allExpanded = false;
+    const routeLayers = {};
+    const routeMeta = {};
+    let highlightedLayer = null;
 
     // Resizable Sidebar logic
     let isResizing = false;
@@ -740,7 +993,7 @@
 
     document.addEventListener('mousemove', (e) => {
       if (!isResizing) return;
-      const newWidth = Math.min(Math.max(e.clientX, 280), window.innerWidth - 120);
+      const newWidth = Math.min(Math.max(e.clientX, 320), window.innerWidth - 120);
       sidebar.style.setProperty('--sidebar-width', newWidth + 'px');
       map.invalidateSize();
     });
@@ -760,15 +1013,8 @@
       sidebar.classList.toggle('collapsed');
       const isCollapsed = sidebar.classList.contains('collapsed');
       toggleArrow.className = isCollapsed ? 'fa-solid fa-bars' : 'fa-solid fa-chevron-left';
-      setTimeout(() => {
-        map.invalidateSize();
-      }, 300);
+      setTimeout(() => map.invalidateSize(), 300);
     });
-
-    // Layer groups categorized by route_code
-    const routeLayers = {};
-    const routeMeta = {};
-    let highlightedLayer = null;
 
     function getRouteColor(code) {
       const colors = {
@@ -799,6 +1045,17 @@
         'OTHER': '#6C757D'
       };
       return colors[code] || '#6C757D';
+    }
+
+    function getRegionLabel(reg) {
+      switch(reg) {
+        case 'es_main': return '🇪🇸 España: Gran Ruta Jacobea';
+        case 'es_connectors': return '🇪🇸 España: Camino Histórico & Enlace';
+        case 'pt': return '🇵🇹 Portugal: Caminho Português';
+        case 'fr': return '🇫🇷 Francia: Voie Historique de Saint-Jacques';
+        case 'eu_central': return '🇩🇪🇨🇿 Europa Central: Jakobsweg';
+        default: return 'Ruta Jacobea Europea';
+      }
     }
 
     function styleFeature(feature) {
@@ -849,6 +1106,8 @@
             visible: true,
             stages: [],
             totalKm: 0,
+            eleGain: 0,
+            eleLoss: 0,
             bounds: null
           };
           if (counts[reg] !== undefined) counts[reg]++;
@@ -856,6 +1115,8 @@
         }
 
         routeMeta[code].totalKm += p.distance_km;
+        if (p.ele_gain) routeMeta[code].eleGain += p.ele_gain;
+        if (p.ele_loss) routeMeta[code].eleLoss += p.ele_loss;
         
         const layer = L.geoJSON(feat, {
           style: styleFeature,
@@ -888,149 +1149,178 @@
         routeMeta[code].stages.push({
           name: p.stage_name,
           km: p.distance_km,
+          ele_gain: p.ele_gain,
+          ele_loss: p.ele_loss,
           file: p.file,
           layer: layer,
           bounds: layerBounds
         });
       });
 
-      // Update region counters
+      // Update region count badges in Index
       for (const [k, v] of Object.entries(counts)) {
         const el = document.getElementById('count-' + k);
         if (el) el.textContent = v;
       }
 
-      renderSidebar();
+      // Populate routes order
+      routesOrder = Object.keys(routeMeta).sort();
+
+      // Populate Select Dropdown
+      docRouteSelect.innerHTML = '';
+      routesOrder.forEach((code, idx) => {
+        const opt = document.createElement('option');
+        opt.value = idx;
+        opt.textContent = `${idx + 1}. [${code}] ${routeMeta[code].name} (${Math.round(routeMeta[code].totalKm)} km)`;
+        docRouteSelect.appendChild(opt);
+      });
+
+      // Initial Render
+      renderDocumentSheet(0, 'init', false);
+      renderIndexView();
     }
 
-    function renderSidebar(filterText = '') {
-      const listEl = document.getElementById('routes-list');
-      listEl.innerHTML = '';
+    /* ========================================================
+       RENDER MODO DOCUMENTO DESLIZABLE (SLIDING DOSSIER)
+       ======================================================== */
+    function renderDocumentSheet(index, direction = 'next', autoZoom = true) {
+      if (index < 0 || index >= routesOrder.length) return;
+      currentRouteIndex = index;
 
-      const query = filterText.toLowerCase().trim();
-      let visibleRouteCount = 0;
+      const code = routesOrder[index];
+      const meta = routeMeta[code];
 
-      Object.keys(routeMeta).sort().forEach(code => {
-        const meta = routeMeta[code];
+      // Update Pager Controls
+      btnDocPrev.disabled = (index === 0);
+      btnDocNext.disabled = (index === routesOrder.length - 1);
+      docRouteSelect.value = index;
+      docPagerCounter.textContent = `Página ${index + 1} de ${routesOrder.length} caminos`;
 
-        // Filter by region
-        if (currentRegion !== 'all' && meta.region_group !== currentRegion) {
-          return;
-        }
+      // Slide Animation
+      if (direction === 'next') {
+        docSheet.className = 'doc-sheet sliding-out-left';
+      } else if (direction === 'prev') {
+        docSheet.className = 'doc-sheet sliding-out-right';
+      }
 
-        // Filter by search query
-        const filteredStages = meta.stages.filter(s => 
-          !query || s.name.toLowerCase().includes(query) || meta.name.toLowerCase().includes(query) || code.toLowerCase().includes(query)
-        );
+      setTimeout(() => {
+        // Build Sheet Content
+        const prevCode = index > 0 ? routesOrder[index - 1] : null;
+        const nextCode = index < routesOrder.length - 1 ? routesOrder[index + 1] : null;
 
-        if (query && filteredStages.length === 0) return;
+        const eleGainStr = meta.eleGain > 0 ? `+${Math.round(meta.eleGain).toLocaleString()} m` : '--';
+        const eleLossStr = meta.eleLoss > 0 ? `-${Math.round(meta.eleLoss).toLocaleString()} m` : '--';
 
-        visibleRouteCount++;
-
-        const groupEl = document.createElement('div');
-        groupEl.className = 'route-group' + (query || allExpanded ? ' open' : '');
-
-        const headerEl = document.createElement('div');
-        headerEl.className = 'route-group-header';
-        headerEl.style.borderLeftColor = meta.color;
-
-        const isVisible = meta.visible;
-        const eyeClass = isVisible ? 'fa-eye active-layer' : 'fa-eye-slash muted-layer';
-
-        headerEl.innerHTML = `
-          <div class="route-header-main">
-            <div class="route-title" title="${meta.name}">
-              <span class="route-badge">${code}</span>
-              ${meta.name}
+        docSheet.innerHTML = `
+          <div class="doc-sheet-header">
+            <div class="doc-page-badge">
+              <i class="fa-solid fa-bookmark" style="color:${meta.color}"></i>
+              ${getRegionLabel(meta.region_group)}
             </div>
-            <div class="route-meta">
-              <span><strong>${filteredStages.length}</strong> etapas</span> &bull; 
-              <span><strong>${Math.round(meta.totalKm)}</strong> km</span>
+            <div class="doc-route-title">
+              <span class="doc-route-code">${code}</span>
+              <span>${meta.name}</span>
+            </div>
+            <div class="doc-region-tag">${meta.stages.length} etapas registradas &bull; Red Jacobea Oficial</div>
+          </div>
+
+          <div class="doc-metrics-grid">
+            <div class="doc-metric-item">
+              <span class="val">${meta.totalKm.toFixed(1)} km</span>
+              <span class="lbl">Distancia Continua</span>
+            </div>
+            <div class="doc-metric-item">
+              <span class="val">${meta.stages.length}</span>
+              <span class="lbl">Etapas / Tracks</span>
+            </div>
+            <div class="doc-metric-item">
+              <span class="val" style="color:#2E7D32;">${eleGainStr}</span>
+              <span class="lbl">Desnivel Acumulado (+)</span>
+            </div>
+            <div class="doc-metric-item">
+              <span class="val" style="color:#C62828;">${eleLossStr}</span>
+              <span class="lbl">Desnivel Acumulado (-)</span>
             </div>
           </div>
-          <div class="route-header-actions">
-            <button class="action-btn btn-zoom-route" title="Centrar mapa en este camino">
-              <i class="fa-solid fa-crosshairs"></i>
+
+          <div class="doc-sheet-actions">
+            <button class="doc-action-btn btn-primary" id="doc-btn-center" title="Centrar mapa en este camino">
+              <i class="fa-solid fa-crosshairs"></i> Centrar en Mapa
             </button>
-            <button class="action-btn btn-toggle-layer ${isVisible ? 'active-layer' : 'muted-layer'}" title="Mostrar/ocultar en el mapa">
-              <i class="fa-solid ${eyeClass}"></i>
+            <button class="doc-action-btn btn-outline ${meta.visible ? 'active-eye' : ''}" id="doc-btn-toggle" title="Mostrar u ocultar trazado en el mapa">
+              <i class="fa-solid ${meta.visible ? 'fa-eye' : 'fa-eye-slash'}"></i>
+              ${meta.visible ? 'Visible en Mapa' : 'Oculto en Mapa'}
             </button>
-            <i class="fa-solid fa-chevron-down toggle-icon"></i>
+          </div>
+
+          <div class="doc-stages-section">
+            <div class="doc-section-title">
+              <span>Etapas y Trazados GPX</span>
+              <span style="font-size:0.75rem;color:#64748B;">${meta.stages.length} tramos</span>
+            </div>
+            <div class="doc-stages-list" id="doc-stages-list"></div>
+          </div>
+
+          <div class="doc-sheet-footer-nav">
+            ${prevCode ? `
+              <button class="doc-footer-link" id="doc-footer-prev">
+                <i class="fa-solid fa-arrow-left"></i> ${routeMeta[prevCode].name}
+              </button>
+            ` : '<span></span>'}
+
+            ${nextCode ? `
+              <button class="doc-footer-link" id="doc-footer-next" style="margin-left:auto;">
+                ${routeMeta[nextCode].name} <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            ` : '<span></span>'}
           </div>
         `;
 
-        // Toggle accordion on header click (except when clicking actions)
-        headerEl.addEventListener('click', (e) => {
-          if (e.target.closest('.action-btn')) return;
-          groupEl.classList.toggle('open');
-        });
+        // Render Stages
+        const stagesListEl = docSheet.querySelector('#doc-stages-list');
+        meta.stages.forEach((s, sIdx) => {
+          const row = document.createElement('div');
+          row.className = 'doc-stage-row';
+          const stageEleGain = s.ele_gain ? `+${Math.round(s.ele_gain)}m` : '';
+          const stageEleLoss = s.ele_loss ? `-${Math.round(s.ele_loss)}m` : '';
 
-        // Zoom to route bounds button
-        const btnZoom = headerEl.querySelector('.btn-zoom-route');
-        btnZoom.addEventListener('click', (e) => {
-          e.stopPropagation();
-          if (meta.bounds && meta.bounds.isValid()) {
-            map.fitBounds(meta.bounds, { padding: [40, 40], maxZoom: 13 });
-          }
-        });
-
-        // Toggle route layer visibility
-        const btnToggleLayer = headerEl.querySelector('.btn-toggle-layer');
-        btnToggleLayer.addEventListener('click', (e) => {
-          e.stopPropagation();
-          meta.visible = !meta.visible;
-          if (meta.visible) {
-            map.addLayer(routeLayers[code]);
-            btnToggleLayer.className = 'action-btn btn-toggle-layer active-layer';
-            btnToggleLayer.innerHTML = '<i class="fa-solid fa-eye"></i>';
-          } else {
-            map.removeLayer(routeLayers[code]);
-            btnToggleLayer.className = 'action-btn btn-toggle-layer muted-layer';
-            btnToggleLayer.innerHTML = '<i class="fa-solid fa-eye-slash"></i>';
-          }
-        });
-
-        const stagesContainer = document.createElement('div');
-        stagesContainer.className = 'stages-container';
-
-        filteredStages.forEach(s => {
-          const item = document.createElement('div');
-          item.className = 'stage-item';
-          item.innerHTML = `
-            <span class="stage-name" title="${s.name}">${s.name}</span>
-            <div class="stage-actions">
-              <span class="stage-km">${s.km} km</span>
-              <a class="btn-icon" href="${s.file}" download title="Descargar GPX"><i class="fa-solid fa-download"></i></a>
+          row.innerHTML = `
+            <div class="doc-stage-info">
+              <div class="doc-stage-name" title="${s.name}">
+                <strong>${(sIdx + 1).toString().padStart(2, '0')}.</strong> ${s.name}
+              </div>
+              <div class="doc-stage-meta">
+                <span><strong>${s.km} km</strong></span>
+                ${stageEleGain ? `<span>${stageEleGain}</span>` : ''}
+                ${stageEleLoss ? `<span>${stageEleLoss}</span>` : ''}
+              </div>
+            </div>
+            <div class="doc-stage-actions">
+              <a class="doc-download-icon" href="${s.file}" download title="Descargar GPX de esta etapa">
+                <i class="fa-solid fa-download"></i>
+              </a>
             </div>
           `;
 
-          item.addEventListener('click', (e) => {
-            if (e.target.closest('.btn-icon')) return;
+          row.addEventListener('click', (e) => {
+            if (e.target.closest('.doc-download-icon')) return;
 
-            // Highlight selected item in list
-            document.querySelectorAll('.stage-item.highlighted').forEach(el => el.classList.remove('highlighted'));
-            item.classList.add('highlighted');
+            document.querySelectorAll('.doc-stage-row.highlighted').forEach(el => el.classList.remove('highlighted'));
+            row.classList.add('highlighted');
 
-            // Reset previously highlighted layer
             if (highlightedLayer && highlightedLayer.setStyle) {
               highlightedLayer.setStyle({ weight: 3.5, opacity: 0.85 });
             }
 
-            // Ensure route is visible on map
             if (!meta.visible) {
               meta.visible = true;
               map.addLayer(routeLayers[code]);
-              btnToggleLayer.className = 'action-btn btn-toggle-layer active-layer';
-              btnToggleLayer.innerHTML = '<i class="fa-solid fa-eye"></i>';
             }
 
-            // Fit bounds and highlight
             if (s.bounds && s.bounds.isValid()) {
               map.fitBounds(s.bounds, { padding: [50, 50], maxZoom: 13 });
               s.layer.eachLayer(sublayer => {
-                if (sublayer.openPopup) {
-                  sublayer.openPopup();
-                }
+                if (sublayer.openPopup) sublayer.openPopup();
                 if (sublayer.setStyle) {
                   sublayer.setStyle({ weight: 6, opacity: 1 });
                   highlightedLayer = sublayer;
@@ -1039,50 +1329,180 @@
             }
           });
 
-          stagesContainer.appendChild(item);
+          stagesListEl.appendChild(row);
         });
 
-        groupEl.appendChild(headerEl);
-        groupEl.appendChild(stagesContainer);
-        listEl.appendChild(groupEl);
-      });
+        // Attach Action Button Handlers
+        docSheet.querySelector('#doc-btn-center').addEventListener('click', () => {
+          if (meta.bounds && meta.bounds.isValid()) {
+            map.fitBounds(meta.bounds, { padding: [40, 40], maxZoom: 12 });
+          }
+        });
 
-      // Update counter text
-      const counterEl = document.getElementById('routes-counter');
-      if (visibleRouteCount === 0) {
-        listEl.innerHTML = '<div class="empty-state"><i class="fa-solid fa-route" style="font-size:2rem;margin-bottom:8px;display:block;"></i>No se encontraron rutas con ese criterio</div>';
-        counterEl.textContent = 'Sin resultados';
-      } else {
-        counterEl.textContent = `Mostrando ${visibleRouteCount} caminos`;
-      }
+        docSheet.querySelector('#doc-btn-toggle').addEventListener('click', (e) => {
+          const btn = e.currentTarget;
+          meta.visible = !meta.visible;
+          if (meta.visible) {
+            map.addLayer(routeLayers[code]);
+            btn.className = 'doc-action-btn btn-outline active-eye';
+            btn.innerHTML = '<i class="fa-solid fa-eye"></i> Visible en Mapa';
+          } else {
+            map.removeLayer(routeLayers[code]);
+            btn.className = 'doc-action-btn btn-outline';
+            btn.innerHTML = '<i class="fa-solid fa-eye-slash"></i> Oculto en Mapa';
+          }
+        });
+
+        // Footer links
+        const footerPrev = docSheet.querySelector('#doc-footer-prev');
+        if (footerPrev) {
+          footerPrev.addEventListener('click', () => renderDocumentSheet(index - 1, 'prev', true));
+        }
+        const footerNext = docSheet.querySelector('#doc-footer-next');
+        if (footerNext) {
+          footerNext.addEventListener('click', () => renderDocumentSheet(index + 1, 'next', true));
+        }
+
+        // Slide In Animation
+        if (direction === 'next') {
+          docSheet.className = 'doc-sheet sliding-in-left';
+        } else if (direction === 'prev') {
+          docSheet.className = 'doc-sheet sliding-in-right';
+        }
+
+        requestAnimationFrame(() => {
+          docSheet.className = 'doc-sheet';
+          docViewport.scrollTop = 0;
+        });
+
+        // Smoothly focus map on active Camino
+        if (autoZoom && meta.bounds && meta.bounds.isValid()) {
+          map.fitBounds(meta.bounds, { padding: [50, 50], maxZoom: 12, animate: true, duration: 0.8 });
+        }
+      }, direction === 'init' ? 0 : 150);
     }
 
-    // Region nav tabs click listener
+    // Pager bar button listeners
+    btnDocPrev.addEventListener('click', () => {
+      if (currentRouteIndex > 0) renderDocumentSheet(currentRouteIndex - 1, 'prev', true);
+    });
+
+    btnDocNext.addEventListener('click', () => {
+      if (currentRouteIndex < routesOrder.length - 1) renderDocumentSheet(currentRouteIndex + 1, 'next', true);
+    });
+
+    docRouteSelect.addEventListener('change', (e) => {
+      const targetIdx = parseInt(e.target.value, 10);
+      const dir = targetIdx >= currentRouteIndex ? 'next' : 'prev';
+      renderDocumentSheet(targetIdx, dir, true);
+    });
+
+    // Keyboard Arrow Navigation (← and →)
+    document.addEventListener('keydown', (e) => {
+      if (document.activeElement && (document.activeElement.tagName === 'INPUT' || document.activeElement.tagName === 'SELECT')) {
+        return;
+      }
+      if (tabDocMode.classList.contains('active')) {
+        if (e.key === 'ArrowLeft' && currentRouteIndex > 0) {
+          renderDocumentSheet(currentRouteIndex - 1, 'prev', true);
+        } else if (e.key === 'ArrowRight' && currentRouteIndex < routesOrder.length - 1) {
+          renderDocumentSheet(currentRouteIndex + 1, 'next', true);
+        }
+      }
+    });
+
+    /* ========================================================
+       RENDER MODO ÍNDICE GENERAL (TABLE OF CONTENTS)
+       ======================================================== */
+    function renderIndexView(filterText = '') {
+      indexList.innerHTML = '';
+      const query = filterText.toLowerCase().trim();
+
+      routesOrder.forEach((code, idx) => {
+        const meta = routeMeta[code];
+
+        if (currentRegion !== 'all' && meta.region_group !== currentRegion) {
+          return;
+        }
+
+        const matchesQuery = !query || 
+          code.toLowerCase().includes(query) || 
+          meta.name.toLowerCase().includes(query) ||
+          meta.stages.some(s => s.name.toLowerCase().includes(query));
+
+        if (query && !matchesQuery) return;
+
+        const card = document.createElement('div');
+        card.className = 'index-item-card';
+        card.style.borderLeftColor = meta.color;
+        card.innerHTML = `
+          <div class="index-item-main">
+            <div class="index-item-title">
+              <span class="doc-route-code" style="font-size:0.72rem;">${code}</span>
+              <span>${meta.name}</span>
+            </div>
+            <div class="index-item-meta">
+              ${meta.stages.length} etapas &bull; ${Math.round(meta.totalKm)} km &bull; ${getRegionLabel(meta.region_group)}
+            </div>
+          </div>
+          <div class="index-open-btn">
+            Ficha <i class="fa-solid fa-chevron-right"></i>
+          </div>
+        `;
+
+        card.addEventListener('click', () => {
+          switchToDocMode(idx);
+        });
+
+        indexList.appendChild(card);
+      });
+    }
+
+    function switchToDocMode(routeIndex) {
+      tabDocMode.classList.add('active');
+      tabIndexMode.classList.remove('active');
+      docViewContainer.classList.remove('hidden');
+      indexView.classList.remove('active');
+      renderDocumentSheet(routeIndex, 'init', true);
+    }
+
+    function switchToIndexMode() {
+      tabIndexMode.classList.add('active');
+      tabDocMode.classList.remove('active');
+      indexView.classList.add('active');
+      docViewContainer.classList.add('hidden');
+      renderIndexView(searchInput.value);
+    }
+
+    tabDocMode.addEventListener('click', () => switchToDocMode(currentRouteIndex));
+    tabIndexMode.addEventListener('click', switchToIndexMode);
+
+    // Region Nav tabs in Index
     regionNav.addEventListener('click', (e) => {
       const tab = e.target.closest('.region-tab');
       if (!tab) return;
       document.querySelectorAll('.region-tab').forEach(t => t.classList.remove('active'));
       tab.classList.add('active');
       currentRegion = tab.dataset.region;
-      renderSidebar(searchInput.value);
+      renderIndexView(searchInput.value);
     });
 
-    // Search input listeners
+    // Search Box in Index
     searchInput.addEventListener('input', (e) => {
       const val = e.target.value;
       clearSearchBtn.style.display = val ? 'block' : 'none';
-      renderSidebar(val);
+      renderIndexView(val);
     });
 
     clearSearchBtn.addEventListener('click', () => {
       searchInput.value = '';
       clearSearchBtn.style.display = 'none';
-      renderSidebar('');
+      renderIndexView('');
       searchInput.focus();
     });
 
-    // Global "Fit all" button
-    btnFitAll.addEventListener('click', () => {
+    // Global Network Zoom
+    btnFitGlobal.addEventListener('click', () => {
       const allBounds = L.latLngBounds();
       let hasValid = false;
       Object.keys(routeMeta).forEach(code => {
@@ -1092,22 +1512,8 @@
         }
       });
       if (hasValid) {
-        map.fitBounds(allBounds, { padding: [40, 40] });
+        map.fitBounds(allBounds, { padding: [40, 40], animate: true });
       }
-    });
-
-    // Global "Toggle all" button
-    btnToggleAll.addEventListener('click', () => {
-      allExpanded = !allExpanded;
-      toggleAllIcon.className = allExpanded ? 'fa-solid fa-angles-up' : 'fa-solid fa-angles-down';
-      toggleAllText.textContent = allExpanded ? 'Colapsar' : 'Expandir';
-      document.querySelectorAll('.route-group').forEach(group => {
-        if (allExpanded) {
-          group.classList.add('open');
-        } else {
-          group.classList.remove('open');
-        }
-      });
     });
 
     // Check if routes data is available from window.ROUTES_GEOJSON or fetch
