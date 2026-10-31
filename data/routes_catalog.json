@@ -1,6 +1,6 @@
 {
-  "total_tracks": 172,
-  "total_distance_km": 17346.0,
+  "total_tracks": 218,
+  "total_distance_km": 23635.6,
   "routes": {
     "ES01": {
       "code": "ES01",
@@ -564,6 +564,723 @@
         }
       ]
     },
+    "ES02": {
+      "code": "ES02",
+      "name": "Camino Aragonés",
+      "color": "#D90429",
+      "total_distance_km": 72.9,
+      "stages_count": 1,
+      "stages": [
+        {
+          "name": "Camino Aragonés",
+          "file": "GPX/ES02-Camino-Aragones/ES02-Camino-Aragones.gpx",
+          "distance_km": 72.94,
+          "elevation_gain_m": null,
+          "elevation_loss_m": null,
+          "min_elevation_m": null,
+          "max_elevation_m": null,
+          "point_count": 2621,
+          "bounds": [
+            -0.98159,
+            42.55262,
+            -0.5079,
+            42.79578
+          ]
+        }
+      ]
+    },
+    "ES03": {
+      "code": "ES03",
+      "name": "Camino del Norte",
+      "color": "#1D3557",
+      "total_distance_km": 2160.3,
+      "stages_count": 35,
+      "stages": [
+        {
+          "name": "Irún to San Sebastián",
+          "file": "GPX/ES03-Camino-del-Norte/ES03-Etapa-00_Irún_to_San_Sebastián.gpx",
+          "distance_km": 24.95,
+          "elevation_gain_m": null,
+          "elevation_loss_m": null,
+          "min_elevation_m": null,
+          "max_elevation_m": null,
+          "point_count": 289,
+          "bounds": [
+            -1.98616,
+            43.32094,
+            -1.78936,
+            43.36683
+          ]
+        },
+        {
+          "name": "San Sebastián to Zarautz",
+          "file": "GPX/ES03-Camino-del-Norte/ES03-Etapa-01_San_Sebastián_to_Zarautz.gpx",
+          "distance_km": 22.21,
+          "elevation_gain_m": null,
+          "elevation_loss_m": null,
+          "min_elevation_m": null,
+          "max_elevation_m": null,
+          "point_count": 252,
+          "bounds": [
+            -2.17513,
+            43.2743,
+            -1.98488,
+            43.32094
+          ]
+        },
+        {
+          "name": "Zarautz to Deba",
+          "file": "GPX/ES03-Camino-del-Norte/ES03-Etapa-02_Zarautz_to_Deba.gpx",
+          "distance_km": 22.06,
+          "elevation_gain_m": null,
+          "elevation_loss_m": null,
+          "min_elevation_m": null,
+          "max_elevation_m": null,
+          "point_count": 225,
+          "bounds": [
+            -2.35456,
+            43.27576,
+            -2.17513,
+            43.30376
+          ]
+        },
+        {
+          "name": "Deba to Markina-Xemein",
+          "file": "GPX/ES03-Camino-del-Norte/ES03-Etapa-03_Deba_to_Markina-Xemein.gpx",
+          "distance_km": 23.19,
+          "elevation_gain_m": null,
+          "elevation_loss_m": null,
+          "min_elevation_m": null,
+          "max_elevation_m": null,
+          "point_count": 257,
+          "bounds": [
+            -2.49635,
+            43.25557,
+            -2.35456,
+            43.30067
+          ]
+        },
+        {
+          "name": "Markina-Xemein to Gernika",
+          "file": "GPX/ES03-Camino-del-Norte/ES03-Etapa-04_Markina-Xemein_to_Gernika.gpx",
+          "distance_km": 25.28,
+          "elevation_gain_m": null,
+          "elevation_loss_m": null,
+          "min_elevation_m": null,
+          "max_elevation_m": null,
+          "point_count": 304,
+          "bounds": [
+            -2.67871,
+            43.2473,
+            -2.49635,
+            43.31828
+          ]
+        },
+        {
+          "name": "Gernika to Lezama",
+          "file": "GPX/ES03-Camino-del-Norte/ES03-Etapa-05_Gernika_to_Lezama.gpx",
+          "distance_km": 19.67,
+          "elevation_gain_m": null,
+          "elevation_loss_m": null,
+          "min_elevation_m": null,
+          "max_elevation_m": null,
+          "point_count": 179,
+          "bounds": [
+            -2.83268,
+            43.26149,
+            -2.6786,
+            43.31495
+          ]
+        },
+        {
+          "name": "Lezama to Bilbao",
+          "file": "GPX/ES03-Camino-del-Norte/ES03-Etapa-06_Lezama_to_Bilbao.gpx",
+          "distance_km": 11.36,
+          "elevation_gain_m": null,
+          "elevation_loss_m": null,
+          "min_elevation_m": null,
+          "max_elevation_m": null,
+          "point_count": 139,
+          "bounds": [
+            -2.92358,
+            43.2568,
+            -2.83268,
+            43.28482
+          ]
+        },
+        {
+          "name": "Bilbao to Portugalete",
+          "file": "GPX/ES03-Camino-del-Norte/ES03-Etapa-07_Bilbao_to_Portugalete.gpx",
+          "distance_km": 19.85,
+          "elevation_gain_m": null,
+          "elevation_loss_m": null,
+          "min_elevation_m": null,
+          "max_elevation_m": null,
+          "point_count": 204,
+          "bounds": [
+            -3.01921,
+            43.25425,
+            -2.92264,
+            43.32006
+          ]
+        },
+        {
+          "name": "Portugalete to Castro Urdiales",
+          "file": "GPX/ES03-Camino-del-Norte/ES03-Etapa-08_Portugalete_to_Castro_Urdiales.gpx",
+          "distance_km": 34.33,
+          "elevation_gain_m": null,
+          "elevation_loss_m": null,
+          "min_elevation_m": null,
+          "max_elevation_m": null,
+          "point_count": 348,
+          "bounds": [
+            -3.23037,
+            43.31069,
+            -3.01921,
+            43.38445
+          ]
+        },
+        {
+          "name": "Castro Urdiales to Laredo",
+          "file": "GPX/ES03-Camino-del-Norte/ES03-Etapa-09_Castro_Urdiales_to_Laredo.gpx",
+          "distance_km": 30.63,
+          "elevation_gain_m": null,
+          "elevation_loss_m": null,
+          "min_elevation_m": null,
+          "max_elevation_m": null,
+          "point_count": 276,
+          "bounds": [
+            -3.41739,
+            43.36215,
+            -3.21641,
+            43.41185
+          ]
+        },
+        {
+          "name": "Laredo to Güemes",
+          "file": "GPX/ES03-Camino-del-Norte/ES03-Etapa-10_Laredo_to_Güemes.gpx",
+          "distance_km": 29.79,
+          "elevation_gain_m": null,
+          "elevation_loss_m": null,
+          "min_elevation_m": null,
+          "max_elevation_m": null,
+          "point_count": 242,
+          "bounds": [
+            -3.64587,
+            43.4101,
+            -3.41739,
+            43.48052
+          ]
+        },
+        {
+          "name": "Güemes to Santander",
+          "file": "GPX/ES03-Camino-del-Norte/ES03-Etapa-11_Güemes_to_Santander.gpx",
+          "distance_km": 18.65,
+          "elevation_gain_m": null,
+          "elevation_loss_m": null,
+          "min_elevation_m": null,
+          "max_elevation_m": null,
+          "point_count": 150,
+          "bounds": [
+            -3.80469,
+            43.44769,
+            -3.64178,
+            43.47902
+          ]
+        },
+        {
+          "name": "Santander to Santillana del Mar",
+          "file": "GPX/ES03-Camino-del-Norte/ES03-Etapa-12_Santander_to_Santillana_del_Mar.gpx",
+          "distance_km": 37.16,
+          "elevation_gain_m": null,
+          "elevation_loss_m": null,
+          "min_elevation_m": null,
+          "max_elevation_m": null,
+          "point_count": 289,
+          "bounds": [
+            -4.10482,
+            43.37327,
+            -3.80469,
+            43.46192
+          ]
+        },
+        {
+          "name": "Santillana del Mar to Comillas",
+          "file": "GPX/ES03-Camino-del-Norte/ES03-Etapa-13_Santillana_del_Mar_to_Comillas.gpx",
+          "distance_km": 22.35,
+          "elevation_gain_m": null,
+          "elevation_loss_m": null,
+          "min_elevation_m": null,
+          "max_elevation_m": null,
+          "point_count": 241,
+          "bounds": [
+            -4.28918,
+            43.37797,
+            -4.10482,
+            43.40351
+          ]
+        },
+        {
+          "name": "Comillas to Colombres",
+          "file": "GPX/ES03-Camino-del-Norte/ES03-Etapa-14_Comillas_to_Colombres.gpx",
+          "distance_km": 28.32,
+          "elevation_gain_m": null,
+          "elevation_loss_m": null,
+          "min_elevation_m": null,
+          "max_elevation_m": null,
+          "point_count": 262,
+          "bounds": [
+            -4.54103,
+            43.35811,
+            -4.28918,
+            43.38673
+          ]
+        },
+        {
+          "name": "Colombres to Llanes",
+          "file": "GPX/ES03-Camino-del-Norte/ES03-Etapa-15_Colombres_to_Llanes.gpx",
+          "distance_km": 21.53,
+          "elevation_gain_m": null,
+          "elevation_loss_m": null,
+          "min_elevation_m": null,
+          "max_elevation_m": null,
+          "point_count": 147,
+          "bounds": [
+            -4.75586,
+            43.37494,
+            -4.54103,
+            43.42105
+          ]
+        },
+        {
+          "name": "Llanes to Ribadesella",
+          "file": "GPX/ES03-Camino-del-Norte/ES03-Etapa-16_Llanes_to_Ribadesella.gpx",
+          "distance_km": 30.43,
+          "elevation_gain_m": null,
+          "elevation_loss_m": null,
+          "min_elevation_m": null,
+          "max_elevation_m": null,
+          "point_count": 314,
+          "bounds": [
+            -5.06054,
+            43.42105,
+            -4.75586,
+            43.4613
+          ]
+        },
+        {
+          "name": "Ribadesella to Colunga",
+          "file": "GPX/ES03-Camino-del-Norte/ES03-Etapa-17_Ribadesella_to_Colunga.gpx",
+          "distance_km": 20.1,
+          "elevation_gain_m": null,
+          "elevation_loss_m": null,
+          "min_elevation_m": null,
+          "max_elevation_m": null,
+          "point_count": 200,
+          "bounds": [
+            -5.2706,
+            43.4613,
+            -5.06054,
+            43.4853
+          ]
+        },
+        {
+          "name": "Colunga to Villaviciosa",
+          "file": "GPX/ES03-Camino-del-Norte/ES03-Etapa-18_Colunga_to_Villaviciosa.gpx",
+          "distance_km": 16.85,
+          "elevation_gain_m": null,
+          "elevation_loss_m": null,
+          "min_elevation_m": null,
+          "max_elevation_m": null,
+          "point_count": 166,
+          "bounds": [
+            -5.4324,
+            43.47768,
+            -5.2706,
+            43.50131
+          ]
+        },
+        {
+          "name": "Villaviciosa to Gijón",
+          "file": "GPX/ES03-Camino-del-Norte/ES03-Etapa-19_Villaviciosa_to_Gijón.gpx",
+          "distance_km": 29.81,
+          "elevation_gain_m": null,
+          "elevation_loss_m": null,
+          "min_elevation_m": null,
+          "max_elevation_m": null,
+          "point_count": 275,
+          "bounds": [
+            -5.66295,
+            43.45811,
+            -5.4324,
+            43.54519
+          ]
+        },
+        {
+          "name": "Gijón to Avilés",
+          "file": "GPX/ES03-Camino-del-Norte/ES03-Etapa-20_Gijón_to_Avilés.gpx",
+          "distance_km": 26.17,
+          "elevation_gain_m": null,
+          "elevation_loss_m": null,
+          "min_elevation_m": null,
+          "max_elevation_m": null,
+          "point_count": 204,
+          "bounds": [
+            -5.92214,
+            43.53055,
+            -5.66295,
+            43.55552
+          ]
+        },
+        {
+          "name": "Avilés to Muros de Nalón",
+          "file": "GPX/ES03-Camino-del-Norte/ES03-Etapa-21_Avilés_to_Muros_de_Nalón.gpx",
+          "distance_km": 22.86,
+          "elevation_gain_m": null,
+          "elevation_loss_m": null,
+          "min_elevation_m": null,
+          "max_elevation_m": null,
+          "point_count": 215,
+          "bounds": [
+            -6.10516,
+            43.5312,
+            -5.92214,
+            43.57568
+          ]
+        },
+        {
+          "name": "Muros de Nalón to Soto de Luiña",
+          "file": "GPX/ES03-Camino-del-Norte/ES03-Etapa-22_Muros_de_Nalón_to_Soto_de_Luiña.gpx",
+          "distance_km": 15.3,
+          "elevation_gain_m": null,
+          "elevation_loss_m": null,
+          "min_elevation_m": null,
+          "max_elevation_m": null,
+          "point_count": 174,
+          "bounds": [
+            -6.23061,
+            43.54156,
+            -6.10516,
+            43.56127
+          ]
+        },
+        {
+          "name": "Soto de Luiña to Cadavedo",
+          "file": "GPX/ES03-Camino-del-Norte/ES03-Etapa-23_Soto_de_Luiña_to_Cadavedo.gpx",
+          "distance_km": 19.41,
+          "elevation_gain_m": null,
+          "elevation_loss_m": null,
+          "min_elevation_m": null,
+          "max_elevation_m": null,
+          "point_count": 178,
+          "bounds": [
+            -6.39968,
+            43.52266,
+            -6.2304,
+            43.56494
+          ]
+        },
+        {
+          "name": "Cadavedo to Luarca",
+          "file": "GPX/ES03-Camino-del-Norte/ES03-Etapa-24_Cadavedo_to_Luarca.gpx",
+          "distance_km": 15.69,
+          "elevation_gain_m": null,
+          "elevation_loss_m": null,
+          "min_elevation_m": null,
+          "max_elevation_m": null,
+          "point_count": 155,
+          "bounds": [
+            -6.53606,
+            43.53501,
+            -6.39803,
+            43.54951
+          ]
+        },
+        {
+          "name": "Luarca to La Caridad",
+          "file": "GPX/ES03-Camino-del-Norte/ES03-Etapa-25_Luarca_to_La_Caridad.gpx",
+          "distance_km": 30.12,
+          "elevation_gain_m": null,
+          "elevation_loss_m": null,
+          "min_elevation_m": null,
+          "max_elevation_m": null,
+          "point_count": 284,
+          "bounds": [
+            -6.82887,
+            43.53164,
+            -6.53597,
+            43.55113
+          ]
+        },
+        {
+          "name": "La Caridad to Ribadeo",
+          "file": "GPX/ES03-Camino-del-Norte/ES03-Etapa-26_La_Caridad_to_Ribadeo.gpx",
+          "distance_km": 22.13,
+          "elevation_gain_m": null,
+          "elevation_loss_m": null,
+          "min_elevation_m": null,
+          "max_elevation_m": null,
+          "point_count": 148,
+          "bounds": [
+            -7.04408,
+            43.52846,
+            -6.82887,
+            43.55973
+          ]
+        },
+        {
+          "name": "Ribadeo to Gondán",
+          "file": "GPX/ES03-Camino-del-Norte/ES03-Etapa-27_Ribadeo_to_Gondán.gpx",
+          "distance_km": 20.16,
+          "elevation_gain_m": null,
+          "elevation_loss_m": null,
+          "min_elevation_m": null,
+          "max_elevation_m": null,
+          "point_count": 168,
+          "bounds": [
+            -7.23864,
+            43.48681,
+            -7.04408,
+            43.53605
+          ]
+        },
+        {
+          "name": "Gondán to Mondoñedo",
+          "file": "GPX/ES03-Camino-del-Norte/ES03-Etapa-28_Gondán_to_Mondoñedo.gpx",
+          "distance_km": 15.26,
+          "elevation_gain_m": null,
+          "elevation_loss_m": null,
+          "min_elevation_m": null,
+          "max_elevation_m": null,
+          "point_count": 123,
+          "bounds": [
+            -7.3632,
+            43.42805,
+            -7.23864,
+            43.48779
+          ]
+        },
+        {
+          "name": "Mondoñedo to Abadín",
+          "file": "GPX/ES03-Camino-del-Norte/ES03-Etapa-29_Mondoñedo_to_Abadín.gpx",
+          "distance_km": 16.51,
+          "elevation_gain_m": null,
+          "elevation_loss_m": null,
+          "min_elevation_m": null,
+          "max_elevation_m": null,
+          "point_count": 151,
+          "bounds": [
+            -7.47524,
+            43.36357,
+            -7.36225,
+            43.42805
+          ]
+        },
+        {
+          "name": "Abadín to Vilalba",
+          "file": "GPX/ES03-Camino-del-Norte/ES03-Etapa-30_Abadín_to_Vilalba.gpx",
+          "distance_km": 20.65,
+          "elevation_gain_m": null,
+          "elevation_loss_m": null,
+          "min_elevation_m": null,
+          "max_elevation_m": null,
+          "point_count": 148,
+          "bounds": [
+            -7.68024,
+            43.29916,
+            -7.47524,
+            43.36499
+          ]
+        },
+        {
+          "name": "Vilalba to Baamonde",
+          "file": "GPX/ES03-Camino-del-Norte/ES03-Etapa-31_Vilalba_to_Baamonde.gpx",
+          "distance_km": 18.77,
+          "elevation_gain_m": null,
+          "elevation_loss_m": null,
+          "min_elevation_m": null,
+          "max_elevation_m": null,
+          "point_count": 171,
+          "bounds": [
+            -7.75694,
+            43.1751,
+            -7.68024,
+            43.29916
+          ]
+        },
+        {
+          "name": "Baamonde to Sobrado dos Monxes",
+          "file": "GPX/ES03-Camino-del-Norte/ES03-Etapa-32_Baamonde_to_Sobrado_dos_Monxes.gpx",
+          "distance_km": 40.12,
+          "elevation_gain_m": null,
+          "elevation_loss_m": null,
+          "min_elevation_m": null,
+          "max_elevation_m": null,
+          "point_count": 315,
+          "bounds": [
+            -8.02333,
+            43.032,
+            -7.75694,
+            43.1751
+          ]
+        },
+        {
+          "name": "Sobrado dos Monxes to Arzúa (joins Camino Francés)",
+          "file": "GPX/ES03-Camino-del-Norte/ES03-Etapa-33_Sobrado_dos_Monxes_to_Arzúa_joins_Camino_Francés.gpx",
+          "distance_km": 21.35,
+          "elevation_gain_m": null,
+          "elevation_loss_m": null,
+          "min_elevation_m": null,
+          "max_elevation_m": null,
+          "point_count": 123,
+          "bounds": [
+            -8.15979,
+            42.93022,
+            -8.02333,
+            43.04037
+          ]
+        },
+        {
+          "name": "Camino del Norte (Northern Way)",
+          "file": "GPX/ES03-Camino-del-Norte/ES03-camino-norte-completo.gpx",
+          "distance_km": 1367.28,
+          "elevation_gain_m": null,
+          "elevation_loss_m": null,
+          "min_elevation_m": null,
+          "max_elevation_m": null,
+          "point_count": 38640,
+          "bounds": [
+            -8.16086,
+            42.92728,
+            -1.78935,
+            43.57568
+          ]
+        }
+      ]
+    },
+    "ES04": {
+      "code": "ES04",
+      "name": "Camino Primitivo",
+      "color": "#8338EC",
+      "total_distance_km": 411.3,
+      "stages_count": 1,
+      "stages": [
+        {
+          "name": "Camino Primitivo (Original Way)",
+          "file": "GPX/ES04-Camino-Primitivo/ES04-camino-primitivo-completo.gpx",
+          "distance_km": 411.28,
+          "elevation_gain_m": null,
+          "elevation_loss_m": null,
+          "min_elevation_m": null,
+          "max_elevation_m": null,
+          "point_count": 13303,
+          "bounds": [
+            -8.01679,
+            42.91441,
+            -5.84068,
+            43.41738
+          ]
+        }
+      ]
+    },
+    "ES07": {
+      "code": "ES07",
+      "name": "Vía de la Plata",
+      "color": "#FB8500",
+      "total_distance_km": 892.7,
+      "stages_count": 3,
+      "stages": [
+        {
+          "name": "Vía de la Plata - Tramo 1 (Sevilla a Mérida)",
+          "file": "GPX/ES07-Via-de-la-Plata/ES07a01-Sevilla-Merida.gpx",
+          "distance_km": 246.25,
+          "elevation_gain_m": null,
+          "elevation_loss_m": null,
+          "min_elevation_m": null,
+          "max_elevation_m": null,
+          "point_count": 4782,
+          "bounds": [
+            -6.41952,
+            37.38512,
+            -5.98541,
+            38.91507
+          ]
+        },
+        {
+          "name": "Vía de la Plata - Tramo 2 (Mérida a Salamanca)",
+          "file": "GPX/ES07-Via-de-la-Plata/ES07a02-Merida-Salamanca.gpx",
+          "distance_km": 440.45,
+          "elevation_gain_m": null,
+          "elevation_loss_m": null,
+          "min_elevation_m": null,
+          "max_elevation_m": null,
+          "point_count": 7330,
+          "bounds": [
+            -6.47464,
+            38.91507,
+            -5.66408,
+            40.965
+          ]
+        },
+        {
+          "name": "Vía de la Plata - Tramo 3 (Salamanca a Astorga)",
+          "file": "GPX/ES07-Via-de-la-Plata/ES07a03-Salamanca-Astorga.gpx",
+          "distance_km": 205.99,
+          "elevation_gain_m": null,
+          "elevation_loss_m": null,
+          "min_elevation_m": null,
+          "max_elevation_m": null,
+          "point_count": 4336,
+          "bounds": [
+            -6.05546,
+            40.965,
+            -5.65554,
+            42.45439
+          ]
+        }
+      ]
+    },
+    "ES08": {
+      "code": "ES08",
+      "name": "Camino Sanabrés",
+      "color": "#023047",
+      "total_distance_km": 1052.3,
+      "stages_count": 2,
+      "stages": [
+        {
+          "name": "Camino Sanabrés - Tramo Este (Granja de Moreruela a Ourense)",
+          "file": "GPX/ES08-Camino-Sanabres/ES08a01-GranjaDeMoreruela-Ourense.gpx",
+          "distance_km": 623.48,
+          "elevation_gain_m": null,
+          "elevation_loss_m": null,
+          "min_elevation_m": null,
+          "max_elevation_m": null,
+          "point_count": 14647,
+          "bounds": [
+            -7.54308,
+            41.80973,
+            -5.74093,
+            42.11472
+          ]
+        },
+        {
+          "name": "Camino Sanabrés - Tramo Oeste (Ourense a Santiago)",
+          "file": "GPX/ES08-Camino-Sanabres/ES08a02-Ourense-Santiago.gpx",
+          "distance_km": 428.85,
+          "elevation_gain_m": null,
+          "elevation_loss_m": null,
+          "min_elevation_m": null,
+          "max_elevation_m": null,
+          "point_count": 9139,
+          "bounds": [
+            -8.54575,
+            42.11465,
+            -7.54308,
+            42.88049
+          ]
+        }
+      ]
+    },
     "ES09": {
       "code": "ES09",
       "name": "Camino Portugués Central",
@@ -864,7 +1581,7 @@
     "ES10": {
       "code": "ES10",
       "name": "Camino Portugués de la Costa",
-      "color": "#1D3557",
+      "color": "#0077B6",
       "total_distance_km": 78.1,
       "stages_count": 10,
       "stages": [
@@ -1026,6 +1743,31 @@
             42.25298,
             -8.6106,
             42.2849
+          ]
+        }
+      ]
+    },
+    "ES11": {
+      "code": "ES11",
+      "name": "Camino Inglés",
+      "color": "#3A86FF",
+      "total_distance_km": 191.8,
+      "stages_count": 1,
+      "stages": [
+        {
+          "name": "Camino Inglés (English Way)",
+          "file": "GPX/ES11-Camino-Ingles/ES11-camino-ingles-completo.gpx",
+          "distance_km": 191.8,
+          "elevation_gain_m": null,
+          "elevation_loss_m": null,
+          "min_elevation_m": null,
+          "max_elevation_m": null,
+          "point_count": 4823,
+          "bounds": [
+            -8.54575,
+            42.88049,
+            -8.15085,
+            43.51671
           ]
         }
       ]
@@ -1419,6 +2161,81 @@
             42.31986,
             -5.02202,
             42.34289
+          ]
+        }
+      ]
+    },
+    "ES13": {
+      "code": "ES13",
+      "name": "Camino de Fisterra y Muxía",
+      "color": "#E76F51",
+      "total_distance_km": 226.0,
+      "stages_count": 1,
+      "stages": [
+        {
+          "name": "Camino de Fisterra y Muxía",
+          "file": "GPX/ES13-Camino-Fisterra-Muxia/ES13-Camino-Fisterra-Muxia.gpx",
+          "distance_km": 226.03,
+          "elevation_gain_m": null,
+          "elevation_loss_m": null,
+          "min_elevation_m": null,
+          "max_elevation_m": null,
+          "point_count": 6014,
+          "bounds": [
+            -9.27206,
+            42.87515,
+            -8.54575,
+            43.11215
+          ]
+        }
+      ]
+    },
+    "ES14": {
+      "code": "ES14",
+      "name": "Camino de Invierno",
+      "color": "#6A994E",
+      "total_distance_km": 388.4,
+      "stages_count": 1,
+      "stages": [
+        {
+          "name": "Camino de Invierno",
+          "file": "GPX/ES14-Camino-de-Invierno/ES14-Camino-de-Invierno.gpx",
+          "distance_km": 388.38,
+          "elevation_gain_m": null,
+          "elevation_loss_m": null,
+          "min_elevation_m": null,
+          "max_elevation_m": null,
+          "point_count": 9027,
+          "bounds": [
+            -8.16346,
+            42.38603,
+            -6.58968,
+            42.68711
+          ]
+        }
+      ]
+    },
+    "ES15": {
+      "code": "ES15",
+      "name": "Camino Mozárabe",
+      "color": "#BC6C25",
+      "total_distance_km": 893.8,
+      "stages_count": 1,
+      "stages": [
+        {
+          "name": "Camino Mozárabe",
+          "file": "GPX/ES15-Camino-Mozarabe/ES15-Camino-Mozarabe.gpx",
+          "distance_km": 893.83,
+          "elevation_gain_m": null,
+          "elevation_loss_m": null,
+          "min_elevation_m": null,
+          "max_elevation_m": null,
+          "point_count": 10904,
+          "bounds": [
+            -6.3238,
+            37.17223,
+            -3.59335,
+            38.997
           ]
         }
       ]

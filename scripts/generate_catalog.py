@@ -4,7 +4,7 @@ generate_catalog.py - Scans all GPX files in the repository, calculates
 geospatial metrics (distance, elevation gain/loss, bounding box), and produces:
 - data/routes_catalog.json
 - data/routes.geojson
-- Updates or generates summary stats
+- data/routes_geojson.js
 """
 
 import os
@@ -121,7 +121,7 @@ def parse_gpx_track(gpx_path):
         'coordinates': points
     }
 
-def simplify_coordinates(coords, max_points=250):
+def simplify_coordinates(coords, max_points=350):
     """Downsample coordinates for lighter web map GeoJSON while preserving shape."""
     if len(coords) <= max_points:
         return coords
@@ -134,19 +134,40 @@ def simplify_coordinates(coords, max_points=250):
 def identify_route_category(rel_path):
     parts = Path(rel_path).parts
     if len(parts) >= 2:
-        if parts[1] == '01-Camino_Frances':
+        folder = parts[1]
+        if folder == '01-Camino_Frances':
             return 'Camino Francés', 'ES01', '#E63946'
-        elif parts[1] == 'ES12-Camino-de-Madrid':
-            return 'Camino de Madrid', 'ES12', '#457B9D'
-        elif parts[1] == 'ES09-Camino-Portugues-Central':
+        elif folder == 'ES02-Camino-Aragones':
+            return 'Camino Aragonés', 'ES02', '#D90429'
+        elif folder == 'ES03-Camino-del-Norte':
+            return 'Camino del Norte', 'ES03', '#1D3557'
+        elif folder == 'ES04-Camino-Primitivo':
+            return 'Camino Primitivo', 'ES04', '#8338EC'
+        elif folder == 'ES07-Via-de-la-Plata':
+            return 'Vía de la Plata', 'ES07', '#FB8500'
+        elif folder == 'ES08-Camino-Sanabres':
+            return 'Camino Sanabrés', 'ES08', '#023047'
+        elif folder == 'ES09-Camino-Portugues-Central':
             return 'Camino Portugués Central', 'ES09', '#2A9D8F'
-        elif parts[1] == 'ES10-Camino-Portugues-de-la-Costa':
-            return 'Camino Portugués de la Costa', 'ES10', '#1D3557'
-        elif parts[1] == 'EU' and len(parts) >= 3:
+        elif folder == 'ES10-Camino-Portugues-de-la-Costa':
+            return 'Camino Portugués de la Costa', 'ES10', '#0077B6'
+        elif folder == 'ES11-Camino-Ingles':
+            return 'Camino Inglés', 'ES11', '#3A86FF'
+        elif folder == 'ES12-Camino-de-Madrid':
+            return 'Camino de Madrid', 'ES12', '#457B9D'
+        elif folder == 'ES13-Camino-Fisterra-Muxia':
+            return 'Camino de Fisterra y Muxía', 'ES13', '#E76F51'
+        elif folder == 'ES14-Camino-de-Invierno':
+            return 'Camino de Invierno', 'ES14', '#6A994E'
+        elif folder == 'ES15-Camino-Mozarabe':
+            return 'Camino Mozárabe', 'ES15', '#BC6C25'
+        elif folder == 'EU' and len(parts) >= 3:
             if parts[2] == 'CZ':
                 return 'Rutas Checas (Jakubská cesta)', 'EU-CZ', '#E76F51'
             elif parts[2] == 'DE':
                 return 'Rutas Alemanas (Jakobsweg)', 'EU-DE', '#F4A261'
+            elif parts[2] == 'FR':
+                return 'Rutas Francesas (Voies de Saint-Jacques)', 'EU-FR', '#3D5A80'
     return 'Otras Rutas', 'OTHER', '#6C757D'
 
 def build_catalog(repo_root='.'):
@@ -240,12 +261,19 @@ def build_catalog(repo_root='.'):
         json.dump(geojson_data, f, ensure_ascii=False)
     print(f"Wrote GeoJSON to {geojson_path}")
 
+    geojson_js_path = Path(repo_root) / 'data' / 'routes_geojson.js'
+    with open(geojson_js_path, 'w', encoding='utf-8') as f:
+        f.write('window.ROUTES_GEOJSON = ' + json.dumps(geojson_data, ensure_ascii=False) + ';')
+    print(f"Wrote GeoJSON JS to {geojson_js_path}")
+
     return catalog
 
 if __name__ == '__main__':
     catalog = build_catalog()
-    print("\n--- RESUMEN DEL CATÁLOGO ---")
-    print(f"Total de etapas/trazas analizadas: {catalog['total_tracks']}")
+    print("\n===============================")
+    print("   RESUMEN GENERAL ACTUALIZADO  ")
+    print("===============================")
+    print(f"Total de archivos GPX procesados: {catalog['total_tracks']}")
     print(f"Distancia total acumulada: {catalog['total_distance_km']:,} km")
     for code, r in sorted(catalog['routes'].items()):
-        print(f" - [{code}] {r['name']}: {r['stages_count']} etapas / variantes, {r['total_distance_km']:,} km")
+        print(f" - [{code:5}] {r['name']:38}: {r['stages_count']:3} archivos, {r['total_distance_km']:>9.1f} km")

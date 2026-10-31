@@ -350,11 +350,11 @@
       
       <div class="stats-bar">
         <div class="stat-card">
-          <div class="val" id="total-km">17,346 km</div>
+          <div class="val" id="total-km">23,636 km</div>
           <div class="lbl">Total Trazado</div>
         </div>
         <div class="stat-card">
-          <div class="val" id="total-tracks">172</div>
+          <div class="val" id="total-tracks">218</div>
           <div class="lbl">Etapas / Tracks GPX</div>
         </div>
       </div>
@@ -414,13 +414,22 @@
 
     function getRouteColor(code) {
       const colors = {
-        'ES01': '#E63946',  // Red
-        'ES12': '#457B9D',  // Blue
-        'ES09': '#2A9D8F',  // Teal
-        'ES10': '#1D3557',  // Navy
-        'EU-CZ': '#E76F51', // Orange-coral
-        'EU-DE': '#F4A261', // Gold
-        'OTHER': '#6C757D'  // Gray
+        'ES01': '#E63946',  // Camino Francés (Rojo)
+        'ES02': '#D90429',  // Camino Aragonés (Carmesí)
+        'ES03': '#1D3557',  // Camino del Norte (Azul marino)
+        'ES04': '#8338EC',  // Camino Primitivo (Púrpura)
+        'ES07': '#FB8500',  // Vía de la Plata (Naranja)
+        'ES08': '#023047',  // Camino Sanabrés (Azul noche)
+        'ES09': '#2A9D8F',  // Camino Portugués Central (Verde esmeralda)
+        'ES10': '#0077B6',  // Camino Portugués de la Costa (Azul atlántico)
+        'ES11': '#3A86FF',  // Camino Inglés (Azul royal)
+        'ES12': '#457B9D',  // Camino de Madrid (Azul cerúleo)
+        'ES13': '#E76F51',  // Camino Fisterra y Muxía (Coral atlántico)
+        'ES14': '#6A994E',  // Camino de Invierno (Verde bosque)
+        'ES15': '#BC6C25',  // Camino Mozárabe (Ocre andalusí)
+        'EU-CZ': '#E76F51', // Rutas Checas (Teja)
+        'EU-DE': '#F4A261', // Rutas Alemanas (Dorado)
+        'OTHER': '#6C757D'  // Otras Rutas (Gris)
       };
       return colors[code] || '#6C757D';
     }
