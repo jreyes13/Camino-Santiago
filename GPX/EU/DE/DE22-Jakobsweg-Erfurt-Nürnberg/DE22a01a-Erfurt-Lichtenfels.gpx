@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="CaminoSantiago-GIS (https://github.com/jreyes13/Camino-Santiago)"
+  xmlns="http://www.topografix.com/GPX/1/1"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  <metadata>
+    <name>NewTrackEditing4</name>
+  </metadata>
+  <trk>
+    <name>NewTrackEditing4</name>
+    <trkseg>
+      <trkpt lat="50.975658" lon="11.031874"><ele>-9999.0</ele></trkpt>
+      <trkpt lat="50.906759" lon="11.027824"><ele>0.0</ele></trkpt>
+      <trkpt lat="50.835201" lon="11.015675"><ele>-9000.0</ele></trkpt>
+      <trkpt lat="50.717403" lon="10.991377"><ele>-9000.0</ele></trkpt>
+      <trkpt lat="50.642986" lon="10.963029"><ele>-9000.0</ele></trkpt>
+      <trkpt lat="50.610348" lon="10.899825"><ele>-9000.0</ele></trkpt>
+      <trkpt lat="50.588307" lon="10.918014"><ele>-9000.0</ele></trkpt>
+      <trkpt lat="50.564154" lon="10.937858"><ele>-9000.0</ele></trkpt>
+      <trkpt lat="50.527488" lon="10.940833"><ele>-9000.0</ele></trkpt>
+      <trkpt lat="50.518083" lon="10.961966"><ele>-9000.0</ele></trkpt>
+      <trkpt lat="50.491479" lon="10.925408"><ele>-9000.0</ele></trkpt>
+      <trkpt lat="50.416147" lon="10.895828"><ele>-9000.0</ele></trkpt>
+      <trkpt lat="50.354326" lon="10.917191"><ele>-9000.0</ele></trkpt>
+      <trkpt lat="50.315517" lon="10.956631"><ele>-9000.0</ele></trkpt>
+      <trkpt lat="50.285076" lon="10.981280"><ele>-9000.0</ele></trkpt>
+      <trkpt lat="50.258819" lon="10.951701"><ele>-9000.0</ele></trkpt>
+      <trkpt lat="50.235935" lon="10.973476"><ele>-9000.0</ele></trkpt>
+      <trkpt lat="50.208389" lon="10.983977"><ele>-9000.0</ele></trkpt>
+      <trkpt lat="50.180156" lon="10.989228"><ele>-9000.0</ele></trkpt>
+      <trkpt lat="50.160651" lon="11.006029"><ele>-9000.0</ele></trkpt>
+      <trkpt lat="50.152578" lon="11.028081"><ele>-9000.0</ele></trkpt>
+      <trkpt lat="50.129024" lon="11.036481"><ele>-9000.0</ele></trkpt>
+      <trkpt lat="50.121619" lon="11.054333"><ele>-9000.0</ele></trkpt>
+    </trkseg>
+  </trk>
+</gpx>

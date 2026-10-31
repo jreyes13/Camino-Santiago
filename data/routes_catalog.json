@@ -1,0 +1,2821 @@
+{
+  "total_tracks": 172,
+  "total_distance_km": 17346.0,
+  "routes": {
+    "ES01": {
+      "code": "ES01",
+      "name": "Camino Francés",
+      "color": "#E63946",
+      "total_distance_km": 809.8,
+      "stages_count": 32,
+      "stages": [
+        {
+          "name": "Saint-Jean-Pied-de-Port Walking",
+          "file": "GPX/01-Camino_Frances/Stage-1-Camino-Frances.gpx",
+          "distance_km": 25.25,
+          "elevation_gain_m": 1551.8,
+          "elevation_loss_m": 795.0,
+          "min_elevation_m": 116.0,
+          "max_elevation_m": 1347.2,
+          "point_count": 6435,
+          "bounds": [
+            -1.31989,
+            43.00661,
+            -1.23714,
+            43.16274
+          ]
+        },
+        {
+          "name": "Azofra Hiking",
+          "file": "GPX/01-Camino_Frances/Stage-10.-Camino-Frances.gpx",
+          "distance_km": 22.43,
+          "elevation_gain_m": 629.2,
+          "elevation_loss_m": 462.4,
+          "min_elevation_m": 436.4,
+          "max_elevation_m": 634.4,
+          "point_count": 3328,
+          "bounds": [
+            -3.02905,
+            42.41272,
+            -2.80062,
+            42.45307
+          ]
+        },
+        {
+          "name": "Grañón Hiking",
+          "file": "GPX/01-Camino_Frances/Stage-11.-Camino-Frances.gpx",
+          "distance_km": 27.82,
+          "elevation_gain_m": 701.2,
+          "elevation_loss_m": 501.8,
+          "min_elevation_m": 517.4,
+          "max_elevation_m": 757.6,
+          "point_count": 4267,
+          "bounds": [
+            -3.30989,
+            42.38856,
+            -3.02818,
+            42.45085
+          ]
+        },
+        {
+          "name": "Villafranca Montes de Oca Hiking",
+          "file": "GPX/01-Camino_Frances/Stage-12.-Camino-Frances.gpx",
+          "distance_km": 24.73,
+          "elevation_gain_m": 800.0,
+          "elevation_loss_m": 845.4,
+          "min_elevation_m": 689.2,
+          "max_elevation_m": 932.8,
+          "point_count": 4277,
+          "bounds": [
+            -3.56121,
+            42.35875,
+            -3.30991,
+            42.38858
+          ]
+        },
+        {
+          "name": "Cardeñuela Riopico Hiking",
+          "file": "GPX/01-Camino_Frances/Stage-13.-Camino-Frances.gpx",
+          "distance_km": 28.29,
+          "elevation_gain_m": 656.2,
+          "elevation_loss_m": 738.2,
+          "min_elevation_m": 598.2,
+          "max_elevation_m": 685.6,
+          "point_count": 5042,
+          "bounds": [
+            -3.81578,
+            42.33968,
+            -3.56109,
+            42.36744
+          ]
+        },
+        {
+          "name": "Tardajos Hiking",
+          "file": "GPX/01-Camino_Frances/Stage-14.-Camino-Frances.gpx",
+          "distance_km": 30.14,
+          "elevation_gain_m": 586.4,
+          "elevation_loss_m": 593.0,
+          "min_elevation_m": 571.2,
+          "max_elevation_m": 709.6,
+          "point_count": 4335,
+          "bounds": [
+            -4.14042,
+            42.28742,
+            -3.81634,
+            42.3496
+          ]
+        },
+        {
+          "name": "Castrojeriz Hiking",
+          "file": "GPX/01-Camino_Frances/Stage-15.-Camino-Frances.gpx",
+          "distance_km": 25.89,
+          "elevation_gain_m": 704.4,
+          "elevation_loss_m": 718.4,
+          "min_elevation_m": 550.2,
+          "max_elevation_m": 697.2,
+          "point_count": 4416,
+          "bounds": [
+            -4.40722,
+            42.25801,
+            -4.14777,
+            42.29103
+          ]
+        },
+        {
+          "name": "Frómista Hiking",
+          "file": "GPX/01-Camino_Frances/Stage-16.-Camino-Frances.gpx",
+          "distance_km": 19.94,
+          "elevation_gain_m": 484.6,
+          "elevation_loss_m": 455.8,
+          "min_elevation_m": 560.6,
+          "max_elevation_m": 627.8,
+          "point_count": 2927,
+          "bounds": [
+            -4.60218,
+            42.26497,
+            -4.40487,
+            42.33785
+          ]
+        },
+        {
+          "name": "Carrión de los Condes Hiking",
+          "file": "GPX/01-Camino_Frances/Stage-17.-Camino-Frances.gpx",
+          "distance_km": 26.4,
+          "elevation_gain_m": 896.4,
+          "elevation_loss_m": 834.2,
+          "min_elevation_m": 607.6,
+          "max_elevation_m": 689.2,
+          "point_count": 4176,
+          "bounds": [
+            -4.8848,
+            42.32843,
+            -4.60217,
+            42.36599
+          ]
+        },
+        {
+          "name": "Lagartos Hiking",
+          "file": "GPX/01-Camino_Frances/Stage-18.-Camino-Frances.gpx",
+          "distance_km": 24.46,
+          "elevation_gain_m": 606.6,
+          "elevation_loss_m": 662.2,
+          "min_elevation_m": 794.2,
+          "max_elevation_m": 886.8,
+          "point_count": 3707,
+          "bounds": [
+            -5.13683,
+            42.3587,
+            -4.88478,
+            42.38947
+          ]
+        },
+        {
+          "name": "Bercianos del Real Camino Hiking",
+          "file": "GPX/01-Camino_Frances/Stage-19.-Camino-Frances.gpx",
+          "distance_km": 27.27,
+          "elevation_gain_m": 695.4,
+          "elevation_loss_m": 745.8,
+          "min_elevation_m": 775.2,
+          "max_elevation_m": 861.4,
+          "point_count": 3818,
+          "bounds": [
+            -5.41488,
+            42.38688,
+            -5.13683,
+            42.49807
+          ]
+        },
+        {
+          "name": "Roncesvalles Hiking",
+          "file": "GPX/01-Camino_Frances/Stage-2.-Camino-Frances.gpx",
+          "distance_km": 23.05,
+          "elevation_gain_m": 743.2,
+          "elevation_loss_m": 1171.2,
+          "min_elevation_m": 433.0,
+          "max_elevation_m": 875.4,
+          "point_count": 5496,
+          "bounds": [
+            -1.50293,
+            42.92884,
+            -1.31934,
+            43.01043
+          ]
+        },
+        {
+          "name": "Mansilla de las Mulas Hiking",
+          "file": "GPX/01-Camino_Frances/Stage-20.-Camino-Frances.gpx",
+          "distance_km": 19.39,
+          "elevation_gain_m": 409.4,
+          "elevation_loss_m": 381.6,
+          "min_elevation_m": 787.4,
+          "max_elevation_m": 892.4,
+          "point_count": 3328,
+          "bounds": [
+            -5.57042,
+            42.5013,
+            -5.41993,
+            42.59901
+          ]
+        },
+        {
+          "name": "León Hiking",
+          "file": "GPX/01-Camino_Frances/Stage-21.-Camino-Frances.gpx",
+          "distance_km": 21.59,
+          "elevation_gain_m": 913.2,
+          "elevation_loss_m": 868.2,
+          "min_elevation_m": 826.4,
+          "max_elevation_m": 913.6,
+          "point_count": 3822,
+          "bounds": [
+            -5.726,
+            42.4837,
+            -5.56663,
+            42.60141
+          ]
+        },
+        {
+          "name": "Chozas de Abajo Hiking",
+          "file": "GPX/01-Camino_Frances/Stage-22.-Camino-Frances.gpx",
+          "distance_km": 32.06,
+          "elevation_gain_m": 1023.8,
+          "elevation_loss_m": 1047.0,
+          "min_elevation_m": 787.4,
+          "max_elevation_m": 887.2,
+          "point_count": 5613,
+          "bounds": [
+            -6.05222,
+            42.45272,
+            -5.72792,
+            42.48345
+          ]
+        },
+        {
+          "name": "Astorga Hiking",
+          "file": "GPX/01-Camino_Frances/Stage-23.-Camino-Frances.gpx",
+          "distance_km": 26.53,
+          "elevation_gain_m": 1413.2,
+          "elevation_loss_m": 859.8,
+          "min_elevation_m": 829.2,
+          "max_elevation_m": 1388.8,
+          "point_count": 4956,
+          "bounds": [
+            -6.34165,
+            42.45443,
+            -6.05307,
+            42.49164
+          ]
+        },
+        {
+          "name": "Santa Colomba de Somoza Hiking",
+          "file": "GPX/01-Camino_Frances/Stage-24.-Camino-Frances.gpx",
+          "distance_km": 27.52,
+          "elevation_gain_m": 679.8,
+          "elevation_loss_m": 1557.6,
+          "min_elevation_m": 516.2,
+          "max_elevation_m": 1500.0,
+          "point_count": 5719,
+          "bounds": [
+            -6.59041,
+            42.48761,
+            -6.34163,
+            42.5463
+          ]
+        },
+        {
+          "name": "Ponferrada Hiking",
+          "file": "GPX/01-Camino_Frances/Stage-25.-Camino-Frances.gpx",
+          "distance_km": 24.96,
+          "elevation_gain_m": 594.0,
+          "elevation_loss_m": 631.8,
+          "min_elevation_m": 451.0,
+          "max_elevation_m": 560.8,
+          "point_count": 4480,
+          "bounds": [
+            -6.81283,
+            42.54278,
+            -6.5881,
+            42.61587
+          ]
+        },
+        {
+          "name": "Villafranca del Bierzo Hiking",
+          "file": "GPX/01-Camino_Frances/Stage-26.-Camino-Frances.gpx",
+          "distance_km": 29.02,
+          "elevation_gain_m": 1247.0,
+          "elevation_loss_m": 473.2,
+          "min_elevation_m": 458.0,
+          "max_elevation_m": 1248.4,
+          "point_count": 5334,
+          "bounds": [
+            -7.04381,
+            42.60475,
+            -6.81065,
+            42.70802
+          ]
+        },
+        {
+          "name": "Pedrafita do Cebreiro Hiking",
+          "file": "GPX/01-Camino_Frances/Stage-27-28.-Camino-Frances.gpx",
+          "distance_km": 46.55,
+          "elevation_gain_m": 1190.6,
+          "elevation_loss_m": 2053.4,
+          "min_elevation_m": 387.4,
+          "max_elevation_m": 1312.4,
+          "point_count": 9666,
+          "bounds": [
+            -7.40618,
+            42.69812,
+            -7.04424,
+            42.77668
+          ]
+        },
+        {
+          "name": "Sarria Hiking",
+          "file": "GPX/01-Camino_Frances/Stage-29.-Camino-Frances.gpx",
+          "distance_km": 22.94,
+          "elevation_gain_m": 694.2,
+          "elevation_loss_m": 765.6,
+          "min_elevation_m": 307.4,
+          "max_elevation_m": 624.8,
+          "point_count": 4497,
+          "bounds": [
+            -7.61911,
+            42.76595,
+            -7.41769,
+            42.80772
+          ]
+        },
+        {
+          "name": "Esteribar Hiking",
+          "file": "GPX/01-Camino_Frances/Stage-3.-Camino-Frances.gpx",
+          "distance_km": 23.28,
+          "elevation_gain_m": 658.2,
+          "elevation_loss_m": 738.4,
+          "min_elevation_m": 323.4,
+          "max_elevation_m": 485.8,
+          "point_count": 4951,
+          "bounds": [
+            -1.64677,
+            42.8179,
+            -1.50228,
+            42.93044
+          ]
+        },
+        {
+          "name": "Portomarín Hiking",
+          "file": "GPX/01-Camino_Frances/Stage-30.-Camino-Frances.gpx",
+          "distance_km": 25.5,
+          "elevation_gain_m": 819.6,
+          "elevation_loss_m": 678.0,
+          "min_elevation_m": 308.6,
+          "max_elevation_m": 678.0,
+          "point_count": 4601,
+          "bounds": [
+            -7.86887,
+            42.8047,
+            -7.61711,
+            42.87599
+          ]
+        },
+        {
+          "name": "Palas de Rei Hiking",
+          "file": "GPX/01-Camino_Frances/Stage-31.-Camino-Frances.gpx",
+          "distance_km": 29.87,
+          "elevation_gain_m": 829.6,
+          "elevation_loss_m": 964.8,
+          "min_elevation_m": 272.6,
+          "max_elevation_m": 519.6,
+          "point_count": 6149,
+          "bounds": [
+            -8.15581,
+            42.8692,
+            -7.86824,
+            42.93105
+          ]
+        },
+        {
+          "name": "Arzúa Hiking",
+          "file": "GPX/01-Camino_Frances/Stage-32.-Camino-Frances.gpx",
+          "distance_km": 20.32,
+          "elevation_gain_m": 531.0,
+          "elevation_loss_m": 662.6,
+          "min_elevation_m": 216.0,
+          "max_elevation_m": 373.2,
+          "point_count": 4145,
+          "bounds": [
+            -8.35956,
+            42.90649,
+            -8.15561,
+            42.92953
+          ]
+        },
+        {
+          "name": "O Pino Hiking",
+          "file": "GPX/01-Camino_Frances/Stage-33.-Camino-Frances.gpx",
+          "distance_km": 20.58,
+          "elevation_gain_m": 604.2,
+          "elevation_loss_m": 630.0,
+          "min_elevation_m": 253.0,
+          "max_elevation_m": 394.4,
+          "point_count": 4156,
+          "bounds": [
+            -8.54579,
+            42.88058,
+            -8.36024,
+            42.91374
+          ]
+        },
+        {
+          "name": "Pamplona Hiking",
+          "file": "GPX/01-Camino_Frances/Stage-4.-Camino-Frances.gpx",
+          "distance_km": 24.92,
+          "elevation_gain_m": 707.8,
+          "elevation_loss_m": 793.8,
+          "min_elevation_m": 267.2,
+          "max_elevation_m": 675.0,
+          "point_count": 4842,
+          "bounds": [
+            -1.81043,
+            42.67355,
+            -1.64268,
+            42.81852
+          ]
+        },
+        {
+          "name": "Puente La Reina Hiking",
+          "file": "GPX/01-Camino_Frances/Stage-5.-Camino-Frances.gpx",
+          "distance_km": 22.21,
+          "elevation_gain_m": 702.0,
+          "elevation_loss_m": 657.2,
+          "min_elevation_m": 231.6,
+          "max_elevation_m": 378.0,
+          "point_count": 4218,
+          "bounds": [
+            -2.02377,
+            42.65822,
+            -1.81172,
+            42.68132
+          ]
+        },
+        {
+          "name": "Estella Hiking",
+          "file": "GPX/01-Camino_Frances/Stage-6.-Camino-Frances.gpx",
+          "distance_km": 22.43,
+          "elevation_gain_m": 618.6,
+          "elevation_loss_m": 599.6,
+          "min_elevation_m": 305.8,
+          "max_elevation_m": 553.0,
+          "point_count": 3982,
+          "bounds": [
+            -2.19344,
+            42.56938,
+            -2.02896,
+            42.66976
+          ]
+        },
+        {
+          "name": "Los Arcos Hiking",
+          "file": "GPX/01-Camino_Frances/Stage-7.-Camino-Frances.gpx",
+          "distance_km": 28.63,
+          "elevation_gain_m": 789.8,
+          "elevation_loss_m": 851.6,
+          "min_elevation_m": 254.8,
+          "max_elevation_m": 459.0,
+          "point_count": 5289,
+          "bounds": [
+            -2.44486,
+            42.46631,
+            -2.19259,
+            42.56924
+          ]
+        },
+        {
+          "name": "Logrono Hiking",
+          "file": "GPX/01-Camino_Frances/Stage-8.-Camino-Frances.gpx",
+          "distance_km": 12.59,
+          "elevation_gain_m": 343.8,
+          "elevation_loss_m": 238.6,
+          "min_elevation_m": 263.8,
+          "max_elevation_m": 398.4,
+          "point_count": 2233,
+          "bounds": [
+            -2.55933,
+            42.43201,
+            -2.44517,
+            42.46684
+          ]
+        },
+        {
+          "name": "Navarrete Hiking",
+          "file": "GPX/01-Camino_Frances/Stage-9.-Camino-Frances.gpx",
+          "distance_km": 23.22,
+          "elevation_gain_m": 573.6,
+          "elevation_loss_m": 534.8,
+          "min_elevation_m": 387.8,
+          "max_elevation_m": 561.2,
+          "point_count": 3774,
+          "bounds": [
+            -2.79974,
+            42.40518,
+            -2.5614,
+            42.4311
+          ]
+        }
+      ]
+    },
+    "OTHER": {
+      "code": "OTHER",
+      "name": "Otras Rutas",
+      "color": "#6C757D",
+      "total_distance_km": 2340.1,
+      "stages_count": 2,
+      "stages": [
+        {
+          "name": "170615 Camino Santiago en Rep Checa. Praga - Radotin - Wikil...",
+          "file": "GPX/170615-camino-santiago-en-rep-checa-praga-radotin.gpx",
+          "distance_km": 16.08,
+          "elevation_gain_m": 781.9,
+          "elevation_loss_m": 770.0,
+          "min_elevation_m": 146.7,
+          "max_elevation_m": 230.4,
+          "point_count": 263,
+          "bounds": [
+            14.36426,
+            49.98487,
+            14.42461,
+            50.08812
+          ]
+        },
+        {
+          "name": "Route from Google Maps (walking)",
+          "file": "GPX/GoogleMaps_Praga_Santiago.gpx",
+          "distance_km": 2323.98,
+          "elevation_gain_m": null,
+          "elevation_loss_m": null,
+          "min_elevation_m": null,
+          "max_elevation_m": null,
+          "point_count": 10000,
+          "bounds": [
+            -8.54418,
+            42.32888,
+            14.42462,
+            50.08856
+          ]
+        }
+      ]
+    },
+    "ES09": {
+      "code": "ES09",
+      "name": "Camino Portugués Central",
+      "color": "#2A9D8F",
+      "total_distance_km": 91.4,
+      "stages_count": 18,
+      "stages": [
+        {
+          "name": "CPO-e02t03-O_PORRIÑO-REDONDELA(OSouto-Redondela)",
+          "file": "GPX/ES09-Camino-Portugues-Central/CPO-e02t03-O_PORRIÑO-REDONDELA(OSouto-Redondela).gpx",
+          "distance_km": 0.42,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": 0.0,
+          "max_elevation_m": 0.0,
+          "point_count": 23,
+          "bounds": [
+            -8.6106,
+            42.27932,
+            -8.60857,
+            42.28233
+          ]
+        },
+        {
+          "name": "CPO-e03t01-REDONDELA-PONTEVEDRA(Redondela-Arcade)",
+          "file": "GPX/ES09-Camino-Portugues-Central/CPO-e03t01-REDONDELA-PONTEVEDRA(Redondela-Arcade).gpx",
+          "distance_km": 7.13,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": 0.0,
+          "max_elevation_m": 0.0,
+          "point_count": 449,
+          "bounds": [
+            -8.6103,
+            42.28233,
+            -8.60311,
+            42.33867
+          ]
+        },
+        {
+          "name": "CPO-e03t02-REDONDELA-PONTEVEDRA(Arcade-Bergunde)",
+          "file": "GPX/ES09-Camino-Portugues-Central/CPO-e03t02-REDONDELA-PONTEVEDRA(Arcade-Bergunde).gpx",
+          "distance_km": 5.07,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": 0.0,
+          "max_elevation_m": 0.0,
+          "point_count": 427,
+          "bounds": [
+            -8.6261,
+            42.33867,
+            -8.60641,
+            42.37072
+          ]
+        },
+        {
+          "name": "CPO-e03t03-REDONDELA-PONTEVEDRA(Bergunde-Pontevedra)",
+          "file": "GPX/ES09-Camino-Portugues-Central/CPO-e03t03-REDONDELA-PONTEVEDRA(Bergunde-Pontevedra).gpx",
+          "distance_km": 6.02,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": 0.0,
+          "max_elevation_m": 0.0,
+          "point_count": 364,
+          "bounds": [
+            -8.63643,
+            42.37072,
+            -8.6248,
+            42.41956
+          ]
+        },
+        {
+          "name": "CPO-e03t03c-REDONDELA-PONTEVEDRA(Bergunde-Pontevedra)",
+          "file": "GPX/ES09-Camino-Portugues-Central/CPO-e03t03c-REDONDELA-PONTEVEDRA(Bergunde-Pontevedra).gpx",
+          "distance_km": 3.41,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": 0.0,
+          "max_elevation_m": 0.0,
+          "point_count": 218,
+          "bounds": [
+            -8.63689,
+            42.39688,
+            -8.62986,
+            42.41873
+          ]
+        },
+        {
+          "name": "CPO-e04t01-PONTEVEDRA-CALDAS_DE_REIS(Pontevedra-SantaMaríaDeAlba)",
+          "file": "GPX/ES09-Camino-Portugues-Central/CPO-e04t01-PONTEVEDRA-CALDAS_DE_REIS(Pontevedra-SantaMaríaDeAlba).gpx",
+          "distance_km": 5.3,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": 0.0,
+          "max_elevation_m": 0.0,
+          "point_count": 361,
+          "bounds": [
+            -8.64522,
+            42.41956,
+            -8.6364,
+            42.46196
+          ]
+        },
+        {
+          "name": "CPO-e04t02-PONTEVEDRA-CALDAS_DE_REIS(SantaMaríaDeAlba-AlbergueDeBarro)",
+          "file": "GPX/ES09-Camino-Portugues-Central/CPO-e04t02-PONTEVEDRA-CALDAS_DE_REIS(SantaMaríaDeAlba-AlbergueDeBarro).gpx",
+          "distance_km": 6.43,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": 0.0,
+          "max_elevation_m": 0.0,
+          "point_count": 522,
+          "bounds": [
+            -8.65121,
+            42.46196,
+            -8.64418,
+            42.51492
+          ]
+        },
+        {
+          "name": "CPO-e04t03p1-PONTEVEDRA-CALDAS_DE_REIS(AlbergueDeBarro-AlbergueDeBriallos)",
+          "file": "GPX/ES09-Camino-Portugues-Central/CPO-e04t03p1-PONTEVEDRA-CALDAS_DE_REIS(AlbergueDeBarro-AlbergueDeBriallos).gpx",
+          "distance_km": 0.48,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": 0.0,
+          "max_elevation_m": 0.0,
+          "point_count": 26,
+          "bounds": [
+            -8.64861,
+            42.51492,
+            -8.6455,
+            42.51843
+          ]
+        },
+        {
+          "name": "CPO-e04t03p2-PONTEVEDRA-CALDAS_DE_REIS(AlbergueDeBarro-AlbergueDeBriallos)",
+          "file": "GPX/ES09-Camino-Portugues-Central/CPO-e04t03p2-PONTEVEDRA-CALDAS_DE_REIS(AlbergueDeBarro-AlbergueDeBriallos).gpx",
+          "distance_km": 0.03,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": 0.0,
+          "max_elevation_m": 0.0,
+          "point_count": 4,
+          "bounds": [
+            -8.6455,
+            42.51843,
+            -8.64538,
+            42.51872
+          ]
+        },
+        {
+          "name": "CPO-e04t03p3-PONTEVEDRA-CALDAS_DE_REIS(AlbergueDeBarro-AlbergueDeBriallos)",
+          "file": "GPX/ES09-Camino-Portugues-Central/CPO-e04t03p3-PONTEVEDRA-CALDAS_DE_REIS(AlbergueDeBarro-AlbergueDeBriallos).gpx",
+          "distance_km": 5.82,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": 0.0,
+          "max_elevation_m": 0.0,
+          "point_count": 469,
+          "bounds": [
+            -8.64674,
+            42.51872,
+            -8.63756,
+            42.56406
+          ]
+        },
+        {
+          "name": "CPO-e04t04-PONTEVEDRA-CALDAS_DE_REIS(AlbergueDeBriallos-CaldasDeReis)",
+          "file": "GPX/ES09-Camino-Portugues-Central/CPO-e04t04-PONTEVEDRA-CALDAS_DE_REIS(AlbergueDeBriallos-CaldasDeReis).gpx",
+          "distance_km": 4.85,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": 0.0,
+          "max_elevation_m": 0.0,
+          "point_count": 378,
+          "bounds": [
+            -8.64593,
+            42.56406,
+            -8.6416,
+            42.60369
+          ]
+        },
+        {
+          "name": "CPO-e05t01-CALDAS_DE_REIS-PADRÓN(CaldasDeReis-Carracedo)",
+          "file": "GPX/ES09-Camino-Portugues-Central/CPO-e05t01-CALDAS_DE_REIS-PADRÓN(CaldasDeReis-Carracedo).gpx",
+          "distance_km": 5.91,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": 0.0,
+          "max_elevation_m": 0.0,
+          "point_count": 514,
+          "bounds": [
+            -8.64694,
+            42.60369,
+            -8.64298,
+            42.65241
+          ]
+        },
+        {
+          "name": "CPO-e05t02-CALDAS_DE_REIS-PADRÓN(Carracedo-SanMiguelDeValga)",
+          "file": "GPX/ES09-Camino-Portugues-Central/CPO-e05t02-CALDAS_DE_REIS-PADRÓN(Carracedo-SanMiguelDeValga).gpx",
+          "distance_km": 6.39,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": 0.0,
+          "max_elevation_m": 0.0,
+          "point_count": 542,
+          "bounds": [
+            -8.64544,
+            42.65241,
+            -8.63301,
+            42.69583
+          ]
+        },
+        {
+          "name": "CPO-e05t03-CALDAS_DE_REIS-PADRÓN(SanMiguelDeValga-Padrón)",
+          "file": "GPX/ES09-Camino-Portugues-Central/CPO-e05t03-CALDAS_DE_REIS-PADRÓN(SanMiguelDeValga-Padrón).gpx",
+          "distance_km": 6.55,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": 0.0,
+          "max_elevation_m": 0.0,
+          "point_count": 435,
+          "bounds": [
+            -8.66176,
+            42.69583,
+            -8.63843,
+            42.73891
+          ]
+        },
+        {
+          "name": "CPO-e06t01-PADRÓN-SANTIAGO(Padrón-AEscravitude)",
+          "file": "GPX/ES09-Camino-Portugues-Central/CPO-e06t01-PADRÓN-SANTIAGO(Padrón-AEscravitude).gpx",
+          "distance_km": 6.39,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": 0.0,
+          "max_elevation_m": 0.0,
+          "point_count": 408,
+          "bounds": [
+            -8.6616,
+            42.73891,
+            -8.65009,
+            42.78416
+          ]
+        },
+        {
+          "name": "CPO-e06t02-PADRÓN-SANTIAGO(AEscravitude-OMilladoiro)",
+          "file": "GPX/ES09-Camino-Portugues-Central/CPO-e06t02-PADRÓN-SANTIAGO(AEscravitude-OMilladoiro).gpx",
+          "distance_km": 11.36,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": 0.0,
+          "max_elevation_m": 0.0,
+          "point_count": 774,
+          "bounds": [
+            -8.65009,
+            42.78416,
+            -8.58086,
+            42.84459
+          ]
+        },
+        {
+          "name": "CPO-e06t03-PADRÓN-SANTIAGO(OMilladoiro-SantiagoDeCompostela)",
+          "file": "GPX/ES09-Camino-Portugues-Central/CPO-e06t03-PADRÓN-SANTIAGO(OMilladoiro-SantiagoDeCompostela).gpx",
+          "distance_km": 7.55,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": 0.0,
+          "max_elevation_m": 0.0,
+          "point_count": 391,
+          "bounds": [
+            -8.58086,
+            42.84459,
+            -8.54366,
+            42.8806
+          ]
+        },
+        {
+          "name": "CPO-e06t03v-PADRÓN-SANTIAGO(OMilladoiro-SantiagoDeCompostela)",
+          "file": "GPX/ES09-Camino-Portugues-Central/CPO-e06t03v-PADRÓN-SANTIAGO(OMilladoiro-SantiagoDeCompostela).gpx",
+          "distance_km": 2.27,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": 0.0,
+          "max_elevation_m": 0.0,
+          "point_count": 107,
+          "bounds": [
+            -8.56574,
+            42.86232,
+            -8.55164,
+            42.87388
+          ]
+        }
+      ]
+    },
+    "ES10": {
+      "code": "ES10",
+      "name": "Camino Portugués de la Costa",
+      "color": "#1D3557",
+      "total_distance_km": 78.1,
+      "stages_count": 10,
+      "stages": [
+        {
+          "name": "CPC-e01t01-AGUARDA-OIA(AGuarda-Portecelo)",
+          "file": "GPX/ES10-Camino-Portugues-de-la-Costa/CPC-e01t01-AGUARDA-OIA(AGuarda-Portecelo).gpx",
+          "distance_km": 10.81,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": 0.0,
+          "max_elevation_m": 0.0,
+          "point_count": 780,
+          "bounds": [
+            -8.88519,
+            41.8883,
+            -8.85065,
+            41.95199
+          ]
+        },
+        {
+          "name": "CPC-e01t02-AGUARDA-OIA(Portecelo-Oia)",
+          "file": "GPX/ES10-Camino-Portugues-de-la-Costa/CPC-e01t02-AGUARDA-OIA(Portecelo-Oia).gpx",
+          "distance_km": 5.87,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": 0.0,
+          "max_elevation_m": 0.0,
+          "point_count": 391,
+          "bounds": [
+            -8.88653,
+            41.95199,
+            -8.87708,
+            42.0012
+          ]
+        },
+        {
+          "name": "CPC-e02t01-OIA-BAIONA(Oia-Silleiro)",
+          "file": "GPX/ES10-Camino-Portugues-de-la-Costa/CPC-e02t01-OIA-BAIONA(Oia-Silleiro).gpx",
+          "distance_km": 13.81,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": 0.0,
+          "max_elevation_m": 0.0,
+          "point_count": 1024,
+          "bounds": [
+            -8.89423,
+            42.0012,
+            -8.8766,
+            42.10175
+          ]
+        },
+        {
+          "name": "CPC-e02t02-OIA-BAIONA(Silleiro-Baiona)",
+          "file": "GPX/ES10-Camino-Portugues-de-la-Costa/CPC-e02t02-OIA-BAIONA(Silleiro-Baiona).gpx",
+          "distance_km": 4.75,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": 0.0,
+          "max_elevation_m": 0.0,
+          "point_count": 376,
+          "bounds": [
+            -8.88959,
+            42.10175,
+            -8.85414,
+            42.11814
+          ]
+        },
+        {
+          "name": "CPC-e03t01-BAIONA-VIGO(Baiona-ARamallosa)",
+          "file": "GPX/ES10-Camino-Portugues-de-la-Costa/CPC-e03t01-BAIONA-VIGO(Baiona-ARamallosa).gpx",
+          "distance_km": 4.8,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": 0.0,
+          "max_elevation_m": 0.0,
+          "point_count": 289,
+          "bounds": [
+            -8.85418,
+            42.10897,
+            -8.81231,
+            42.11877
+          ]
+        },
+        {
+          "name": "CPC-e03t02-BAIONA-VIGO(ARamallosa-Nigrán)",
+          "file": "GPX/ES10-Camino-Portugues-de-la-Costa/CPC-e03t02-BAIONA-VIGO(ARamallosa-Nigrán).gpx",
+          "distance_km": 4.18,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": 0.0,
+          "max_elevation_m": 0.0,
+          "point_count": 315,
+          "bounds": [
+            -8.81288,
+            42.11474,
+            -8.80147,
+            42.13858
+          ]
+        },
+        {
+          "name": "CPC-e03t03-BAIONA-VIGO(Nigrán-Coruxo)",
+          "file": "GPX/ES10-Camino-Portugues-de-la-Costa/CPC-e03t03-BAIONA-VIGO(Nigrán-Coruxo).gpx",
+          "distance_km": 9.02,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": 0.0,
+          "max_elevation_m": 0.0,
+          "point_count": 473,
+          "bounds": [
+            -8.80663,
+            42.13815,
+            -8.77655,
+            42.18871
+          ]
+        },
+        {
+          "name": "CPC-e03t04-BAIONA-VIGO(Coruxo-Vigo)",
+          "file": "GPX/ES10-Camino-Portugues-de-la-Costa/CPC-e03t04-BAIONA-VIGO(Coruxo-Vigo).gpx",
+          "distance_km": 8.95,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": 0.0,
+          "max_elevation_m": 0.0,
+          "point_count": 348,
+          "bounds": [
+            -8.77655,
+            42.18871,
+            -8.72658,
+            42.23888
+          ]
+        },
+        {
+          "name": "CPC-e04t01-VIGO-REDONDELA(Vigo-Teis)",
+          "file": "GPX/ES10-Camino-Portugues-de-la-Costa/CPC-e04t01-VIGO-REDONDELA(Vigo-Teis).gpx",
+          "distance_km": 5.75,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": 0.0,
+          "max_elevation_m": 0.0,
+          "point_count": 262,
+          "bounds": [
+            -8.72678,
+            42.23888,
+            -8.68025,
+            42.25446
+          ]
+        },
+        {
+          "name": "CPC-e04t02-VIGO-REDONDELA(Teis-Redondela)",
+          "file": "GPX/ES10-Camino-Portugues-de-la-Costa/CPC-e04t02-VIGO-REDONDELA(Teis-Redondela).gpx",
+          "distance_km": 10.14,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": 0.0,
+          "max_elevation_m": 0.0,
+          "point_count": 864,
+          "bounds": [
+            -8.68025,
+            42.25298,
+            -8.6106,
+            42.2849
+          ]
+        }
+      ]
+    },
+    "ES12": {
+      "code": "ES12",
+      "name": "Camino de Madrid",
+      "color": "#457B9D",
+      "total_distance_km": 453.4,
+      "stages_count": 24,
+      "stages": [
+        {
+          "name": "etapa 01_Madrid-Tres Cantos",
+          "file": "GPX/ES12-Camino-de-Madrid/ES12a01a-Madrid-TresCantos.gpx",
+          "distance_km": 24.79,
+          "elevation_gain_m": 445.0,
+          "elevation_loss_m": 361.0,
+          "min_elevation_m": 654.0,
+          "max_elevation_m": 761.0,
+          "point_count": 448,
+          "bounds": [
+            -3.71871,
+            40.41661,
+            -3.68624,
+            40.60012
+          ]
+        },
+        {
+          "name": "NewTrackEditing3",
+          "file": "GPX/ES12-Camino-de-Madrid/ES12a01b-Variante-ElPardo.gpx",
+          "distance_km": 2.24,
+          "elevation_gain_m": 36.0,
+          "elevation_loss_m": 26.0,
+          "min_elevation_m": 735.0,
+          "max_elevation_m": 753.0,
+          "point_count": 24,
+          "bounds": [
+            -3.71241,
+            40.53684,
+            -3.70475,
+            40.55248
+          ]
+        },
+        {
+          "name": "etapa 02 Colmenar Viejo-Manzanares el Real",
+          "file": "GPX/ES12-Camino-de-Madrid/ES12a02a-TresCantos-ManzanareselReal.gpx",
+          "distance_km": 24.08,
+          "elevation_gain_m": 526.0,
+          "elevation_loss_m": 362.0,
+          "min_elevation_m": 662.0,
+          "max_elevation_m": 1009.0,
+          "point_count": 311,
+          "bounds": [
+            -3.8727,
+            40.59685,
+            -3.71874,
+            40.72587
+          ]
+        },
+        {
+          "name": "NewTrackEditing2",
+          "file": "GPX/ES12-Camino-de-Madrid/ES12a03a-ManzanareselReal-Cercedilla.gpx",
+          "distance_km": 19.17,
+          "elevation_gain_m": 552.0,
+          "elevation_loss_m": 275.0,
+          "min_elevation_m": 910.0,
+          "max_elevation_m": 1304.0,
+          "point_count": 165,
+          "bounds": [
+            -4.05703,
+            40.72284,
+            -3.86819,
+            40.74292
+          ]
+        },
+        {
+          "name": "NewTrackEditing3",
+          "file": "GPX/ES12-Camino-de-Madrid/ES12a03b-Variante-Mataelpino.gpx",
+          "distance_km": 1.94,
+          "elevation_gain_m": 119.0,
+          "elevation_loss_m": 4.0,
+          "min_elevation_m": 1034.0,
+          "max_elevation_m": 1149.0,
+          "point_count": 30,
+          "bounds": [
+            -3.95931,
+            40.73209,
+            -3.93992,
+            40.73401
+          ]
+        },
+        {
+          "name": "04a-Cercedilla-Segovia",
+          "file": "GPX/ES12-Camino-de-Madrid/ES12a04a-Cercedilla-Segovia.gpx",
+          "distance_km": 28.74,
+          "elevation_gain_m": 821.0,
+          "elevation_loss_m": 1017.0,
+          "min_elevation_m": 990.0,
+          "max_elevation_m": 1818.0,
+          "point_count": 205,
+          "bounds": [
+            -4.1181,
+            40.73847,
+            -4.04794,
+            40.94803
+          ]
+        },
+        {
+          "name": "04b-bicicletas-por-carretera-de-la-Republica",
+          "file": "GPX/ES12-Camino-de-Madrid/ES12a04b-Bicicletas-CarreteradelaRepublica.gpx",
+          "distance_km": 16.61,
+          "elevation_gain_m": 482.0,
+          "elevation_loss_m": 497.0,
+          "min_elevation_m": 1488.0,
+          "max_elevation_m": 1797.0,
+          "point_count": 159,
+          "bounds": [
+            -4.06414,
+            40.76479,
+            -4.05032,
+            40.85407
+          ]
+        },
+        {
+          "name": "NewTrackEditing3",
+          "file": "GPX/ES12-Camino-de-Madrid/ES12a04c-Valsain-LaGranja.gpx",
+          "distance_km": 16.4,
+          "elevation_gain_m": 116.0,
+          "elevation_loss_m": 541.0,
+          "min_elevation_m": 1063.0,
+          "max_elevation_m": 1506.0,
+          "point_count": 154,
+          "bounds": [
+            -4.09155,
+            40.85413,
+            -4.00957,
+            40.92725
+          ]
+        },
+        {
+          "name": "05-Segovia-Sta-Maria-la-Real-de-Nieva",
+          "file": "GPX/ES12-Camino-de-Madrid/ES12a05a-Segovia-StaMarialaRealdeNieva.gpx",
+          "distance_km": 32.39,
+          "elevation_gain_m": 406.0,
+          "elevation_loss_m": 492.0,
+          "min_elevation_m": 850.0,
+          "max_elevation_m": 1010.0,
+          "point_count": 190,
+          "bounds": [
+            -4.40632,
+            40.94782,
+            -4.11807,
+            41.07083
+          ]
+        },
+        {
+          "name": "NewTrackEditing3",
+          "file": "GPX/ES12-Camino-de-Madrid/ES12a06a-StaMarialaRealdeNieva-Coca.gpx",
+          "distance_km": 21.36,
+          "elevation_gain_m": 48.0,
+          "elevation_loss_m": 168.0,
+          "min_elevation_m": 784.0,
+          "max_elevation_m": 904.0,
+          "point_count": 85,
+          "bounds": [
+            -4.52164,
+            41.07032,
+            -4.40636,
+            41.21641
+          ]
+        },
+        {
+          "name": "07a-Coca-Alcazaren",
+          "file": "GPX/ES12-Camino-de-Madrid/ES12a07a-Coca-Alcazaren.gpx",
+          "distance_km": 25.57,
+          "elevation_gain_m": 113.0,
+          "elevation_loss_m": 160.0,
+          "min_elevation_m": 722.0,
+          "max_elevation_m": 789.0,
+          "point_count": 134,
+          "bounds": [
+            -4.68935,
+            41.21637,
+            -4.52128,
+            41.37086
+          ]
+        },
+        {
+          "name": "NewTrackEditing4",
+          "file": "GPX/ES12-Camino-de-Madrid/ES12a07b-Variante-PinardeValviadero.gpx",
+          "distance_km": 8.32,
+          "elevation_gain_m": 33.0,
+          "elevation_loss_m": 50.0,
+          "min_elevation_m": 730.0,
+          "max_elevation_m": 756.0,
+          "point_count": 59,
+          "bounds": [
+            -4.67167,
+            41.31884,
+            -4.61769,
+            41.37003
+          ]
+        },
+        {
+          "name": "07c-variante-por-Llanos-Olmedo",
+          "file": "GPX/ES12-Camino-de-Madrid/ES12a07c-Llanos-Olmedo.gpx",
+          "distance_km": 15.74,
+          "elevation_gain_m": 104.0,
+          "elevation_loss_m": 129.0,
+          "min_elevation_m": 734.0,
+          "max_elevation_m": 780.0,
+          "point_count": 210,
+          "bounds": [
+            -4.68615,
+            41.26703,
+            -4.59609,
+            41.34272
+          ]
+        },
+        {
+          "name": "etapa 08-Alcazarén-Simancas",
+          "file": "GPX/ES12-Camino-de-Madrid/ES12a08a-Alcazaren-Simancas.gpx",
+          "distance_km": 30.87,
+          "elevation_gain_m": 187.0,
+          "elevation_loss_m": 187.0,
+          "min_elevation_m": 677.0,
+          "max_elevation_m": 737.0,
+          "point_count": 155,
+          "bounds": [
+            -4.82919,
+            41.37083,
+            -4.67141,
+            41.59153
+          ]
+        },
+        {
+          "name": "NewTrackEditing5",
+          "file": "GPX/ES12-Camino-de-Madrid/ES12a08b-Variante-Valladolid.gpx",
+          "distance_km": 26.0,
+          "elevation_gain_m": 49.0,
+          "elevation_loss_m": 50.0,
+          "min_elevation_m": 679.0,
+          "max_elevation_m": 699.0,
+          "point_count": 284,
+          "bounds": [
+            -4.8225,
+            41.55281,
+            -4.72187,
+            41.6536
+          ]
+        },
+        {
+          "name": "NewTrackEditing5",
+          "file": "GPX/ES12-Camino-de-Madrid/ES12a09a-Simancas-PenaflordeHornija.gpx",
+          "distance_km": 21.01,
+          "elevation_gain_m": 269.0,
+          "elevation_loss_m": 142.0,
+          "min_elevation_m": 711.0,
+          "max_elevation_m": 844.0,
+          "point_count": 93,
+          "bounds": [
+            -4.98148,
+            41.59129,
+            -4.82855,
+            41.71185
+          ]
+        },
+        {
+          "name": "NewTrackEditing6",
+          "file": "GPX/ES12-Camino-de-Madrid/ES12a10a-PenaflordeHornija-MedinadeRioseco.gpx",
+          "distance_km": 24.59,
+          "elevation_gain_m": 145.0,
+          "elevation_loss_m": 241.0,
+          "min_elevation_m": 727.0,
+          "max_elevation_m": 842.0,
+          "point_count": 121,
+          "bounds": [
+            -5.06153,
+            41.7111,
+            -4.98128,
+            41.88632
+          ]
+        },
+        {
+          "name": "NewTrackEditing6",
+          "file": "GPX/ES12-Camino-de-Madrid/ES12a10b-Variante-MonasteriodelaSantaEspina.gpx",
+          "distance_km": 15.22,
+          "elevation_gain_m": 93.0,
+          "elevation_loss_m": 94.0,
+          "min_elevation_m": 794.0,
+          "max_elevation_m": 845.0,
+          "point_count": 70,
+          "bounds": [
+            -5.10035,
+            41.72932,
+            -5.01754,
+            41.7735
+          ]
+        },
+        {
+          "name": "ES12-11b-variante-CanaldeCastilla-TamarizdeCampos",
+          "file": "GPX/ES12-Camino-de-Madrid/ES12a11a-MedinadeRioseco-CuencadeCampos.gpx",
+          "distance_km": 22.58,
+          "elevation_gain_m": 87.0,
+          "elevation_loss_m": 58.0,
+          "min_elevation_m": 740.0,
+          "max_elevation_m": 775.0,
+          "point_count": 128,
+          "bounds": [
+            -5.05545,
+            41.88653,
+            -5.01975,
+            42.05902
+          ]
+        },
+        {
+          "name": "etapa 11-Medina de Rioseco-Cuenca de Campos",
+          "file": "GPX/ES12-Camino-de-Madrid/ES12a11b-Berrueces-MoraldelaReina.gpx",
+          "distance_km": 24.02,
+          "elevation_gain_m": 144.0,
+          "elevation_loss_m": 107.0,
+          "min_elevation_m": 742.0,
+          "max_elevation_m": 787.0,
+          "point_count": 74,
+          "bounds": [
+            -5.10039,
+            41.88562,
+            -5.04678,
+            42.05936
+          ]
+        },
+        {
+          "name": "NewTrackEditing1",
+          "file": "GPX/ES12-Camino-de-Madrid/ES12a12a-CuencadeCampos-SantervasdeCampos.gpx",
+          "distance_km": 21.15,
+          "elevation_gain_m": 157.0,
+          "elevation_loss_m": 169.0,
+          "min_elevation_m": 752.0,
+          "max_elevation_m": 831.0,
+          "point_count": 241,
+          "bounds": [
+            -5.10142,
+            42.05936,
+            -5.03076,
+            42.21808
+          ]
+        },
+        {
+          "name": "etapa 12-Villalón de Campos-Sahagún",
+          "file": "GPX/ES12-Camino-de-Madrid/ES12a13a-SantervasdeCampos-Sahagun.gpx",
+          "distance_km": 20.58,
+          "elevation_gain_m": 115.0,
+          "elevation_loss_m": 56.0,
+          "min_elevation_m": 753.0,
+          "max_elevation_m": 841.0,
+          "point_count": 79,
+          "bounds": [
+            -5.10111,
+            42.21766,
+            -5.01977,
+            42.36807
+          ]
+        },
+        {
+          "name": "NewTrackEditing8",
+          "file": "GPX/ES12-Camino-de-Madrid/ES12a13b-Variante-MelgardeArriba.gpx",
+          "distance_km": 4.43,
+          "elevation_gain_m": 25.0,
+          "elevation_loss_m": 17.0,
+          "min_elevation_m": 767.0,
+          "max_elevation_m": 789.0,
+          "point_count": 18,
+          "bounds": [
+            -5.09288,
+            42.25782,
+            -5.06384,
+            42.2737
+          ]
+        },
+        {
+          "name": "NewTrackEditing9",
+          "file": "GPX/ES12-Camino-de-Madrid/ES12a13c-Variante-SanPedrodelasDuenas.gpx",
+          "distance_km": 5.56,
+          "elevation_gain_m": 55.0,
+          "elevation_loss_m": 42.0,
+          "min_elevation_m": 788.0,
+          "max_elevation_m": 818.0,
+          "point_count": 36,
+          "bounds": [
+            -5.05007,
+            42.31986,
+            -5.02202,
+            42.34289
+          ]
+        }
+      ]
+    },
+    "EU-CZ": {
+      "code": "EU-CZ",
+      "name": "Rutas Checas (Jakubská cesta)",
+      "color": "#E76F51",
+      "total_distance_km": 1382.6,
+      "stages_count": 7,
+      "stages": [
+        {
+          "name": "Zitavska_trasa",
+          "file": "GPX/EU/CZ/CZ01a-Žitavská trasa/CZ01a01a-HradeknadNisou-Praha.gpx",
+          "distance_km": 150.82,
+          "elevation_gain_m": 2514.0,
+          "elevation_loss_m": 2564.0,
+          "min_elevation_m": 168.0,
+          "max_elevation_m": 583.0,
+          "point_count": 6499,
+          "bounds": [
+            14.42397,
+            50.08827,
+            15.01527,
+            50.8583
+          ]
+        },
+        {
+          "name": "Vserubska_trasa",
+          "file": "GPX/EU/CZ/CZ02a-Všerubská trasa/CZ02a01a-Praha-Vseruby.gpx",
+          "distance_km": 205.75,
+          "elevation_gain_m": 4240.0,
+          "elevation_loss_m": 4003.0,
+          "min_elevation_m": 188.0,
+          "max_elevation_m": 811.0,
+          "point_count": 8356,
+          "bounds": [
+            12.97269,
+            49.33376,
+            14.42453,
+            50.08815
+          ]
+        },
+        {
+          "name": "Zelezna_trasa",
+          "file": "GPX/EU/CZ/CZ03a-Železná trasa/CZ03a01a-Praha-Zelezna.gpx",
+          "distance_km": 257.78,
+          "elevation_gain_m": 6086.0,
+          "elevation_loss_m": 5760.0,
+          "min_elevation_m": 188.0,
+          "max_elevation_m": 627.0,
+          "point_count": 11779,
+          "bounds": [
+            12.57641,
+            49.55933,
+            14.42496,
+            50.08813
+          ]
+        },
+        {
+          "name": "Východočeská trasa",
+          "file": "GPX/EU/CZ/CZ04a-Východočeská trasa/CZ04a01a-Broumov-Vlasim.gpx",
+          "distance_km": 265.2,
+          "elevation_gain_m": 3686.0,
+          "elevation_loss_m": 3904.0,
+          "min_elevation_m": 199.0,
+          "max_elevation_m": 685.0,
+          "point_count": 11165,
+          "bounds": [
+            14.89637,
+            49.70695,
+            16.33245,
+            50.6551
+          ]
+        },
+        {
+          "name": "Radków - Broumov",
+          "file": "GPX/EU/CZ/CZ04a-Východočeská trasa/CZ04a01b-Radkow-Broumov.gpx",
+          "distance_km": 13.03,
+          "elevation_gain_m": 270.0,
+          "elevation_loss_m": 272.0,
+          "min_elevation_m": 382.0,
+          "max_elevation_m": 475.0,
+          "point_count": 611,
+          "bounds": [
+            16.30479,
+            50.50523,
+            16.36527,
+            50.58521
+          ]
+        },
+        {
+          "name": "GPX Jihočeská trasa",
+          "file": "GPX/EU/CZ/CZ05a-Jihočeská trasa/CZ05a01a-Vlasim-Koranda.gpx",
+          "distance_km": 213.79,
+          "elevation_gain_m": 4908.0,
+          "elevation_loss_m": 4533.0,
+          "min_elevation_m": 353.0,
+          "max_elevation_m": 997.0,
+          "point_count": 9842,
+          "bounds": [
+            14.03423,
+            48.62794,
+            14.89739,
+            49.70649
+          ]
+        },
+        {
+          "name": "Moravskoslezska_trasa",
+          "file": "GPX/EU/CZ/CZ06a-Moravskoslezská trasa/CZ06a01a-Opava-Mikulov.gpx",
+          "distance_km": 276.21,
+          "elevation_gain_m": 5104.0,
+          "elevation_loss_m": 5149.0,
+          "min_elevation_m": 168.0,
+          "max_elevation_m": 683.0,
+          "point_count": 10708,
+          "bounds": [
+            16.60389,
+            48.78058,
+            18.09946,
+            50.00603
+          ]
+        }
+      ]
+    },
+    "EU-DE": {
+      "code": "EU-DE",
+      "name": "Rutas Alemanas (Jakobsweg)",
+      "color": "#F4A261",
+      "total_distance_km": 12190.7,
+      "stages_count": 79,
+      "stages": [
+        {
+          "name": "DE05-01-Swinemunde-Osnabruck",
+          "file": "GPX/EU/DE/DE01-Via Baltica-Swinemunde-Osnabrück/DE01a01a-Swinemunde-Osnabruck.gpx",
+          "distance_km": 780.09,
+          "elevation_gain_m": 11982.0,
+          "elevation_loss_m": 11985.0,
+          "min_elevation_m": -9999.0,
+          "max_elevation_m": 104.0,
+          "point_count": 8013,
+          "bounds": [
+            8.03777,
+            52.27756,
+            14.32684,
+            54.14065
+          ]
+        },
+        {
+          "name": "DE-Stralsund-Rekentin",
+          "file": "GPX/EU/DE/DE01-Via Baltica-Swinemunde-Osnabrück/DE01a01b-Stralsund-Rekentin.gpx",
+          "distance_km": 37.43,
+          "elevation_gain_m": 136.0,
+          "elevation_loss_m": 133.0,
+          "min_elevation_m": 4.0,
+          "max_elevation_m": 27.0,
+          "point_count": 335,
+          "bounds": [
+            12.83237,
+            54.10487,
+            13.09807,
+            54.31265
+          ]
+        },
+        {
+          "name": "DE08-Via-Scandinavica-Fehmarn-Gottingen",
+          "file": "GPX/EU/DE/DE02-Via-Scandinavica-Fehmarn-Creuzburg/DE02a01a-Fehmarn-Creuzburg.gpx",
+          "distance_km": 624.74,
+          "elevation_gain_m": 39992.0,
+          "elevation_loss_m": 49990.0,
+          "min_elevation_m": -9999.0,
+          "max_elevation_m": -1.0,
+          "point_count": 5717,
+          "bounds": [
+            9.73375,
+            51.05318,
+            11.22624,
+            54.50773
+          ]
+        },
+        {
+          "name": "DE-Via Jutlandica-Schleswig-Lübeck",
+          "file": "GPX/EU/DE/DE03-Via-Jutlandica-a-Padborg-Lübeck/DE03a01a-Schleswig-Lubeck.gpx",
+          "distance_km": 156.13,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": 0.0,
+          "max_elevation_m": 0.0,
+          "point_count": 1798,
+          "bounds": [
+            9.54177,
+            53.866,
+            10.69123,
+            54.55029
+          ]
+        },
+        {
+          "name": "DE09-01-Via Jutlandica-Padborg-Harsefeld",
+          "file": "GPX/EU/DE/DE04-Via Jutlandica-b-Padborg-Harsefeld/DE04a01a-Padborg-Stade.gpx",
+          "distance_km": 217.46,
+          "elevation_gain_m": 61.0,
+          "elevation_loss_m": 61.0,
+          "min_elevation_m": 0.0,
+          "max_elevation_m": 7.0,
+          "point_count": 2242,
+          "bounds": [
+            9.31983,
+            53.58393,
+            9.69841,
+            54.8352
+          ]
+        },
+        {
+          "name": "GE-Jacobsweg-Westfälischer-Jakobsweg-V1.0",
+          "file": "GPX/EU/DE/DE05-Jakobsweg-Osnabrück-Aachen/DE05a01a-Osnabruck-Beyenburg.gpx",
+          "distance_km": 206.05,
+          "elevation_gain_m": 3600.0,
+          "elevation_loss_m": 3461.0,
+          "min_elevation_m": 41.0,
+          "max_elevation_m": 337.0,
+          "point_count": 2993,
+          "bounds": [
+            7.28452,
+            51.2499,
+            8.04412,
+            52.27778
+          ]
+        },
+        {
+          "name": "DE-Beyenburg-Aken",
+          "file": "GPX/EU/DE/DE05-Jakobsweg-Osnabrück-Aachen/DE05a02a-Beyenburg-Aachen.gpx",
+          "distance_km": 152.08,
+          "elevation_gain_m": 1897.0,
+          "elevation_loss_m": 1938.0,
+          "min_elevation_m": 39.0,
+          "max_elevation_m": 348.0,
+          "point_count": 1534,
+          "bounds": [
+            6.08348,
+            50.72544,
+            7.30102,
+            51.2502
+          ]
+        },
+        {
+          "name": "DE-Dortmund-Aken",
+          "file": "GPX/EU/DE/DE05-Jakobsweg-Osnabrück-Aachen/DE05a02b-Dortmund-Aachen.gpx",
+          "distance_km": 181.83,
+          "elevation_gain_m": 2343.0,
+          "elevation_loss_m": 2203.0,
+          "min_elevation_m": 27.0,
+          "max_elevation_m": 209.0,
+          "point_count": 3335,
+          "bounds": [
+            6.08321,
+            50.77439,
+            7.4672,
+            51.51572
+          ]
+        },
+        {
+          "name": "Steele-Düsseldorf",
+          "file": "GPX/EU/DE/DE05-Jakobsweg-Osnabrück-Aachen/DE05a02c-Steele-Dusseldorf.gpx",
+          "distance_km": 61.46,
+          "elevation_gain_m": 496.0,
+          "elevation_loss_m": 508.0,
+          "min_elevation_m": 21.0,
+          "max_elevation_m": 107.0,
+          "point_count": 1111,
+          "bounds": [
+            6.71081,
+            51.22834,
+            7.07473,
+            51.46622
+          ]
+        },
+        {
+          "name": "DE02-02b-Bonn-Bad-Münstereifel (2)",
+          "file": "GPX/EU/DE/DE06-Jakobsweg-Nijmegen-Aachen/DE06a01a-Nijmegen-Koln.gpx",
+          "distance_km": 204.23,
+          "elevation_gain_m": 1202.0,
+          "elevation_loss_m": 1160.0,
+          "min_elevation_m": 8.0,
+          "max_elevation_m": 69.0,
+          "point_count": 2809,
+          "bounds": [
+            5.85903,
+            50.94134,
+            6.96247,
+            51.84876
+          ]
+        },
+        {
+          "name": "NewTrackEditing3",
+          "file": "GPX/EU/DE/DE07-Jakobsweg-Stettin-Berlin/DE07a01a-Stettin-Berlin.gpx",
+          "distance_km": 213.44,
+          "elevation_gain_m": 9999.0,
+          "elevation_loss_m": 9000.0,
+          "min_elevation_m": -9999.0,
+          "max_elevation_m": 0.0,
+          "point_count": 117,
+          "bounds": [
+            13.41714,
+            52.51894,
+            14.79221,
+            53.84029
+          ]
+        },
+        {
+          "name": "DE31-01-FrankfurtanderOder-Berlin",
+          "file": "GPX/EU/DE/DE08-Jakobsweg-FrankfurtanderOder-Berlin/DE08a01a-FrankfurtanderOder-Berlin.gpx",
+          "distance_km": 112.64,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": -1.0,
+          "max_elevation_m": -1.0,
+          "point_count": 702,
+          "bounds": [
+            13.26497,
+            52.31112,
+            14.55387,
+            52.4314
+          ]
+        },
+        {
+          "name": "DE15-01a-Berlin-BadWilsnack",
+          "file": "GPX/EU/DE/DE09-Jakobsweg-Bad-Willsnack-Berlin/DE09a01a-BadWilsnack-Berlin.gpx",
+          "distance_km": 139.77,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": -1.0,
+          "max_elevation_m": -1.0,
+          "point_count": 689,
+          "bounds": [
+            11.94805,
+            52.52007,
+            13.41149,
+            52.96335
+          ]
+        },
+        {
+          "name": "DE05-01b-Rostock-Perleberg",
+          "file": "GPX/EU/DE/DE10-Jakobsweg-Rostock-Bad-Wilsnack/DE10a01a-Rostock-BadWilsnack.gpx",
+          "distance_km": 182.44,
+          "elevation_gain_m": 849.0,
+          "elevation_loss_m": 849.0,
+          "min_elevation_m": 0.0,
+          "max_elevation_m": 88.0,
+          "point_count": 1518,
+          "bounds": [
+            11.68135,
+            52.9601,
+            12.1888,
+            54.08131
+          ]
+        },
+        {
+          "name": "DE11-01-Berlin-Vehlen",
+          "file": "GPX/EU/DE/DE11-Jakobsweg-FranfurtanderOder-Berlin-Tangermünde/DE11a01a-Berlin-Vehlen.gpx",
+          "distance_km": 103.56,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": -1.0,
+          "max_elevation_m": -1.0,
+          "point_count": 955,
+          "bounds": [
+            12.32128,
+            52.3133,
+            13.26902,
+            52.43088
+          ]
+        },
+        {
+          "name": "DE11-02-Vehlen-Tangermünden",
+          "file": "GPX/EU/DE/DE11-Jakobsweg-FranfurtanderOder-Berlin-Tangermünde/DE11a02a-Vehlen-Tangermunden.gpx",
+          "distance_km": 40.07,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": -1.0,
+          "max_elevation_m": -1.0,
+          "point_count": 320,
+          "bounds": [
+            11.97423,
+            52.43088,
+            12.32128,
+            52.56769
+          ]
+        },
+        {
+          "name": "DE15-01-Bad Willsnack-Freyburg",
+          "file": "GPX/EU/DE/DE12-Jakosbweg-BadWilsnack-Freyburg/DE12a01a-BadWilsnack-Freyburg.gpx",
+          "distance_km": 433.1,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": -1.0,
+          "max_elevation_m": -1.0,
+          "point_count": 3535,
+          "bounds": [
+            10.98872,
+            51.22395,
+            12.07462,
+            52.95554
+          ]
+        },
+        {
+          "name": "DE34-Halberstadt-BadGandrsheim",
+          "file": "GPX/EU/DE/DE13-Jakobsweg-Halberstadt-Dormund/DE13a01a-Halberstadt-BadGandrsheim.gpx",
+          "distance_km": 93.14,
+          "elevation_gain_m": 1144.0,
+          "elevation_loss_m": 1132.0,
+          "min_elevation_m": 114.0,
+          "max_elevation_m": 523.0,
+          "point_count": 304,
+          "bounds": [
+            10.03263,
+            51.83632,
+            11.04997,
+            51.9297
+          ]
+        },
+        {
+          "name": "DE13-02-BadGandrsheim-Paderborn",
+          "file": "GPX/EU/DE/DE13-Jakobsweg-Halberstadt-Dormund/DE13a02a-BadGandrsheim-Paderborn.gpx",
+          "distance_km": 113.69,
+          "elevation_gain_m": 1548.0,
+          "elevation_loss_m": 1538.0,
+          "min_elevation_m": 91.0,
+          "max_elevation_m": 531.0,
+          "point_count": 223,
+          "bounds": [
+            8.74596,
+            51.70994,
+            10.03519,
+            51.88266
+          ]
+        },
+        {
+          "name": "DE13-03-Paderborn-Dormund",
+          "file": "GPX/EU/DE/DE13-Jakobsweg-Halberstadt-Dormund/DE13a03a-Paderborn-Dortmund.gpx",
+          "distance_km": 106.35,
+          "elevation_gain_m": 428.0,
+          "elevation_loss_m": 457.0,
+          "min_elevation_m": 78.0,
+          "max_elevation_m": 185.0,
+          "point_count": 278,
+          "bounds": [
+            7.46817,
+            51.51033,
+            8.7457,
+            51.71489
+          ]
+        },
+        {
+          "name": "DE15-Frankfurt-Leipzig",
+          "file": "GPX/EU/DE/DE14-Jakobsweg-FrankfurtanderOder-Leipzig/DE14a01a-FrankfurtanderOder-Leipzig.gpx",
+          "distance_km": 234.58,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": -1.0,
+          "max_elevation_m": -1.0,
+          "point_count": 1269,
+          "bounds": [
+            12.37807,
+            51.34033,
+            14.55387,
+            52.3431
+          ]
+        },
+        {
+          "name": "DE13-01-Berlin-Leipzig",
+          "file": "GPX/EU/DE/DE15-Jakobsweg-Berlin-Leizpig/DE15a01a-Berlin-Leipzig.gpx",
+          "distance_km": 208.64,
+          "elevation_gain_m": 9998.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": -9999.0,
+          "max_elevation_m": -1.0,
+          "point_count": 1508,
+          "bounds": [
+            12.37807,
+            51.34033,
+            13.41543,
+            52.52052
+          ]
+        },
+        {
+          "name": "GE-Jacobsweg-Ökumenischer-Pilgerweg-V1.0",
+          "file": "GPX/EU/DE/DE16-Via-Regia-Görlitz-Fulda/DE16a01a-Gorlitz-Vacha.gpx",
+          "distance_km": 463.75,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": -1.0,
+          "max_elevation_m": -1.0,
+          "point_count": 4351,
+          "bounds": [
+            10.02102,
+            50.82773,
+            14.994,
+            51.38141
+          ]
+        },
+        {
+          "name": "DE03-02-Vacha-Fulda",
+          "file": "GPX/EU/DE/DE16-Via-Regia-Görlitz-Fulda/DE16a02a-Vacha-Fulda.gpx",
+          "distance_km": 63.85,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": -1.0,
+          "max_elevation_m": -1.0,
+          "point_count": 817,
+          "bounds": [
+            9.67275,
+            50.55169,
+            10.03293,
+            50.82774
+          ]
+        },
+        {
+          "name": "DE25-Bautzen-Zwickau",
+          "file": "GPX/EU/DE/DE17-Sächsischer-Jakobsweg-Bautzen-Hof/DE17a01a-Bautzen-Zwickau.gpx",
+          "distance_km": 206.66,
+          "elevation_gain_m": 2337.0,
+          "elevation_loss_m": 2066.0,
+          "min_elevation_m": 112.0,
+          "max_elevation_m": 485.0,
+          "point_count": 2750,
+          "bounds": [
+            12.49554,
+            50.68169,
+            14.42622,
+            51.18324
+          ]
+        },
+        {
+          "name": "DE17-02-Zwickau-Hof",
+          "file": "GPX/EU/DE/DE17-Sächsischer-Jakobsweg-Bautzen-Hof/DE17a02a-Zwickau-Hof.gpx",
+          "distance_km": 78.41,
+          "elevation_gain_m": 1115.0,
+          "elevation_loss_m": 885.0,
+          "min_elevation_m": 267.0,
+          "max_elevation_m": 568.0,
+          "point_count": 168,
+          "bounds": [
+            11.90714,
+            50.32124,
+            12.49471,
+            50.71865
+          ]
+        },
+        {
+          "name": "DE18-01-Leipzig-Hof",
+          "file": "GPX/EU/DE/DE18-Jakobsweg-Lepzig-Zwickau/DE18a01a-Leipzig-Zwickau.gpx",
+          "distance_km": 105.32,
+          "elevation_gain_m": 471.0,
+          "elevation_loss_m": 310.0,
+          "min_elevation_m": 103.0,
+          "max_elevation_m": 267.0,
+          "point_count": 1170,
+          "bounds": [
+            12.35345,
+            50.71809,
+            12.52211,
+            51.34033
+          ]
+        },
+        {
+          "name": "DE19-Jacosweg-Paderborn-Köln",
+          "file": "GPX/EU/DE/DE19-Jakobsweg-Paderborn-Köln/DE19a01a-Paderborn-Koln.gpx",
+          "distance_km": 234.57,
+          "elevation_gain_m": 3433.0,
+          "elevation_loss_m": 3499.0,
+          "min_elevation_m": 38.0,
+          "max_elevation_m": 516.0,
+          "point_count": 503,
+          "bounds": [
+            6.92035,
+            50.93642,
+            8.76294,
+            51.71402
+          ]
+        },
+        {
+          "name": "DE04-Eisenach-Koln",
+          "file": "GPX/EU/DE/DE20-Jakobsweg-Eisenach-Köln/DE20a01a-Eisenach-Koln.gpx",
+          "distance_km": 339.82,
+          "elevation_gain_m": 3632.0,
+          "elevation_loss_m": 3578.0,
+          "min_elevation_m": 0.0,
+          "max_elevation_m": 577.0,
+          "point_count": 4444,
+          "bounds": [
+            6.9576,
+            50.78499,
+            10.31716,
+            51.15045
+          ]
+        },
+        {
+          "name": "Jakobsweg Hof-Nuernberg",
+          "file": "GPX/EU/DE/DE21-Via Imperii-Hof-Nürnberg/DE21a01a-Hof-Nurnberg.gpx",
+          "distance_km": 183.34,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": 0.0,
+          "max_elevation_m": 0.0,
+          "point_count": 2541,
+          "bounds": [
+            11.06917,
+            49.44939,
+            11.91698,
+            50.31581
+          ]
+        },
+        {
+          "name": "NewTrackEditing4",
+          "file": "GPX/EU/DE/DE22-Jakobsweg-Erfurt-Nürnberg/DE22a01a-Erfurt-Lichtenfels.gpx",
+          "distance_km": 104.78,
+          "elevation_gain_m": 9999.0,
+          "elevation_loss_m": 9000.0,
+          "min_elevation_m": -9999.0,
+          "max_elevation_m": 0.0,
+          "point_count": 23,
+          "bounds": [
+            10.89583,
+            50.12162,
+            11.05433,
+            50.97566
+          ]
+        },
+        {
+          "name": "DE14-01-Kronach-Nurnberg",
+          "file": "GPX/EU/DE/DE22-Jakobsweg-Erfurt-Nürnberg/DE22a02a-Lichtenfels-Nurnberg.gpx",
+          "distance_km": 118.44,
+          "elevation_gain_m": 9998.0,
+          "elevation_loss_m": 9998.0,
+          "min_elevation_m": -9999.0,
+          "max_elevation_m": -1.0,
+          "point_count": 1195,
+          "bounds": [
+            10.83509,
+            49.44942,
+            11.13895,
+            50.12373
+          ]
+        },
+        {
+          "name": "DE23-01-Bamberg-Uffenheim",
+          "file": "GPX/EU/DE/DE23-Jakobsweg-Bamberg-Uffenheim/DE23a01a-Bamberg-Uffenheim.gpx",
+          "distance_km": 99.21,
+          "elevation_gain_m": 1133.0,
+          "elevation_loss_m": 1047.0,
+          "min_elevation_m": 232.0,
+          "max_elevation_m": 464.0,
+          "point_count": 237,
+          "bounds": [
+            10.19185,
+            49.54405,
+            10.87613,
+            49.92139
+          ]
+        },
+        {
+          "name": "DE24-01-Fulda-Mainz",
+          "file": "GPX/EU/DE/DE24-Jakobsweg-Fulda-Mainz/DE24a01a-Fulda-Mainz.gpx",
+          "distance_km": 162.82,
+          "elevation_gain_m": 2098.0,
+          "elevation_loss_m": 2263.0,
+          "min_elevation_m": -1.0,
+          "max_elevation_m": 320.0,
+          "point_count": 1601,
+          "bounds": [
+            8.2595,
+            49.99512,
+            9.67264,
+            50.5532
+          ]
+        },
+        {
+          "name": "DE-Fulda-Wurzburg",
+          "file": "GPX/EU/DE/DE25-Jakobsweg-Fulda-Wurzburg/DE25a01a-Fulda-Wurzburg.gpx",
+          "distance_km": 155.7,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": -1.0,
+          "max_elevation_m": -1.0,
+          "point_count": 1858,
+          "bounds": [
+            9.66362,
+            49.79288,
+            10.15143,
+            50.55398
+          ]
+        },
+        {
+          "name": "DE02-02b-Bonn-Bad-Münstereifel (3)",
+          "file": "GPX/EU/DE/DE26-Jakobsweg-Koln-Metz/DE26a01a-Koln-Trier.gpx",
+          "distance_km": 236.5,
+          "elevation_gain_m": 5113.0,
+          "elevation_loss_m": 5033.0,
+          "min_elevation_m": 0.0,
+          "max_elevation_m": 687.0,
+          "point_count": 3867,
+          "bounds": [
+            6.27615,
+            49.75646,
+            6.95829,
+            50.94077
+          ]
+        },
+        {
+          "name": "DE02-02b-Bonn-Bad-Münstereifel (1)",
+          "file": "GPX/EU/DE/DE26-Jakobsweg-Koln-Metz/DE26a01b-Bonn-BadMunstereifel.gpx",
+          "distance_km": 49.96,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": -1.0,
+          "max_elevation_m": -1.0,
+          "point_count": 217,
+          "bounds": [
+            6.76421,
+            50.55489,
+            7.10023,
+            50.73334
+          ]
+        },
+        {
+          "name": "15 Merzkirchen",
+          "file": "GPX/EU/DE/DE26-Jakobsweg-Koln-Metz/DE26a02a-Trier-Merzkirchen.gpx",
+          "distance_km": 26.28,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": 0.0,
+          "max_elevation_m": 0.0,
+          "point_count": 361,
+          "bounds": [
+            6.4764,
+            49.57807,
+            6.631,
+            49.73865
+          ]
+        },
+        {
+          "name": "16 Perl",
+          "file": "GPX/EU/DE/DE26-Jakobsweg-Koln-Metz/DE26a03a-Merzkirchen-Perl.gpx",
+          "distance_km": 17.86,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": 0.0,
+          "max_elevation_m": 0.0,
+          "point_count": 187,
+          "bounds": [
+            6.38482,
+            49.47194,
+            6.48189,
+            49.57807
+          ]
+        },
+        {
+          "name": "17 Hombourg",
+          "file": "GPX/EU/DE/DE26-Jakobsweg-Koln-Metz/DE26a04a-Perl-HombourgBudange.gpx",
+          "distance_km": 31.92,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": 0.0,
+          "max_elevation_m": 0.0,
+          "point_count": 388,
+          "bounds": [
+            6.33708,
+            49.29693,
+            6.399,
+            49.47342
+          ]
+        },
+        {
+          "name": "18 Metz",
+          "file": "GPX/EU/DE/DE26-Jakobsweg-Koln-Metz/DE26a05a-HombourgBudange-Metz.gpx",
+          "distance_km": 30.59,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": 0.0,
+          "max_elevation_m": 0.0,
+          "point_count": 395,
+          "bounds": [
+            6.17475,
+            49.1197,
+            6.34832,
+            49.29693
+          ]
+        },
+        {
+          "name": "DE04-Andernach-Trier",
+          "file": "GPX/EU/DE/DE27-Jakobsweg-Andernach-Trier/DE27a01a-Andernach-Trier.gpx",
+          "distance_km": 120.55,
+          "elevation_gain_m": 1632.0,
+          "elevation_loss_m": 1691.0,
+          "min_elevation_m": -1.0,
+          "max_elevation_m": 510.0,
+          "point_count": 366,
+          "bounds": [
+            6.62735,
+            49.7379,
+            7.39641,
+            50.44209
+          ]
+        },
+        {
+          "name": "DE28-01-Mainz-Bingen",
+          "file": "GPX/EU/DE/DE28-Jakobsweg-Mainz-Trier/DE28a01a-Mainz-Bingen.gpx",
+          "distance_km": 33.51,
+          "elevation_gain_m": 136.0,
+          "elevation_loss_m": 118.0,
+          "min_elevation_m": 78.0,
+          "max_elevation_m": 102.0,
+          "point_count": 136,
+          "bounds": [
+            7.90008,
+            49.96591,
+            8.27283,
+            50.03303
+          ]
+        },
+        {
+          "name": "DE35-Bingen-Trier",
+          "file": "GPX/EU/DE/DE28-Jakobsweg-Mainz-Trier/DE28a02a-Bingen-Trier.gpx",
+          "distance_km": 125.49,
+          "elevation_gain_m": 3047.0,
+          "elevation_loss_m": 3011.0,
+          "min_elevation_m": 86.0,
+          "max_elevation_m": 723.0,
+          "point_count": 421,
+          "bounds": [
+            6.63134,
+            49.72254,
+            7.90058,
+            49.96744
+          ]
+        },
+        {
+          "name": "DE-Fränkisch-Schwäbisch",
+          "file": "GPX/EU/DE/DE29-Fränkisch-Schwäbicher-Jakobsweg-Wurzburg-Ulm/DE29a01a-Wurzburg-Ulm.gpx",
+          "distance_km": 270.08,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": -1.0,
+          "max_elevation_m": -1.0,
+          "point_count": 3843,
+          "bounds": [
+            9.85023,
+            48.39853,
+            10.24834,
+            49.79333
+          ]
+        },
+        {
+          "name": "GE-Jacobsweg-Oberpfälzer-Jakobsweg-V1.0",
+          "file": "GPX/EU/DE/DE30-Oberpfälzer-Jakobsweg-Tillyschanz-Nümberg/DE30a01a-Tillyschanz-Nurnberg.gpx",
+          "distance_km": 177.01,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": -1.0,
+          "max_elevation_m": -1.0,
+          "point_count": 2288,
+          "bounds": [
+            11.00698,
+            49.29167,
+            12.57534,
+            49.58796
+          ]
+        },
+        {
+          "name": "DE12-Nuremberg-Steimfeld",
+          "file": "GPX/EU/DE/DE31-Jakobsweg-Nürnberg-Rothenburg/DE31a01a-Nurnberg-Rothemburg.gpx",
+          "distance_km": 86.64,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": -1.0,
+          "max_elevation_m": -1.0,
+          "point_count": 935,
+          "bounds": [
+            10.17705,
+            49.33522,
+            11.00704,
+            49.40425
+          ]
+        },
+        {
+          "name": "DE16-01-Rothenburg-Speyer",
+          "file": "GPX/EU/DE/DE32-Jakobsweg-Rothenburg-Metz/DE32a01a-Rothenburg-Speyer.gpx",
+          "distance_km": 183.13,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": -1.0,
+          "max_elevation_m": -1.0,
+          "point_count": 2098,
+          "bounds": [
+            8.44147,
+            49.22404,
+            10.17816,
+            49.38996
+          ]
+        },
+        {
+          "name": "DE16-01a-Schontal-Sinsheim",
+          "file": "GPX/EU/DE/DE32-Jakobsweg-Rothenburg-Metz/DE32a01b-Schontal-Sinsheim.gpx",
+          "distance_km": 75.87,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": -1.0,
+          "max_elevation_m": -1.0,
+          "point_count": 983,
+          "bounds": [
+            8.87904,
+            49.25332,
+            9.50268,
+            49.40606
+          ]
+        },
+        {
+          "name": "DE16-02-Speyer-Hornbach",
+          "file": "GPX/EU/DE/DE32-Jakobsweg-Rothenburg-Metz/DE32a02a-Speyer-Hornbach.gpx",
+          "distance_km": 146.33,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": -1.0,
+          "max_elevation_m": -1.0,
+          "point_count": 2538,
+          "bounds": [
+            7.34406,
+            49.18639,
+            8.44125,
+            49.41486
+          ]
+        },
+        {
+          "name": "DE16-02a-Alternativ",
+          "file": "GPX/EU/DE/DE32-Jakobsweg-Rothenburg-Metz/DE32a02b-Alternativ-Hornbach.gpx",
+          "distance_km": 143.73,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": -1.0,
+          "max_elevation_m": -1.0,
+          "point_count": 2732,
+          "bounds": [
+            7.37101,
+            49.07765,
+            8.44925,
+            49.31723
+          ]
+        },
+        {
+          "name": "DE33-Jakobweg-Nünrberg-Eichstätt",
+          "file": "GPX/EU/DE/DE33-Jakobsweg-Nürnberg-Eichtätt/DE33a01a-Nurnberg-Eichstatt.gpx",
+          "distance_km": 55.58,
+          "elevation_gain_m": 206.0,
+          "elevation_loss_m": 30.0,
+          "min_elevation_m": 348.0,
+          "max_elevation_m": 554.0,
+          "point_count": 4,
+          "bounds": [
+            11.11485,
+            48.90387,
+            11.20574,
+            49.39511
+          ]
+        },
+        {
+          "name": "GE-Jacobsweg-Nürnberg-Ulm-V1.0",
+          "file": "GPX/EU/DE/DE34-Jakobsweg -Nürnberg-Konstanz/DE34a01a-Nurnberg-Ulm.gpx",
+          "distance_km": 216.72,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": -1.0,
+          "max_elevation_m": -1.0,
+          "point_count": 2690,
+          "bounds": [
+            9.99141,
+            48.39612,
+            11.11375,
+            49.44948
+          ]
+        },
+        {
+          "name": "GE-Jacobsweg-Oberschwäbischer-Jakobsweg-V1.0",
+          "file": "GPX/EU/DE/DE34-Jakobsweg -Nürnberg-Konstanz/DE34a02a-Ulm-Konstanz.gpx",
+          "distance_km": 165.12,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": -1.0,
+          "max_elevation_m": -1.0,
+          "point_count": 2473,
+          "bounds": [
+            9.1754,
+            47.66306,
+            9.99141,
+            48.39853
+          ]
+        },
+        {
+          "name": "GE-Jacobsweg-Ostbayerischer-Jakobsweg-V1.0",
+          "file": "GPX/EU/DE/DE35-Ostbayrischer-Jakobsweg-Vseruby-Donauwörth/DE35a01a-Vseruby-Donauworth.gpx",
+          "distance_km": 271.8,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": -1.0,
+          "max_elevation_m": -1.0,
+          "point_count": 3505,
+          "bounds": [
+            10.77748,
+            48.71807,
+            12.97662,
+            49.33475
+          ]
+        },
+        {
+          "name": "DE18-01-Nordlingen-Kempten",
+          "file": "GPX/EU/DE/DE36-Jakobsweg-Nordlingen-Kempten/DE36a01a-Nordlingen-Kempten.gpx",
+          "distance_km": 228.23,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": -1.0,
+          "max_elevation_m": -1.0,
+          "point_count": 3130,
+          "bounds": [
+            10.18119,
+            47.72661,
+            10.9136,
+            48.95531
+          ]
+        },
+        {
+          "name": "DE18-Alternativ-Nordlingen-Kempten-Alternativ",
+          "file": "GPX/EU/DE/DE36-Jakobsweg-Nordlingen-Kempten/DE36a01b-Alternativ-Memmingen.gpx",
+          "distance_km": 111.34,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": -1.0,
+          "max_elevation_m": -1.0,
+          "point_count": 1423,
+          "bounds": [
+            10.15898,
+            47.86706,
+            10.85437,
+            48.33699
+          ]
+        },
+        {
+          "name": "DE-Rothenburg-Rottenburg",
+          "file": "GPX/EU/DE/DE37-Jakobsweg-Rothenburg-Rottenburg/DE37a01a-Rothenburg-Rottenburg.gpx",
+          "distance_km": 196.5,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": -1.0,
+          "max_elevation_m": -1.0,
+          "point_count": 2671,
+          "bounds": [
+            8.93381,
+            48.47713,
+            10.17816,
+            49.37767
+          ]
+        },
+        {
+          "name": "DE26-HorbamNeckar-Strasboug",
+          "file": "GPX/EU/DE/DE38-Kinzigtäler-Jakobsweg-Horb-am-Neckar-Strasboug/DE38a01a-HorbamNeckar-Strasboug.gpx",
+          "distance_km": 146.86,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": -1.0,
+          "max_elevation_m": -1.0,
+          "point_count": 2285,
+          "bounds": [
+            7.78433,
+            48.2532,
+            8.69043,
+            48.57252
+          ]
+        },
+        {
+          "name": "DE39-01-Mainz-Worms",
+          "file": "GPX/EU/DE/DE39-Jakobsweg-Mainz-Speyer/DE39a01a-Mainz-Worms.gpx",
+          "distance_km": 52.47,
+          "elevation_gain_m": 168.0,
+          "elevation_loss_m": 161.0,
+          "min_elevation_m": 79.0,
+          "max_elevation_m": 108.0,
+          "point_count": 105,
+          "bounds": [
+            8.27268,
+            49.6365,
+            8.45562,
+            50.00552
+          ]
+        },
+        {
+          "name": "DE39-02-Worms-Speyer",
+          "file": "GPX/EU/DE/DE39-Jakobsweg-Mainz-Speyer/DE39a02a-Worms-Speyer.gpx",
+          "distance_km": 47.79,
+          "elevation_gain_m": 126.0,
+          "elevation_loss_m": 114.0,
+          "min_elevation_m": 88.0,
+          "max_elevation_m": 111.0,
+          "point_count": 122,
+          "bounds": [
+            8.35564,
+            49.31629,
+            8.43339,
+            49.63663
+          ]
+        },
+        {
+          "name": "DE12-Weinstadt-Neckartenzlingen",
+          "file": "GPX/EU/DE/DE40-Jakobsweg-Weinstadt-Neckartenzlingen/DE40a01a-Weinstadt-Neckartenzlingen.gpx",
+          "distance_km": 46.22,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": -1.0,
+          "max_elevation_m": -1.0,
+          "point_count": 564,
+          "bounds": [
+            9.26301,
+            48.5902,
+            9.4196,
+            48.81072
+          ]
+        },
+        {
+          "name": "DE12-Bargau-Göppinger-Wendlingen",
+          "file": "GPX/EU/DE/DE40-Jakobsweg-Weinstadt-Neckartenzlingen/DE40a01b-Bargau-Wendlingen.gpx",
+          "distance_km": 65.81,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": -1.0,
+          "max_elevation_m": -1.0,
+          "point_count": 890,
+          "bounds": [
+            9.40952,
+            48.65529,
+            9.88804,
+            48.78673
+          ]
+        },
+        {
+          "name": "DE28-Rottenburg-Blumberg",
+          "file": "GPX/EU/DE/DE41-Jakobsweg-Rottenburg-Blumberg/DE41a01a-Rottenburg-Blumberg.gpx",
+          "distance_km": 148.38,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": -1.0,
+          "max_elevation_m": -1.0,
+          "point_count": 1032,
+          "bounds": [
+            8.4593,
+            47.78005,
+            8.93386,
+            48.50775
+          ]
+        },
+        {
+          "name": "DE29-01-Hufingen-Freiburg-Basel",
+          "file": "GPX/EU/DE/DE42-Jakobsweg-Hufingen-Basel/DE42a01a-Hufingen-Basel.gpx",
+          "distance_km": 175.22,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": -1.0,
+          "max_elevation_m": -1.0,
+          "point_count": 2817,
+          "bounds": [
+            7.52793,
+            47.55613,
+            8.48954,
+            48.00291
+          ]
+        },
+        {
+          "name": "DE29-01a-Alternativ",
+          "file": "GPX/EU/DE/DE42-Jakobsweg-Hufingen-Basel/DE42a01b-Alternativ-Stegen.gpx",
+          "distance_km": 16.56,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": -1.0,
+          "max_elevation_m": -1.0,
+          "point_count": 309,
+          "bounds": [
+            7.94792,
+            47.95856,
+            8.01393,
+            48.00385
+          ]
+        },
+        {
+          "name": "DE43a01a-CseskyKrumlov-Peissenberg",
+          "file": "GPX/EU/DE/DE43a-Jakobsweg-StOswald bei Haslach-Peissenberg/DE43a01a-StOswaldbeiHaslach-Peissenberg.gpx",
+          "distance_km": 442.46,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": -1.0,
+          "max_elevation_m": -1.0,
+          "point_count": 6359,
+          "bounds": [
+            11.01321,
+            47.79338,
+            14.03118,
+            48.64133
+          ]
+        },
+        {
+          "name": "Gasteig-Breitenbach",
+          "file": "GPX/EU/DE/DE43a-Jakobsweg-StOswald bei Haslach-Peissenberg/DE43a01b-Neubeuern-Kundl.gpx",
+          "distance_km": 53.93,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": -1.0,
+          "max_elevation_m": -1.0,
+          "point_count": 782,
+          "bounds": [
+            11.9732,
+            47.47845,
+            12.19901,
+            47.77391
+          ]
+        },
+        {
+          "name": "DE07-01-Munchen-Bregenz",
+          "file": "GPX/EU/DE/DE44-Münchener-Jakobsweg-München-Bregenz/DE44a01a-Munchen-StGallen.gpx",
+          "distance_km": 299.45,
+          "elevation_gain_m": 974.0,
+          "elevation_loss_m": 581.0,
+          "min_elevation_m": -1.0,
+          "max_elevation_m": 950.0,
+          "point_count": 1747,
+          "bounds": [
+            9.49512,
+            47.46083,
+            11.58525,
+            48.12976
+          ]
+        },
+        {
+          "name": "DE07-01a-Freising-Stegen",
+          "file": "GPX/EU/DE/DE44-Münchener-Jakobsweg-München-Bregenz/DE44a01b-Freising-Munchen.gpx",
+          "distance_km": 78.35,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": -1.0,
+          "max_elevation_m": -1.0,
+          "point_count": 703,
+          "bounds": [
+            11.12918,
+            48.07806,
+            11.71678,
+            48.40824
+          ]
+        },
+        {
+          "name": "DE44-02-Munchen-Motz",
+          "file": "GPX/EU/DE/DE44-Münchener-Jakobsweg-München-Bregenz/DE44a01c-Munchen-Motz.gpx",
+          "distance_km": 129.23,
+          "elevation_gain_m": 1129.0,
+          "elevation_loss_m": 1694.0,
+          "min_elevation_m": -1.0,
+          "max_elevation_m": 565.0,
+          "point_count": 508,
+          "bounds": [
+            10.96325,
+            47.28278,
+            11.47829,
+            47.97898
+          ]
+        },
+        {
+          "name": "MJW_08bT_MarktoberdorfWaldKapelle 001",
+          "file": "GPX/EU/DE/DE44-Münchener-Jakobsweg-München-Bregenz/DE44a01d-Variente-WaldKapelle.gpx",
+          "distance_km": 27.96,
+          "elevation_gain_m": 659.0,
+          "elevation_loss_m": 496.0,
+          "min_elevation_m": 730.0,
+          "max_elevation_m": 894.0,
+          "point_count": 334,
+          "bounds": [
+            10.44359,
+            47.68629,
+            10.618,
+            47.77821
+          ]
+        },
+        {
+          "name": "MJW_11bT_WeilerLindau 001",
+          "file": "GPX/EU/DE/DE44-Münchener-Jakobsweg-München-Bregenz/DE44a01e-WeilerSimmerberg-Lindau.gpx",
+          "distance_km": 25.45,
+          "elevation_gain_m": 680.0,
+          "elevation_loss_m": 905.0,
+          "min_elevation_m": 396.0,
+          "max_elevation_m": 830.0,
+          "point_count": 497,
+          "bounds": [
+            9.68206,
+            47.54379,
+            9.91293,
+            47.60697
+          ]
+        },
+        {
+          "name": "MJW_11bT_LindauNonnenhorn",
+          "file": "GPX/EU/DE/DE44-Münchener-Jakobsweg-München-Bregenz/DE44a02e-Lindau-Nonnenhorn.gpx",
+          "distance_km": 8.16,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": 0.0,
+          "max_elevation_m": 0.0,
+          "point_count": 68,
+          "bounds": [
+            9.60806,
+            47.55024,
+            9.69197,
+            47.57486
+          ]
+        },
+        {
+          "name": "DE11-Salzburg-Berbling",
+          "file": "GPX/EU/DE/DE45-Jakobsweg-Salzburg-Bad-Aibling/DE45a01a-Salzburg-BadAibling.gpx",
+          "distance_km": 135.43,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": -1.0,
+          "max_elevation_m": -1.0,
+          "point_count": 1841,
+          "bounds": [
+            11.97328,
+            47.73129,
+            13.0474,
+            47.87761
+          ]
+        },
+        {
+          "name": "DE46-01-Ettlingen-Schutterwald-Breisach",
+          "file": "GPX/EU/DE/DE46-Badisher-Jakobsweg-Ettlingen-Breisach/DE46a01a-Ettlingen-Breisach.gpx",
+          "distance_km": 140.22,
+          "elevation_gain_m": 685.0,
+          "elevation_loss_m": 627.0,
+          "min_elevation_m": 114.0,
+          "max_elevation_m": 229.0,
+          "point_count": 300,
+          "bounds": [
+            7.57851,
+            48.02122,
+            8.40809,
+            48.9418
+          ]
+        },
+        {
+          "name": "DE12-01-Wolfach-Thann",
+          "file": "GPX/EU/DE/DE47-Jakobsweg-Wolfach-Thann/DE47a01a-Wolfach-Thann.gpx",
+          "distance_km": 137.69,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": -1.0,
+          "max_elevation_m": -1.0,
+          "point_count": 1624,
+          "bounds": [
+            7.10463,
+            47.80168,
+            8.22421,
+            48.29097
+          ]
+        },
+        {
+          "name": "DE12-01a-Geiswasser-Pfaffenheim",
+          "file": "GPX/EU/DE/DE47-Jakobsweg-Wolfach-Thann/DE47a01b-Alternativ-Pfaffenheim.gpx",
+          "distance_km": 45.31,
+          "elevation_gain_m": 0.0,
+          "elevation_loss_m": 0.0,
+          "min_elevation_m": -1.0,
+          "max_elevation_m": -1.0,
+          "point_count": 308,
+          "bounds": [
+            7.26499,
+            47.97943,
+            7.65986,
+            48.05938
+          ]
+        },
+        {
+          "name": "DE00a-Gorlitz-HradekNadNisou",
+          "file": "GPX/EU/DE/DE48a-Zittauer Jakobsweg/DE48a01a-Gorlitz-HradekNadNisou.gpx",
+          "distance_km": 47.45,
+          "elevation_gain_m": 329.0,
+          "elevation_loss_m": 267.0,
+          "min_elevation_m": 186.0,
+          "max_elevation_m": 262.0,
+          "point_count": 1724,
+          "bounds": [
+            14.80678,
+            50.85379,
+            14.99103,
+            51.15629
+          ]
+        }
+      ]
+    }
+  }
+}

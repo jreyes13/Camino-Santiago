@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="CaminoSantiago-GIS (https://github.com/jreyes13/Camino-Santiago)"
+  xmlns="http://www.topografix.com/GPX/1/1"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  <metadata>
+    <name>CPO-e04t03p2-PONTEVEDRA-CALDAS_DE_REIS(AlbergueDeBarro-AlbergueDeBriallos)</name>
+  </metadata>
+  <trk>
+    <name>CPO-e04t03p2-PONTEVEDRA-CALDAS_DE_REIS(AlbergueDeBarro-AlbergueDeBriallos)</name>
+    <trkseg>
+      <trkpt lat="42.518433" lon="-8.645504"><ele>0.0</ele></trkpt>
+      <trkpt lat="42.518528" lon="-8.645465"><ele>0.0</ele></trkpt>
+      <trkpt lat="42.518612" lon="-8.645413"><ele>0.0</ele></trkpt>
+      <trkpt lat="42.518715" lon="-8.645384"><ele>0.0</ele></trkpt>
+    </trkseg>
+  </trk>
+</gpx>

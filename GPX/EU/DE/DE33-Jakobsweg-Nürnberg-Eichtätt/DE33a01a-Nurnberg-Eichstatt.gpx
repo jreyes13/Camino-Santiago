@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="CaminoSantiago-GIS (https://github.com/jreyes13/Camino-Santiago)"
+  xmlns="http://www.topografix.com/GPX/1/1"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  <metadata>
+    <name>DE33-Jakobweg-Nünrberg-Eichstätt</name>
+  </metadata>
+  <trk>
+    <name>DE33-Jakobweg-Nünrberg-Eichstätt</name>
+    <trkseg>
+      <trkpt lat="49.395106" lon="11.114848"><ele>348.0</ele></trkpt>
+      <trkpt lat="49.215761" lon="11.186602"><ele>372.0</ele></trkpt>
+      <trkpt lat="49.076515" lon="11.205737"><ele>554.0</ele></trkpt>
+      <trkpt lat="48.903873" lon="11.165076"><ele>524.0</ele></trkpt>
+    </trkseg>
+  </trk>
+</gpx>

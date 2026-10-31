@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Camino de Santiago - Visor Cartográfico & GPX</title>
+  
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+    :root {
+      --primary: #1D3557;
+      --secondary: #457B9D;
+      --accent: #E63946;
+      --highlight: #F4A261;
+      --bg-light: #F8F9FA;
+      --dark: #2B2D42;
+      --border: #E2E8F0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+      background: var(--bg-light);
+      color: var(--dark);
+    }
+
+    /* Sidebar */
+    #sidebar {
+      width: 400px;
+      min-width: 320px;
+      height: 100vh;
+      background: #FFFFFF;
+      border-right: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      box-shadow: 2px 0 12px rgba(0,0,0,0.06);
+      z-index: 1000;
+      transition: transform 0.3s ease;
+    }
+
+    .sidebar-header {
+      background: linear-gradient(135deg, #1D3557 0%, #2A4365 100%);
+      color: white;
+      padding: 18px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .sidebar-header h1 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .sidebar-header .subtitle {
+      font-size: 0.82rem;
+      opacity: 0.88;
+    }
+
+    .stats-bar {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 6px;
+    }
+
+    .stat-card {
+      background: rgba(255, 255, 255, 0.12);
+      padding: 8px 12px;
+      border-radius: 6px;
+      backdrop-filter: blur(4px);
+    }
+
+    .stat-card .val {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #F1FAEE;
+    }
+
+    .stat-card .lbl {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      opacity: 0.8;
+    }
+
+    .search-box {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+      background: #FAFAFA;
+    }
+
+    .search-input-wrapper {
+      position: relative;
+    }
+
+    .search-input-wrapper i {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #94A3B8;
+      font-size: 0.9rem;
+    }
+
+    .search-input-wrapper input {
+      width: 100%;
+      padding: 8px 12px 8px 36px;
+      border: 1px solid #CBD5E1;
+      border-radius: 6px;
+      font-size: 0.88rem;
+      outline: none;
+      transition: border 0.2s;
+    }
+
+    .search-input-wrapper input:focus {
+      border-color: var(--secondary);
+    }
+
+    .routes-list {
+      flex: 1;
+      overflow-y: auto;
+      padding: 12px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .route-group {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      background: #FFFFFF;
+      transition: box-shadow 0.2s;
+    }
+
+    .route-group:hover {
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .route-group-header {
+      padding: 10px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      user-select: none;
+      border-left: 6px solid #CBD5E1;
+      background: #F8FAFC;
+    }
+
+    .route-title {
+      font-size: 0.92rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .route-badge {
+      font-size: 0.72rem;
+      background: #E2E8F0;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    .route-meta {
+      font-size: 0.76rem;
+      color: #64748B;
+    }
+
+    .stages-container {
+      display: none;
+      padding: 6px 12px 10px 12px;
+      border-top: 1px solid var(--border);
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .route-group.open .stages-container {
+      display: flex;
+    }
+
+    .stage-item {
+      padding: 6px 8px;
+      border-radius: 4px;
+      font-size: 0.82rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+
+    .stage-item:hover {
+      background: #F1F5F9;
+    }
+
+    .stage-name {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 210px;
+    }
+
+    .stage-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .stage-km {
+      font-size: 0.76rem;
+      color: #64748B;
+      font-weight: 500;
+    }
+
+    .btn-icon {
+      color: var(--secondary);
+      cursor: pointer;
+      padding: 2px;
+      text-decoration: none;
+      font-size: 0.85rem;
+    }
+
+    .btn-icon:hover {
+      color: var(--accent);
+    }
+
+    /* Map Area */
+    #map {
+      flex: 1;
+      height: 100vh;
+      background: #E5E9EC;
+    }
+
+    .legend-control {
+      background: white;
+      padding: 12px 14px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+      max-height: 280px;
+      overflow-y: auto;
+      font-size: 0.8rem;
+    }
+
+    .legend-title {
+      font-weight: 700;
+      margin-bottom: 8px;
+      font-size: 0.85rem;
+      color: var(--primary);
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 6px;
+      cursor: pointer;
+    }
+
+    .legend-color {
+      width: 14px;
+      height: 14px;
+      border-radius: 3px;
+    }
+
+    /* Custom Leaflet popup */
+    .leaflet-popup-content-wrapper {
+      border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    }
+
+    .popup-card {
+      font-size: 0.86rem;
+      min-width: 220px;
+    }
+
+    .popup-header {
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 4px;
+      font-size: 0.95rem;
+    }
+
+    .popup-route {
+      display: inline-block;
+      font-size: 0.72rem;
+      padding: 2px 6px;
+      border-radius: 4px;
+      color: white;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .popup-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+      margin: 8px 0;
+      background: #F8FAFC;
+      padding: 6px 8px;
+      border-radius: 4px;
+      font-size: 0.8rem;
+    }
+
+    .popup-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 6px;
+      background: var(--secondary);
+      color: white !important;
+      padding: 6px 12px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.78rem;
+      transition: background 0.2s;
+    }
+
+    .popup-btn:hover {
+      background: var(--primary);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div id="sidebar">
+    <div class="sidebar-header">
+      <h1><i class="fa-solid fa-map-location-dot"></i> Camino de Santiago</h1>
+      <div class="subtitle">Repositorio Cartográfico & Tracks GPX</div>
+      
+      <div class="stats-bar">
+        <div class="stat-card">
+          <div class="val" id="total-km">17,346 km</div>
+          <div class="lbl">Total Trazado</div>
+        </div>
+        <div class="stat-card">
+          <div class="val" id="total-tracks">172</div>
+          <div class="lbl">Etapas / Tracks GPX</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="search-box">
+      <div class="search-input-wrapper">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="route-search" placeholder="Buscar etapa, ciudad o variante..." />
+      </div>
+    </div>
+
+    <div class="routes-list" id="routes-list">
+      <!-- Generated dynamically -->
+    </div>
+  </div>
+
+  <!-- Map Container -->
+  <div id="map"></div>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  
+  <!-- Pre-loaded GeoJSON (allows opening index.html directly from file://) -->
+  <script src="data/routes_geojson.js"></script>
+
+  <script>
+    // Initialize Map
+    const map = L.map('map', {
+      center: [42.8782, -4.5],
+      zoom: 6,
+      zoomControl: true
+    });
+
+    // Tile Layers
+    const baseMaps = {
+      "OpenStreetMap": L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors'
+      }),
+      "Topográfico (OpenTopoMap)": L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenTopoMap contributors'
+      }),
+      "CartoDB Positron": L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+        attribution: '&copy; CARTO'
+      }),
+      "Satélite": L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+        attribution: '&copy; Esri'
+      })
+    };
+
+    baseMaps["OpenStreetMap"].addTo(map);
+    L.control.layers(baseMaps, null, { position: 'topright' }).addTo(map);
+
+    // Layer groups categorized by route_code
+    const routeLayers = {};
+    const routeMeta = {};
+
+    function getRouteColor(code) {
+      const colors = {
+        'ES01': '#E63946',  // Red
+        'ES12': '#457B9D',  // Blue
+        'ES09': '#2A9D8F',  // Teal
+        'ES10': '#1D3557',  // Navy
+        'EU-CZ': '#E76F51', // Orange-coral
+        'EU-DE': '#F4A261', // Gold
+        'OTHER': '#6C757D'  // Gray
+      };
+      return colors[code] || '#6C757D';
+    }
+
+    function styleFeature(feature) {
+      const color = feature.properties.color || getRouteColor(feature.properties.route_code);
+      return {
+        color: color,
+        weight: 3.5,
+        opacity: 0.85,
+        smoothFactor: 1.0
+      };
+    }
+
+    function createPopup(props) {
+      const eleGain = props.ele_gain ? `<div><strong>+ Ascenso:</strong> ${Math.round(props.ele_gain)} m</div>` : '';
+      const eleLoss = props.ele_loss ? `<div><strong>- Descenso:</strong> ${Math.round(props.ele_loss)} m</div>` : '';
+
+      return `
+        <div class="popup-card">
+          <span class="popup-route" style="background:${props.color || '#333'}">${props.route_name}</span>
+          <div class="popup-header">${props.stage_name}</div>
+          <div class="popup-stats">
+            <div><strong>Distancia:</strong> ${props.distance_km} km</div>
+            ${eleGain}
+            ${eleLoss}
+          </div>
+          <a class="popup-btn" href="${props.file}" download>
+            <i class="fa-solid fa-download"></i> Descargar GPX
+          </a>
+        </div>
+      `;
+    }
+
+    function loadGeoJSON(geojson) {
+      const stageListByRoute = {};
+
+      geojson.features.forEach(feat => {
+        const p = feat.properties;
+        const code = p.route_code;
+
+        if (!routeLayers[code]) {
+          routeLayers[code] = L.featureGroup().addTo(map);
+          routeMeta[code] = {
+            name: p.route_name,
+            color: p.color || getRouteColor(code),
+            stages: [],
+            totalKm: 0
+          };
+        }
+
+        routeMeta[code].totalKm += p.distance_km;
+        
+        const layer = L.geoJSON(feat, {
+          style: styleFeature,
+          onEachFeature: function(f, l) {
+            l.bindPopup(createPopup(p));
+            l.on('mouseover', function() {
+              this.setStyle({ weight: 6, opacity: 1 });
+            });
+            l.on('mouseout', function() {
+              this.setStyle(styleFeature(f));
+            });
+          }
+        });
+
+        layer.addTo(routeLayers[code]);
+
+        routeMeta[code].stages.push({
+          name: p.stage_name,
+          km: p.distance_km,
+          file: p.file,
+          bounds: layer.getBounds()
+        });
+      });
+
+      renderSidebar();
+    }
+
+    function renderSidebar(filterText = '') {
+      const listEl = document.getElementById('routes-list');
+      listEl.innerHTML = '';
+
+      const query = filterText.toLowerCase().trim();
+
+      Object.keys(routeMeta).sort().forEach(code => {
+        const meta = routeMeta[code];
+        const filteredStages = meta.stages.filter(s => 
+          !query || s.name.toLowerCase().includes(query) || meta.name.toLowerCase().includes(query)
+        );
+
+        if (query && filteredStages.length === 0) return;
+
+        const groupEl = document.createElement('div');
+        groupEl.className = 'route-group' + (query ? ' open' : '');
+
+        const headerEl = document.createElement('div');
+        headerEl.className = 'route-group-header';
+        headerEl.style.borderLeftColor = meta.color;
+        headerEl.innerHTML = `
+          <div>
+            <div class="route-title">
+              <span class="route-badge">${code}</span>
+              ${meta.name}
+            </div>
+            <div class="route-meta">${filteredStages.length} etapas &bull; ${Math.round(meta.totalKm)} km</div>
+          </div>
+          <i class="fa-solid fa-chevron-down toggle-icon" style="color:#94A3B8; font-size:0.8rem"></i>
+        `;
+
+        headerEl.addEventListener('click', () => {
+          groupEl.classList.toggle('open');
+        });
+
+        const stagesContainer = document.createElement('div');
+        stagesContainer.className = 'stages-container';
+
+        filteredStages.forEach(s => {
+          const item = document.createElement('div');
+          item.className = 'stage-item';
+          item.innerHTML = `
+            <span class="stage-name" title="${s.name}">${s.name}</span>
+            <div class="stage-actions">
+              <span class="stage-km">${s.km} km</span>
+              <a class="btn-icon" href="${s.file}" download title="Descargar GPX"><i class="fa-solid fa-download"></i></a>
+            </div>
+          `;
+
+          item.addEventListener('click', (e) => {
+            if (e.target.closest('.btn-icon')) return;
+            map.fitBounds(s.bounds, { padding: [50, 50], maxZoom: 13 });
+          });
+
+          stagesContainer.appendChild(item);
+        });
+
+        groupEl.appendChild(headerEl);
+        groupEl.appendChild(stagesContainer);
+        listEl.appendChild(groupEl);
+      });
+    }
+
+    // Search input listener
+    document.getElementById('route-search').addEventListener('input', (e) => {
+      renderSidebar(e.target.value);
+    });
+
+    // Check if routes data is available from window.ROUTES_GEOJSON or fetch
+    if (window.ROUTES_GEOJSON) {
+      loadGeoJSON(window.ROUTES_GEOJSON);
+    } else {
+      fetch('data/routes.geojson')
+        .then(r => r.json())
+        .then(data => loadGeoJSON(data))
+        .catch(err => console.error("Error loading GeoJSON:", err));
+    }
+  </script>
+</body>
+</html>

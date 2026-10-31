@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="CaminoSantiago-GIS (https://github.com/jreyes13/Camino-Santiago)"
+  xmlns="http://www.topografix.com/GPX/1/1"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  <metadata>
+    <name>CPO-e02t03-O_PORRIÑO-REDONDELA(OSouto-Redondela)</name>
+  </metadata>
+  <trk>
+    <name>CPO-e02t03-O_PORRIÑO-REDONDELA(OSouto-Redondela)</name>
+    <trkseg>
+      <trkpt lat="42.279319" lon="-8.610597"><ele>0.0</ele></trkpt>
+      <trkpt lat="42.279359" lon="-8.610595"><ele>0.0</ele></trkpt>
+      <trkpt lat="42.279512" lon="-8.610586"><ele>0.0</ele></trkpt>
+      <trkpt lat="42.279701" lon="-8.610572"><ele>0.0</ele></trkpt>
+      <trkpt lat="42.279858" lon="-8.610553"><ele>0.0</ele></trkpt>
+      <trkpt lat="42.280027" lon="-8.610529"><ele>0.0</ele></trkpt>
+      <trkpt lat="42.280144" lon="-8.610508"><ele>0.0</ele></trkpt>
+      <trkpt lat="42.280318" lon="-8.610473"><ele>0.0</ele></trkpt>
+      <trkpt lat="42.280447" lon="-8.610428"><ele>0.0</ele></trkpt>
+      <trkpt lat="42.280574" lon="-8.610368"><ele>0.0</ele></trkpt>
+      <trkpt lat="42.280717" lon="-8.610082"><ele>0.0</ele></trkpt>
+      <trkpt lat="42.280783" lon="-8.609938"><ele>0.0</ele></trkpt>
+      <trkpt lat="42.280903" lon="-8.609617"><ele>0.0</ele></trkpt>
+      <trkpt lat="42.281068" lon="-8.609471"><ele>0.0</ele></trkpt>
+      <trkpt lat="42.281264" lon="-8.609248"><ele>0.0</ele></trkpt>
+      <trkpt lat="42.281503" lon="-8.609025"><ele>0.0</ele></trkpt>
+      <trkpt lat="42.281634" lon="-8.608930"><ele>0.0</ele></trkpt>
+      <trkpt lat="42.281776" lon="-8.608829"><ele>0.0</ele></trkpt>
+      <trkpt lat="42.281861" lon="-8.608708"><ele>0.0</ele></trkpt>
+      <trkpt lat="42.281931" lon="-8.608844"><ele>0.0</ele></trkpt>
+      <trkpt lat="42.282016" lon="-8.608971"><ele>0.0</ele></trkpt>
+      <trkpt lat="42.282154" lon="-8.608771"><ele>0.0</ele></trkpt>
+      <trkpt lat="42.282330" lon="-8.608567"><ele>0.0</ele></trkpt>
+    </trkseg>
+  </trk>
+</gpx>

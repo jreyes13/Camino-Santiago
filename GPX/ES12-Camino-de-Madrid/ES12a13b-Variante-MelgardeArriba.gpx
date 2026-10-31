@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="CaminoSantiago-GIS (https://github.com/jreyes13/Camino-Santiago)"
+  xmlns="http://www.topografix.com/GPX/1/1"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  <metadata>
+    <name>NewTrackEditing8</name>
+  </metadata>
+  <trk>
+    <name>NewTrackEditing8</name>
+    <trkseg>
+      <trkpt lat="42.257817" lon="-5.074808"><ele>767.0</ele></trkpt>
+      <trkpt lat="42.260311" lon="-5.079742"><ele>780.0</ele></trkpt>
+      <trkpt lat="42.261236" lon="-5.081794"><ele>780.0</ele></trkpt>
+      <trkpt lat="42.262643" lon="-5.083701"><ele>780.0</ele></trkpt>
+      <trkpt lat="42.265209" lon="-5.087991"><ele>780.0</ele></trkpt>
+      <trkpt lat="42.266244" lon="-5.090533"><ele>782.0</ele></trkpt>
+      <trkpt lat="42.267944" lon="-5.092854"><ele>781.0</ele></trkpt>
+      <trkpt lat="42.268725" lon="-5.092880"><ele>780.0</ele></trkpt>
+      <trkpt lat="42.268740" lon="-5.092071"><ele>781.0</ele></trkpt>
+      <trkpt lat="42.269133" lon="-5.090304"><ele>780.0</ele></trkpt>
+      <trkpt lat="42.269670" lon="-5.087248"><ele>780.0</ele></trkpt>
+      <trkpt lat="42.270588" lon="-5.082991"><ele>780.0</ele></trkpt>
+      <trkpt lat="42.271642" lon="-5.077929"><ele>789.0</ele></trkpt>
+      <trkpt lat="42.272755" lon="-5.072870"><ele>787.0</ele></trkpt>
+      <trkpt lat="42.273527" lon="-5.070064"><ele>781.0</ele></trkpt>
+      <trkpt lat="42.273672" lon="-5.068693"><ele>780.0</ele></trkpt>
+      <trkpt lat="42.273523" lon="-5.066989"><ele>779.0</ele></trkpt>
+      <trkpt lat="42.273700" lon="-5.063840"><ele>775.0</ele></trkpt>
+    </trkseg>
+  </trk>
+</gpx>
