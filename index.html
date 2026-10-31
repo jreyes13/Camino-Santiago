@@ -350,11 +350,11 @@
       
       <div class="stats-bar">
         <div class="stat-card">
-          <div class="val" id="total-km">23,636 km</div>
+          <div class="val" id="total-km">41,438 km</div>
           <div class="lbl">Total Trazado</div>
         </div>
         <div class="stat-card">
-          <div class="val" id="total-tracks">218</div>
+          <div class="val" id="total-tracks">228</div>
           <div class="lbl">Etapas / Tracks GPX</div>
         </div>
       </div>
@@ -389,19 +389,27 @@
       zoomControl: true
     });
 
-    // Tile Layers
+    // Tile Layers (100% libres de API Key)
     const baseMaps = {
       "OpenStreetMap": L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; OpenStreetMap contributors'
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        maxZoom: 19
       }),
-      "Topográfico (OpenTopoMap)": L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; OpenTopoMap contributors'
+      "Topográfico IGN (España)": L.tileLayer('https://www.ign.es/wmts/mapa-raster?layer=MTN&style=default&tilematrixset=GoogleMapsCompatible&Service=WMTS&Request=GetTile&Version=1.0.0&Format=image/jpeg&TileMatrix={z}&TileCol={x}&TileRow={y}', {
+        attribution: '&copy; <a href="https://www.ign.es">Instituto Geográfico Nacional (IGN)</a>',
+        maxZoom: 19
       }),
-      "CartoDB Positron": L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
-        attribution: '&copy; CARTO'
+      "Ortofoto PNOA (IGN)": L.tileLayer('https://www.ign.es/wmts/pnoa-ma?layer=OI.OrthoimageCoverage&style=default&tilematrixset=GoogleMapsCompatible&Service=WMTS&Request=GetTile&Version=1.0.0&Format=image/jpeg&TileMatrix={z}&TileCol={x}&TileRow={y}', {
+        attribution: '&copy; <a href="https://www.ign.es">PNOA / IGN</a>',
+        maxZoom: 19
       }),
-      "Satélite": L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-        attribution: '&copy; Esri'
+      "OpenTopoMap (Relieve)": L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)',
+        maxZoom: 17
+      }),
+      "Satélite Global (Esri)": L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+        attribution: '&copy; <a href="https://www.esri.com">Esri</a>',
+        maxZoom: 18
       })
     };
 
@@ -418,6 +426,7 @@
         'ES02': '#D90429',  // Camino Aragonés (Carmesí)
         'ES03': '#1D3557',  // Camino del Norte (Azul marino)
         'ES04': '#8338EC',  // Camino Primitivo (Púrpura)
+        'ES05': '#588157',  // Camino Vasco del Interior (Verde oliva)
         'ES07': '#FB8500',  // Vía de la Plata (Naranja)
         'ES08': '#023047',  // Camino Sanabrés (Azul noche)
         'ES09': '#2A9D8F',  // Camino Portugués Central (Verde esmeralda)
@@ -427,8 +436,16 @@
         'ES13': '#E76F51',  // Camino Fisterra y Muxía (Coral atlántico)
         'ES14': '#6A994E',  // Camino de Invierno (Verde bosque)
         'ES15': '#BC6C25',  // Camino Mozárabe (Ocre andalusí)
+        'ES16': '#D4A373',  // Camino de Levante (Arena)
+        'ES17': '#0096C7',  // Camino del Ebro (Azul fluvial)
+        'ES18': '#F77F00',  // Camino Catalán (Ámbar)
+        'ES19': '#AE2012',  // Camino del Sureste (Teja)
+        'ES21': '#606C38',  // Camino Olvidado (Verde montaña)
+        'ES25': '#7209B7',  // Camino del Salvador (Violeta)
         'EU-CZ': '#E76F51', // Rutas Checas (Teja)
         'EU-DE': '#F4A261', // Rutas Alemanas (Dorado)
+        'EU-FR': '#3D5A80', // Rutas Francesas (Azul ultramar)
+        'EU-PT': '#058C42', // Rutas Portuguesas (Verde portugués)
         'OTHER': '#6C757D'  // Otras Rutas (Gris)
       };
       return colors[code] || '#6C757D';

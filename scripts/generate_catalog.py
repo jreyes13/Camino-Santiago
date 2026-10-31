@@ -157,10 +157,24 @@ def identify_route_category(rel_path):
             return 'Camino de Madrid', 'ES12', '#457B9D'
         elif folder == 'ES13-Camino-Fisterra-Muxia':
             return 'Camino de Fisterra y Muxía', 'ES13', '#E76F51'
+        elif folder == 'ES05-Camino-Vasco-Interior':
+            return 'Camino Vasco del Interior', 'ES05', '#588157'
         elif folder == 'ES14-Camino-de-Invierno':
             return 'Camino de Invierno', 'ES14', '#6A994E'
         elif folder == 'ES15-Camino-Mozarabe':
             return 'Camino Mozárabe', 'ES15', '#BC6C25'
+        elif folder == 'ES16-Camino-de-Levante':
+            return 'Camino de Levante', 'ES16', '#D4A373'
+        elif folder == 'ES17-Camino-del-Ebro':
+            return 'Camino del Ebro', 'ES17', '#0096C7'
+        elif folder == 'ES18-Camino-Catalan':
+            return 'Camino Catalán', 'ES18', '#F77F00'
+        elif folder == 'ES19-Camino-del-Sureste':
+            return 'Camino del Sureste', 'ES19', '#AE2012'
+        elif folder == 'ES21-Camino-Olvidado':
+            return 'Camino Olvidado', 'ES21', '#606C38'
+        elif folder == 'ES25-Camino-del-Salvador':
+            return 'Camino del Salvador', 'ES25', '#7209B7'
         elif folder == 'EU' and len(parts) >= 3:
             if parts[2] == 'CZ':
                 return 'Rutas Checas (Jakubská cesta)', 'EU-CZ', '#E76F51'
@@ -168,6 +182,8 @@ def identify_route_category(rel_path):
                 return 'Rutas Alemanas (Jakobsweg)', 'EU-DE', '#F4A261'
             elif parts[2] == 'FR':
                 return 'Rutas Francesas (Voies de Saint-Jacques)', 'EU-FR', '#3D5A80'
+            elif parts[2] == 'PT':
+                return 'Camino Portugués en Portugal', 'EU-PT', '#058C42'
     return 'Otras Rutas', 'OTHER', '#6C757D'
 
 def build_catalog(repo_root='.'):

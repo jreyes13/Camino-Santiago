@@ -7,8 +7,8 @@
 <p align="left">
   <img src="https://img.shields.io/badge/QGIS-3.x-589632?style=flat-square&logo=qgis&logoColor=white" alt="QGIS 3.x" />
   <img src="https://img.shields.io/badge/Formats-GPX%20%7C%20KML%20%7C%20GeoJSON-007acc?style=flat-square" alt="GPX, KML and GeoJSON Formats" />
-  <img src="https://img.shields.io/badge/Coverage-23%2C636%20km-orange?style=flat-square" alt="23,636 km covered" />
-  <img src="https://img.shields.io/badge/Tracks-218%20GPX-success?style=flat-square" alt="218 GPX tracks" />
+  <img src="https://img.shields.io/badge/Coverage-41%2C438%20km-orange?style=flat-square" alt="41,438 km covered" />
+  <img src="https://img.shields.io/badge/Tracks-228%20GPX-success?style=flat-square" alt="228 GPX tracks" />
   <img src="https://img.shields.io/badge/Data-IGN%20%2F%20CNIG%20%2F%20FEAACS%20%2F%20OSM-lightgrey?style=flat-square" alt="Data IGN / CNIG / FEAACS / OSM" />
   <img src="https://img.shields.io/badge/License-GPL--3.0-blue?style=flat-square" alt="GPL-3.0 License" />
 </p>
@@ -27,17 +27,22 @@ An open repository dedicated to collecting, processing, standardizing, and visua
 | **ES04** | Camino Primitivo (Oviedo – Santiago) | 1 | 411.3 km | GPX |
 | **ES07** | Vía de la Plata (Sevilla – Astorga, 3 tramos) | 3 | 892.7 km | GPX |
 | **ES08** | Camino Sanabrés (Granja de Moreruela – Santiago) | 2 | 1,052.3 km | GPX |
-| **ES09** | Camino Portugués Central | 18 | 91.4 km | GPX / KML |
-| **ES10** | Camino Portugués de la Costa | 10 | 78.1 km | GPX / KML |
+| **ES09** | Camino Portugués Central (Galicia) | 18 | 91.4 km | GPX / KML |
+| **ES10** | Camino Portugués de la Costa (Galicia) | 10 | 78.1 km | GPX / KML |
 | **ES11** | Camino Inglés (Ferrol – Santiago) | 1 | 191.8 km | GPX |
 | **ES12** | Camino de Madrid (Madrid – Sahagún) | 24 | 453.4 km | GPX / KML |
 | **ES13** | Camino de Fisterra y Muxía | 1 | 226.0 km | GPX |
 | **ES14** | Camino de Invierno (Ponferrada – Santiago) | 1 | 388.4 km | GPX |
 | **ES15** | Camino Mozárabe (Andalucía – Mérida) | 1 | 893.8 km | GPX |
+| **ES16** | Camino de Levante (Valencia – Zamora) | 1 | 616.2 km | GPX |
+| **ES19** | Camino del Sureste (Alicante – Benavente) | 1 | 3,004.4 km | GPX |
+| **ES21** | Camino Olvidado (Bilbao – Villafranca del Bierzo) | 1 | 603.1 km | GPX |
+| **EU-PT** | Camino Portugués en Portugal (Lisboa – Oporto – Valença) | 2 | 3,042.9 km | GPX |
+| **EU-FR** | Rutas Francesas (*Voies de Saint-Jacques*: Podiensis, Lemovicensis, Turonensis, Tolosana, Piémont) | 5 | 10,535.7 km | GPX |
 | **EU-CZ** | Rutas Jacobeas Checas (*Jakubská cesta*) | 7 | 1,382.6 km | GPX / KML |
 | **EU-DE** | Rutas Alemanas (*Jakobsweg*) | 79 | 12,190.7 km | GPX / KML |
 | **OTHER** | Gran Vía Trans-Europea (Praga – Santiago) | 2 | 2,340.1 km | GPX |
-| **TOTAL** | **Red Jacobea Integrada** | **218** | **23,635.6 km** | **GPX** |
+| **TOTAL** | **Red Jacobea Integrada** | **228** | **41,437.8 km** | **GPX** |
 
 ---
 
@@ -46,7 +51,7 @@ An open repository dedicated to collecting, processing, standardizing, and visua
 👉 **Acceso directo online:** **[https://jreyes13.github.io/Camino-Santiago/](https://jreyes13.github.io/Camino-Santiago/)**
 
 También puedes abrir directamente [`index.html`](index.html) de manera local en cualquier navegador:
-- **Base Layers**: OpenStreetMap, OpenTopoMap, CartoDB Positron, Esri Satellite.
+- **Base Layers**: OpenStreetMap, IGN Topográfico Nacional (MTN), Ortofoto PNOA (IGN), OpenTopoMap (Relieve), Esri Satélite.
 - **Stage Search & Filtering**: Búsqueda y filtrado en tiempo real por Camino, nombre de etapa o ciudad.
 - **Elevation & Statistics**: Desniveles acumulados ($+$ y $-$), distancias y descarga directa en 1 clic de cada archivo `.gpx`.
 
@@ -127,5 +132,5 @@ The geospatial data and routes are referenced against and verified with official
 
 - **[IGN - National Geographic Information Infrastructure](https://nco.ign.es/Caminosantiago/)**: Official interactive map of Jacobean routes across Spain provided by the National Geographic Institute of Spain (*IGN*).
 - **[CNIG Download Center](https://centrodedescargas.cnig.es/CentroDescargas/mapas-camino-santiago)**: Official digital cartography, aerial photography (PNOA), digital elevation models (DEM), and vector datasets of the Camino de Santiago.
-- **[FEAACS - Spanish Federation of Associations of Friends of the Camino de Santiago](https://www.caminosantiago.org/cpperegrino/caminos/)**: Historical routes, stage itineraries, official variants, and hostel networks.
+- **[FEAACS - Spanish Federation of Associations of Friends of the Camino de Santiago](https://www.caminosantiago.org/)**: Historical routes, stage itineraries, official variants, and hostel networks.
 - **[OpenStreetMap & Open Pilgrimages](https://www.openstreetmap.org/)**: Community-verified collaborative cartography and high-precision GPS trace alignments.

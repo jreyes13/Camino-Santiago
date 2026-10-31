@@ -1,6 +1,6 @@
 {
-  "total_tracks": 218,
-  "total_distance_km": 23635.6,
+  "total_tracks": 228,
+  "total_distance_km": 41437.8,
   "routes": {
     "ES01": {
       "code": "ES01",
@@ -2240,6 +2240,81 @@
         }
       ]
     },
+    "ES16": {
+      "code": "ES16",
+      "name": "Camino de Levante",
+      "color": "#D4A373",
+      "total_distance_km": 616.2,
+      "stages_count": 1,
+      "stages": [
+        {
+          "name": "Camino de Levante",
+          "file": "GPX/ES16-Camino-de-Levante/ES16-Camino-de-Levante.gpx",
+          "distance_km": 616.16,
+          "elevation_gain_m": null,
+          "elevation_loss_m": null,
+          "min_elevation_m": null,
+          "max_elevation_m": null,
+          "point_count": 15389,
+          "bounds": [
+            -2.9971,
+            38.78359,
+            -0.37528,
+            39.5153
+          ]
+        }
+      ]
+    },
+    "ES19": {
+      "code": "ES19",
+      "name": "Camino del Sureste",
+      "color": "#AE2012",
+      "total_distance_km": 3004.4,
+      "stages_count": 1,
+      "stages": [
+        {
+          "name": "Camino del Sureste",
+          "file": "GPX/ES19-Camino-del-Sureste/ES19-Camino-del-Sureste.gpx",
+          "distance_km": 3004.36,
+          "elevation_gain_m": null,
+          "elevation_loss_m": null,
+          "min_elevation_m": null,
+          "max_elevation_m": null,
+          "point_count": 25538,
+          "bounds": [
+            -5.68096,
+            38.34283,
+            -0.47975,
+            42.00226
+          ]
+        }
+      ]
+    },
+    "ES21": {
+      "code": "ES21",
+      "name": "Camino Olvidado",
+      "color": "#606C38",
+      "total_distance_km": 603.1,
+      "stages_count": 1,
+      "stages": [
+        {
+          "name": "Camino Olvidado",
+          "file": "GPX/ES21-Camino-Olvidado/ES21-Camino-Olvidado.gpx",
+          "distance_km": 603.11,
+          "elevation_gain_m": null,
+          "elevation_loss_m": null,
+          "min_elevation_m": null,
+          "max_elevation_m": null,
+          "point_count": 18620,
+          "bounds": [
+            -6.71657,
+            42.57531,
+            -2.97388,
+            43.25559
+          ]
+        }
+      ]
+    },
     "EU-CZ": {
       "code": "EU-CZ",
       "name": "Rutas Checas (Jakubská cesta)",
@@ -3630,6 +3705,136 @@
             50.85379,
             14.99103,
             51.15629
+          ]
+        }
+      ]
+    },
+    "EU-FR": {
+      "code": "EU-FR",
+      "name": "Rutas Francesas (Voies de Saint-Jacques)",
+      "color": "#3D5A80",
+      "total_distance_km": 10535.7,
+      "stages_count": 5,
+      "stages": [
+        {
+          "name": "Via Podiensis (Le Puy)",
+          "file": "GPX/EU/FR/FR01-Via-Podiensis/FR01-Via-Podiensis.gpx",
+          "distance_km": 1149.2,
+          "elevation_gain_m": null,
+          "elevation_loss_m": null,
+          "min_elevation_m": null,
+          "max_elevation_m": null,
+          "point_count": 29817,
+          "bounds": [
+            -1.31979,
+            43.0067,
+            3.88395,
+            45.04613
+          ]
+        },
+        {
+          "name": "Via Lemovicensis (Vézelay)",
+          "file": "GPX/EU/FR/FR02-Via-Lemovicensis/FR02-Via-Lemovicensis.gpx",
+          "distance_km": 3293.72,
+          "elevation_gain_m": null,
+          "elevation_loss_m": null,
+          "min_elevation_m": null,
+          "max_elevation_m": null,
+          "point_count": 40162,
+          "bounds": [
+            -1.0388,
+            43.29898,
+            3.80465,
+            47.46636
+          ]
+        },
+        {
+          "name": "Via Turonensis (París - Tours)",
+          "file": "GPX/EU/FR/FR03-Via-Turonensis/FR03-Via-Turonensis.gpx",
+          "distance_km": 3560.3,
+          "elevation_gain_m": null,
+          "elevation_loss_m": null,
+          "min_elevation_m": null,
+          "max_elevation_m": null,
+          "point_count": 51259,
+          "bounds": [
+            -1.09626,
+            43.32391,
+            2.34961,
+            48.85798
+          ]
+        },
+        {
+          "name": "Via Tolosana (Arlés)",
+          "file": "GPX/EU/FR/FR04-Via-Tolosana/FR04-Via-Tolosana.gpx",
+          "distance_km": 1601.73,
+          "elevation_gain_m": null,
+          "elevation_loss_m": null,
+          "min_elevation_m": null,
+          "max_elevation_m": null,
+          "point_count": 37541,
+          "bounds": [
+            -0.62086,
+            42.79571,
+            4.63726,
+            43.74297
+          ]
+        },
+        {
+          "name": "Voie du Piémont Pyrénéen",
+          "file": "GPX/EU/FR/FR05-Voie-Piemont-Pyreneen/FR05-Voie-Piemont-Pyreneen.gpx",
+          "distance_km": 930.74,
+          "elevation_gain_m": null,
+          "elevation_loss_m": null,
+          "min_elevation_m": null,
+          "max_elevation_m": null,
+          "point_count": 25436,
+          "bounds": [
+            -1.17277,
+            42.92602,
+            3.21061,
+            43.35519
+          ]
+        }
+      ]
+    },
+    "EU-PT": {
+      "code": "EU-PT",
+      "name": "Camino Portugués en Portugal",
+      "color": "#058C42",
+      "total_distance_km": 3042.9,
+      "stages_count": 2,
+      "stages": [
+        {
+          "name": "Camino Portugués Central (Lisboa - Oporto - Valença)",
+          "file": "GPX/EU/PT/PT01-Camino-Portugues-Central/PT01-Camino-Portugues-Central.gpx",
+          "distance_km": 2645.83,
+          "elevation_gain_m": null,
+          "elevation_loss_m": null,
+          "min_elevation_m": null,
+          "max_elevation_m": null,
+          "point_count": 23499,
+          "bounds": [
+            -8.68232,
+            40.30378,
+            -8.43602,
+            42.88049
+          ]
+        },
+        {
+          "name": "Camino Portugués (Central)",
+          "file": "GPX/EU/PT/PT01-Camino-Portugues-Central/PT01-Camino-Portugues-OpenPilgrimages.gpx",
+          "distance_km": 397.11,
+          "elevation_gain_m": null,
+          "elevation_loss_m": null,
+          "min_elevation_m": null,
+          "max_elevation_m": null,
+          "point_count": 13722,
+          "bounds": [
+            -8.68232,
+            41.14229,
+            -8.54507,
+            42.88049
           ]
         }
       ]
